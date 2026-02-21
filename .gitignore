@@ -42,5 +42,8 @@ SKILLS_TAB_IMPROVEMENTS.md
 # Test HTML
 test_data_load.html
 
+# Playwright MCP cache
+.playwright-mcp/
+
 # OS files
 .DS_Store
