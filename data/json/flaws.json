@@ -1,10 +1,8 @@
 {
   "metadata": {
-    "source": "Converted from charbuild flaws.xml",
-    "version": "1.0",
-    "generated": "2026-01-30T21:13:34.153613Z",
-    "category": "flaws",
-    "entry_count": 92
+    "source": "consolidated from realmshelps.net and existing data",
+    "entry_count": 92,
+    "generated_at": "2026-02-21T02:16:58.536099+00:00"
   },
   "data": [
     {
@@ -12,8 +10,8 @@
       "type": "Flaw",
       "source": "Dragon #326",
       "prerequisite": "Ability to spontaneously cast cure spells.",
-      "description": "",
-      "effect": "",
+      "description": "Your healing powers are only effective for those whose alignment closely matches yours.",
+      "effect": "Your spells of the healing subschool have reduced effect on those who do not share your alignment. Those that have exactly the same alignment as you gain full benefit from your healing. Those with an alignment within one step of yours are cured half the normal amount of hit points from your healing spells. Characters with alignments more than one step different from yours gain no benefit from your healing at all. Your cure spells still deal full damage to undead.",
       "special": ""
     },
     {
@@ -21,8 +19,8 @@
       "type": "Flaw",
       "source": "Dragon #328",
       "prerequisite": "Gnome, Cha 10+.",
-      "description": "",
-      "effect": "",
+      "description": "You are unable to use your inborn magical abilities.",
+      "effect": "You may never use any spell-like abilities under any circumstances. In addition, you suffer a -2 penalty on saving throws versus spells of the illusion school.",
       "special": ""
     },
     {
@@ -30,8 +28,8 @@
       "type": "Flaw",
       "source": "Dragon #333",
       "prerequisite": "Ability to cast arcane spells.",
-      "description": "",
-      "effect": "",
+      "description": "Conjuring magical energies is especially draining for you.",
+      "effect": "Whenever you successfully cast an arcane spell you must immediately make a Fortitude save (DC 10 + spell level). If you fail you become fatigued. If you are fatigued as a result of this flaw, it has no further effect until that condition is removed.",
       "special": ""
     },
     {
@@ -39,8 +37,8 @@
       "type": "Flaw",
       "source": "Dragon #333",
       "prerequisite": "Ability to cast arcane spells.",
-      "description": "",
-      "effect": "",
+      "description": "Thousands of unseen parasites within your flesh draw upon the arcane power held within every spell you cast.",
+      "effect": "Every arcane spell you cast has the DC to resist it lowered by 1. These parasites cannot be removed by any mortal means, even by a miracle or wish.",
       "special": ""
     },
     {
@@ -48,8 +46,8 @@
       "type": "Flaw",
       "source": "Dragon #324",
       "prerequisite": "Ability to cast arcane spells without preparation, Perform 1 rank.",
-      "description": "",
-      "effect": "",
+      "description": "You depend upon your performance ability to aid in the casting of spells.",
+      "effect": "In order to cast any spell, you must succeed at a Perform check (DC 10 + spell level). If you fail, you lose the spell.",
       "special": ""
     },
     {
@@ -57,8 +55,8 @@
       "type": "Flaw",
       "source": "Dragon #328",
       "prerequisite": "Darkvision.",
-      "description": "",
-      "effect": "",
+      "description": "You have narrow beady eyes that do not catch the light as well as they should.",
+      "effect": "You do not have darkvision; instead you possess low-light vision. In addition, you suffer a -2 penalty on all Search and Spot checks.",
       "special": ""
     },
     {
@@ -66,8 +64,8 @@
       "type": "Flaw",
       "source": "Dragon #329",
       "prerequisite": "Wild empathy.",
-      "description": "",
-      "effect": "",
+      "description": "You have more in common with beasts than you do with your own race.",
+      "effect": "You are vulnerable to the following list of spells that affect animals, as well as those which affect your own creature type: animal trance, calm animals, charm animal, dominate animal, hide from animals, hold animal. Additionally, you suffer a -2 penalty on all Charisma-based skill checks except Disguise, Handle Animal, and Use Magic Device. Anyone observing your mannerisms who possesses the wild empathy class ability can recognize this flaw immediately.",
       "special": ""
     },
     {
@@ -84,8 +82,8 @@
       "type": "Flaw",
       "source": "Dragon #325",
       "prerequisite": "Rage ability.",
-      "description": "",
-      "effect": "",
+      "description": "Your ability to distinguish between friend and foe is limited once you enter a rage.",
+      "effect": "You may not end your rage voluntarily. Once you enter a rage, you continue to rage for the entire duration. While in a rage, you must attack a creature every round if able. You can charge or move in order to make the attack, and you may move to attack a foe rather than stay still to attack a friend. If there are no creatures within sight, you attack the nearest breakable object. You may attempt a DC 15 Will save once per round on your turn in order stop attacking an ally. If foes become visible, you may immediately switch targets and engage them.",
       "special": ""
     },
     {
@@ -120,8 +118,8 @@
       "type": "Flaw",
       "source": "Dragon #324",
       "prerequisite": "Good or lawful alignment.",
-      "description": "",
-      "effect": "",
+      "description": "You despise raising your hand against creatures of the opposite gender.",
+      "effect": "You suffer a -4 penalty on attack rolls to hit a creature you can tell is of the opposite gender.",
       "special": ""
     },
     {
@@ -129,8 +127,8 @@
       "type": "Flaw",
       "source": "Dragon #324",
       "prerequisite": "Survival as a class skill.",
-      "description": "",
-      "effect": "",
+      "description": "Although interested in the natural world, you suffer from a lack of experience in the wilds.",
+      "effect": "You suffer a -4 penalty on all Handle Animal, Knowledge (nature), and Survival checks.",
       "special": ""
     },
     {
@@ -147,8 +145,8 @@
       "type": "Flaw",
       "source": "Dragon #324",
       "prerequisite": "Good or lawful alignment.",
-      "description": "",
-      "effect": "",
+      "description": "Trained to only kill other armed warriors, you hesitate when attacking unarmed opponents.",
+      "effect": "You suffer a -4 penalty on attack rolls made against an enemy not armed with a melee weapon. If the enemy uses a natural attack against you, you may then attack it without penalty.",
       "special": ""
     },
     {
@@ -183,8 +181,8 @@
       "type": "Flaw",
       "source": "Dragon #326",
       "prerequisite": "Ability to cast divine spells.",
-      "description": "",
-      "effect": "",
+      "description": "Your religious rites require elaborate gestures that cause you difficulty when casting divine spells while wearing armor or using a shield.",
+      "effect": "You suffer a spell failure chance (due to armor, shields, or anything else which causes arcane spell failure) when casting divine spells, just as if they were arcane spells.",
       "special": ""
     },
     {
@@ -192,8 +190,8 @@
       "type": "Flaw",
       "source": "Dragon #326",
       "prerequisite": "Access to domains.",
-      "description": "",
-      "effect": "",
+      "description": "You are limited to accessing only one of your deity's domains.",
+      "effect": "You choose and have access to only one of your deity's domains. You may gain prestige domains from a prestige class as usual.",
       "special": ""
     },
     {
@@ -201,8 +199,8 @@
       "type": "Flaw",
       "source": "Dragon #328",
       "prerequisite": "Elven blood.",
-      "description": "",
-      "effect": "",
+      "description": "You only consider those weapons designed specifically for use by the noblest of elves to be fit to wield. Using any other object as a weapon is beneath your dignity.",
+      "effect": "You suffer a -4 penalty on attack rolls when using a weapon other than a longsword, rapier, or bow (long, short, or composite). Attacks made while fighting unarmed, touch attacks (including ranged touch attacks), or attacks made with natural weaponry also incur this penalty.",
       "special": ""
     },
     {
@@ -210,8 +208,8 @@
       "type": "Flaw",
       "source": "Dragon #325",
       "prerequisite": "Rage ability.",
-      "description": "",
-      "effect": "",
+      "description": "You rage so powerfully that you become exhausted once you calm down.",
+      "effect": "When you end your rage, you become exhausted (instead of fatigued) for the duration of the encounter. If you gain the ability to rage tirelessly, as a 17th-level barbarian, you are instead fatigued after a rage.",
       "special": ""
     },
     {
@@ -228,8 +226,8 @@
       "type": "Flaw",
       "source": "Dragon #329",
       "prerequisite": "Favored enemy.",
-      "description": "",
-      "effect": "",
+      "description": "Your training is so specialized that you have difficulty tracking, predicting, or otherwise interacting with those foes you have not studied in great detail.",
+      "effect": "You suffer a -1 penalty on attack rolls, Bluff, Sense Motive, Spot, and Survival checks made against creatures of any kind that isn't one of your favored enemies.",
       "special": ""
     },
     {
@@ -237,8 +235,8 @@
       "type": "Flaw",
       "source": "Dragon #324",
       "prerequisite": "Bardic music.",
-      "description": "",
-      "effect": "",
+      "description": "Your excessively lighthearted nature grates on your companions.",
+      "effect": "You lose the inspire courage, inspire competence, inspire greatness, and inspire heroics bardic music abilities.",
       "special": ""
     },
     {
@@ -246,8 +244,8 @@
       "type": "Flaw",
       "source": "Dragon #333",
       "prerequisite": "Ability to call a familiar.",
-      "description": "",
-      "effect": "",
+      "description": "You lack the ability to summon a creature to do your bidding.",
+      "effect": "You lose the ability to call a familiar.",
       "special": ""
     },
     {
@@ -273,8 +271,8 @@
       "type": "Flaw",
       "source": "Dragon #328",
       "prerequisite": "Constitution 11 or lower.",
-      "description": "",
-      "effect": "",
+      "description": "You become fatigued when your body is assaulted by poison or magic.",
+      "effect": "Whenever you fail a Fortitude save, you become fatigued, in addition to any other effects you might suffer. This condition lasts until you get 8 hours of complete rest. This flaw applies only once to any given source that requires a Fortitude save. Failing a Fortitude save while fatigued causes you to become exhausted.",
       "special": ""
     },
     {
@@ -282,8 +280,8 @@
       "type": "Flaw",
       "source": "Dragon #328",
       "prerequisite": "Chaotic alignment.",
-      "description": "",
-      "effect": "",
+      "description": "You seek to live your life freely, unburdened by excessive material possessions.",
+      "effect": "The weight of any gear you carry is considered double for the purposes of determining your load. For example, a half-elf with a Strength of 10 and 30 pounds of gear is treated as carrying 60 pounds, which is a medium load. In addition, any armor check penalties you have are also doubled (or tripled, in the case of making a Swim check).",
       "special": ""
     },
     {
@@ -291,8 +289,8 @@
       "type": "Flaw",
       "source": "Dragon #324",
       "prerequisite": "Bardic knowledge.",
-      "description": "",
-      "effect": "",
+      "description": "Having focused your time on practicing and performing, you have gathered little useful information in your travels.",
+      "effect": "You suffer a -10 penalty on all bardic knowledge checks. This penalty does not apply if the relevant knowledge involves the Perform skill in which you have the most ranks. For example, if you have the most ranks in Perform (wind instrument), you may use bardic knowledge without penalty to identify famous wind instruments, to remember facts about famous wind instrument players, or to identify places that make quality wind instruments.",
       "special": ""
     },
     {
@@ -309,8 +307,8 @@
       "type": "Flaw",
       "source": "Dragon #328",
       "prerequisite": "Base attack bonus +1.",
-      "description": "",
-      "effect": "",
+      "description": "You have an insatiable desire for glorious combat, fighting recklessly to prove yourself.",
+      "effect": "You suffer a -2 penalty to AC during combat until you drop an opponent. This penalty does not apply if the combat is against a single opponent.",
       "special": ""
     },
     {
@@ -336,8 +334,8 @@
       "type": "Flaw",
       "source": "Dragon #328",
       "prerequisite": "Half-elf or half-orc.",
-      "description": "",
-      "effect": "",
+      "description": "You despise your nonhuman side.",
+      "effect": "You suffer a -2 penalty on all attack rolls, saving throws, and skill checks when within line of sight of an elf (if you are a half-elf) or an orc if you are a half-orc).",
       "special": ""
     },
     {
@@ -345,8 +343,8 @@
       "type": "Flaw",
       "source": "Dragon #329",
       "prerequisite": "Favored enemy.",
-      "description": "",
-      "effect": "",
+      "description": "You are engulfed by a deep hatred of your chosen foes and you become insensibly enraged in their presence.",
+      "effect": "You suffer a -4 penalty to your Armor Class and on attack rolls and skill checks whenever you are not engaged in melee combat with a favored enemy and a favored enemy is close enough that you could engage it.",
       "special": ""
     },
     {
@@ -354,8 +352,8 @@
       "type": "Flaw",
       "source": "Dragon #327",
       "prerequisite": "Ability to cast spells.",
-      "description": "",
-      "effect": "",
+      "description": "You are unable to prevent the occurrence of strange noises in your immediate vicinity.",
+      "effect": "Spontaneous noises sometimes arise in your immediate vicinity. These noises are completely out of your control and cannot be used to communicate or distract other creatures. These sounds cease when you are unconscious, petrified, asleep, or dead. You suffer a -4 penalty on all Listen and Move Silently skill checks.",
       "special": ""
     },
     {
@@ -363,8 +361,8 @@
       "type": "Flaw",
       "source": "Dragon #324",
       "prerequisite": "Good or lawful alignment.",
-      "description": "",
-      "effect": "",
+      "description": "You strongly believe in one-on-one combat to decide a fight.",
+      "effect": "You must make a Will save (DC 10 + your level) to attack a creature in a square threatened by one of its other foes. A successful save allows you to attack such a creature, albeit with a -2 penalty on your attack rolls. A failed save prohibits you from attacking that creature.",
       "special": ""
     },
     {
@@ -372,8 +370,8 @@
       "type": "Flaw",
       "source": "Dragon #324",
       "prerequisite": "Lawful alignment.",
-      "description": "",
-      "effect": "",
+      "description": "You only cross arms with foes who willingly engage you.",
+      "effect": "You suffer a -4 penalty on attack rolls against creatures that have not explicitly challenged you or made an attack against you. For the purposes of this feat, an attack against you includes any action that would end an invisibility spell.",
       "special": ""
     },
     {
@@ -390,8 +388,8 @@
       "type": "Flaw",
       "source": "Dragon #328",
       "prerequisite": "Base attack bonus +1.",
-      "description": "",
-      "effect": "",
+      "description": "You refuse to retreat from even the most deadly of confrontations.",
+      "effect": "If you move out of melee combat for any reason, you suffer a -2 penalty on all attack rolls, skill checks, and saving throws for 1 hour.",
       "special": ""
     },
     {
@@ -426,8 +424,8 @@
       "type": "Flaw",
       "source": "Dragon #328",
       "prerequisite": "Darkvision.",
-      "description": "",
-      "effect": "",
+      "description": "Accustomed only to the darker places in the world, your eyes open much wider than normal, making it difficult for you to see in bright light.",
+      "effect": "You become dazzled in bright sunlight or within the radius of a daylight spell. A dazzled creature takes a -1 penalty on attack rolls, Search checks, and Spot checks.",
       "special": ""
     },
     {
@@ -435,8 +433,8 @@
       "type": "Flaw",
       "source": "Dragon #328",
       "prerequisite": "",
-      "description": "",
-      "effect": "",
+      "description": "You are light for your size. Region: Constitution 13 or lower, you may not be Obese.",
+      "effect": "You have half the base weight of a normal character of your race. Height and weight modifiers are added normally. You suffer a -4 penalty when making or resisting bull rushes, grapples, overruns, or trip attacks. You gain no attack bonus when you charge, but you do suffer the -2 Armor Class penalty and take double damage from weapons set against charges you make.",
       "special": ""
     },
     {
@@ -444,8 +442,8 @@
       "type": "Flaw",
       "source": "Dragon #326",
       "prerequisite": "Ability to turn or rebuke undead.",
-      "description": "",
-      "effect": "",
+      "description": "Your religious practices give you no special powers over the dead.",
+      "effect": "You lose the ability to turn or rebuke undead. This does not extend to any other creatures a domain might grant you the ability to turn or rebuke, such as earth elementals for a cleric with the Air domain.",
       "special": ""
     },
     {
@@ -453,8 +451,8 @@
       "type": "Flaw",
       "source": "Dragon #327",
       "prerequisite": "Ability to summon a familiar or animal companion.",
-      "description": "",
-      "effect": "",
+      "description": "You do not have the ability to summon a familiar or gain an animal companion.",
+      "effect": "You lose the ability to summon a familiar or gain an animal companion. You never gain the ability to gain a special companion, whether through animal companion, summon familiar, or some other class ability or feat. Possessing multiple classes that would grant you an animal companion or familiar does not negate the effects of this flaw.",
       "special": ""
     },
     {
@@ -489,8 +487,8 @@
       "type": "Flaw",
       "source": "Dragon #327",
       "prerequisite": "Ability to cast spells.",
-      "description": "",
-      "effect": "",
+      "description": "You have difficulty controlling your most powerful magic, being more comfortable with more familiar, lower-level spells.",
+      "effect": "You must use one spell slot of your highest spell level to cast or prepare a spell of a lower level. This spell slot may be used to cast or prepare any spell of any level lower than your highest level, effectively causing you to lose one of your highest-level spell slots to gain one of a lower level. For example, a 6th-level sorcerer would lose the ability to cast one 3rd-level spell per day, but would gain the ability to cast one additional 0, 1st-, or 2nd-level spell instead. This flaw always affects your highest spell level and changes the spell level it affects as you gain levels.",
       "special": ""
     },
     {
@@ -498,8 +496,8 @@
       "type": "Flaw",
       "source": "Dragon #326",
       "prerequisite": "Access to domains.",
-      "description": "",
-      "effect": "",
+      "description": "You are restricted to using magical objects created with your deity's domains in mind.",
+      "effect": "You may only use spell-trigger items (wands and staffs) that cast spells on your domain spell lists. Other spell-trigger items fail in your hands.",
       "special": ""
     },
     {
@@ -525,8 +523,8 @@
       "type": "Flaw",
       "source": "Dragon #333",
       "prerequisite": "Ability to cast spells.",
-      "description": "",
-      "effect": "",
+      "description": "Your spellcasting methods require a rigid posture that makes you vulnerable to your foes while casting.",
+      "effect": "You are considered flat-footed with an effective Dexterity of 0 (-5 to AC) on any round in which you cast a spell. You may not cast spells defensively.",
       "special": ""
     },
     {
@@ -534,8 +532,8 @@
       "type": "Flaw",
       "source": "Dragon #324",
       "prerequisite": "Bardic music.",
-      "description": "",
-      "effect": "",
+      "description": "You get lost in your performances.",
+      "effect": "Initiating or maintaining any bardic music ability is a full-round action.",
       "special": ""
     },
     {
@@ -543,8 +541,8 @@
       "type": "Flaw",
       "source": "Dragon #324",
       "prerequisite": "Ride 1 rank.",
-      "description": "",
-      "effect": "",
+      "description": "You only feel comfortable fighting from the saddle.",
+      "effect": "You suffer a -2 penalty on attack rolls made while not riding a mount.",
       "special": ""
     },
     {
@@ -579,8 +577,8 @@
       "type": "Flaw",
       "source": "Dragon #328",
       "prerequisite": "Small size, Dexterity 13 or lower, you may not be Lightweight.",
-      "description": "",
-      "effect": "",
+      "description": "Your great bulk can sometimes impede your actions.",
+      "effect": "You have double the base weight of a character of your race. Height and weight modifiers are added normally. You lose your +1 bonus to Armor Class and on attack rolls, as well as your +4 bonus on Hide checks. You must pay double the cost for armor but not for any magical enhancements the armor might have. Such armor does not weigh half the normal amount.",
       "special": ""
     },
     {
@@ -597,8 +595,8 @@
       "type": "Flaw",
       "source": "Dragon #327",
       "prerequisite": "Ability to cast spells.",
-      "description": "",
-      "effect": "",
+      "description": "Your body occasionally emits bursts of bright colored light.",
+      "effect": "You spontaneously emit bursts of colored light. These lights are completely out of your control and cannot be used as a light source. They only cease when you are unconscious, petrified, asleep, or dead. You suffer a -4 penalty on all Hide and Spot skill checks.",
       "special": ""
     },
     {
@@ -606,8 +604,8 @@
       "type": "Flaw",
       "source": "Dragon #326",
       "prerequisite": "Ability to cast spells.",
-      "description": "",
-      "effect": "",
+      "description": "Your spells take additional time to cast.",
+      "effect": "The casting time of all your spells are doubled. Spells that normally require a single action to cast require a full-round action to cast instead. Spells that normally require a free action to cast now require a standard action to cast instead.",
       "special": ""
     },
     {
@@ -624,8 +622,8 @@
       "type": "Flaw",
       "source": "Dragon #324",
       "prerequisite": "Proficiency in all martial weapons.",
-      "description": "",
-      "effect": "",
+      "description": "You take great pride in knowing how to use weapons specifically designed for war. You consider all other weapons beneath your station and have allowed your training in them to atrophy.",
+      "effect": "You suffer a -4 penalty on all attack rolls made with exotic weapons, simple weapons, unarmed attacks, and touch attacks.",
       "special": ""
     },
     {
@@ -633,8 +631,8 @@
       "type": "Flaw",
       "source": "Dragon #328",
       "prerequisite": "Half-elf.",
-      "description": "",
-      "effect": "",
+      "description": "Elven blood is not particularly strong in your veins and its features are barely noticeable.",
+      "effect": "You are not immune to sleep spells and do not gain a racial bonus on saving throws against enchantment spells or effects. You are not considered to have elven blood.",
       "special": ""
     },
     {
@@ -642,8 +640,8 @@
       "type": "Flaw",
       "source": "Dragon #325",
       "prerequisite": "Rage ability.",
-      "description": "",
-      "effect": "",
+      "description": "Your rages don't last very long.",
+      "effect": "Your rage only lasts for a number of rounds equal to your newly improved Constitution modifier.",
       "special": ""
     },
     {
@@ -651,8 +649,8 @@
       "type": "Flaw",
       "source": "Dragon #327",
       "prerequisite": "Ability to cast spells without preparation.",
-      "description": "",
-      "effect": "",
+      "description": "Your magical powers manifest within a limited realm of effects.",
+      "effect": "Choose two schools of magic to be your restricted schools. When you select spells to learn, you may not choose spells from these two restricted schools. In addition, you may not use wands or scrolls that cast spells from these restricted schools. You may not choose divination as one of your restricted schools.",
       "special": ""
     },
     {
@@ -674,21 +672,21 @@
       "special": ""
     },
     {
+      "name": "Short of Breath",
+      "type": "Flaw",
+      "source": "Dragon #333",
+      "prerequisite": "Constitution 13 or lower.",
+      "description": "You have limited stamina and you easily become exhausted by physical tasks.",
+      "effect": "Whenever you make a Strength check, a Constitution check to continue running, or use the skills Climb, Jump, or Swim, you must make a Fortitude save at the same DC as the skill or ability check. If you fail this save, you become fatigued.",
+      "special": ""
+    },
+    {
       "name": "Short Temper",
       "type": "Flaw",
       "source": "Dragon #328",
       "prerequisite": "",
       "description": "You become angry and flustered under stressful circumstances.",
       "effect": "If you suffer any damage during combat, you must make a DC 15 Will save or become enraged. While enraged you suffer a -2 penalty to your Armor Class and you cannot use any Charisma-, Dexterity-, or Intelligence-based skills (except for Balance, Escape Artist, Intimidate, and Ride), the Concentration skill, or any abilities that require patience or concentration. You cannot cast spells or activate magic items that require a command word, a spell trigger (such as a wand), or spell completion (such as a scroll) to function. You can use any feat you possess except Combat Expertise, item creation feats, and metamagic feats. This enraged state lasts for a number of rounds equal to 3 + your Constitution modifier and cannot be ended prematurely. This penalty stacks with those from the use of the barbarian rage ability, resulting in a -4 AC penalty.",
-      "special": ""
-    },
-    {
-      "name": "Short of Breath",
-      "type": "Flaw",
-      "source": "Dragon #333",
-      "prerequisite": "Constitution 13 or lower.",
-      "description": "",
-      "effect": "",
       "special": ""
     },
     {
@@ -714,8 +712,8 @@
       "type": "Flaw",
       "source": "Dragon #328",
       "prerequisite": "Constitution 13 or lower.",
-      "description": "",
-      "effect": "",
+      "description": "You do not heal quickly.",
+      "effect": "You do not normally recover hit points or temporary ability damage through natural healing. If you undergo complete bed rest for a full day, you may recover either 1 hit point or 1 point of temporary ability damage. In addition, any conjuration (healing) spell cast upon you works at only half its caster level. For example, a cure moderate wounds cast upon you by an 8th-level cleric would only heal 2d8+4 points of damage, instead of 2d8+8 points of damage.",
       "special": ""
     },
     {
@@ -723,8 +721,8 @@
       "type": "Flaw",
       "source": "Dragon #325",
       "prerequisite": "Rage ability.",
-      "description": "",
-      "effect": "",
+      "description": "It takes you longer to get worked up.",
+      "effect": "Entering a rage requires a full- round action",
       "special": ""
     },
     {
@@ -741,8 +739,8 @@
       "type": "Flaw",
       "source": "Dragon #328",
       "prerequisite": "Dwarf, gnome, or halfling.",
-      "description": "",
-      "effect": "",
+      "description": "You have short stubby fingers, which are not well-suited for grasping.",
+      "effect": "You suffer a -4 penalty on all attack rolls made when you use a light or one-handed weapon (natural weapons and unarmed attacks do not incur this penalty). In addition, you suffer a -4 penalty on all Disable Device, Open Lock, Sleight of Hand, and Use Rope checks.",
       "special": ""
     },
     {
@@ -750,8 +748,8 @@
       "type": "Flaw",
       "source": "Dragon #325",
       "prerequisite": "Inability to cast spells.",
-      "description": "",
-      "effect": "",
+      "description": "You fear magic, and avoid it when possible.",
+      "effect": "Whenever you see an item, effect, or location obviously created by magic (whether by spell or some other means), you become frightened. The frightened condition lasts until you can no longer see the obviously magical item, effect, or location.",
       "special": ""
     },
     {
@@ -759,8 +757,8 @@
       "type": "Flaw",
       "source": "Dragon #329",
       "prerequisite": "Track, wild empathy.",
-      "description": "",
-      "effect": "",
+      "description": "You were trained to use your abilities in only one type of environment and are uncomfortable and less competent in all others.",
+      "effect": "Choose one terrain type (aquatic, desert, forest, hills, marsh, mountain, or plains). That is your home terrain, in which you are most comfortable. In all other terrains you suffer a -2 penalty on all wild empathy checks, as well as on Search or Survival checks made to track. You may only use your camouflage and hide in plain sight abilities in your chosen terrain.",
       "special": ""
     },
     {
@@ -768,8 +766,8 @@
       "type": "Flaw",
       "source": "Dragon #324",
       "prerequisite": "Bardic music.",
-      "description": "",
-      "effect": "",
+      "description": "Your performance is lighthearted and has limited effect on others.",
+      "effect": "The save DC against your fascinate, suggestion, and mass suggestion abilities is half normal (rounded down). If you use the inspire courage, inspire greatness, or inspire heroics bardic music abilities, their benefits end as soon as you stop performing (rather than lasting for an additional 5 rounds).",
       "special": ""
     },
     {
@@ -777,8 +775,8 @@
       "type": "Flaw",
       "source": "Dragon #325",
       "prerequisite": "Rage ability.",
-      "description": "",
-      "effect": "",
+      "description": "You have no ability to control your rage.",
+      "effect": "You cannot enter a rage voluntarily. If during the previous round something dealt you damage, grappled or immobilized you, or you failed a saving throw against a spell, you may enter a rage; if you do not wish to enter a rage after such an event, you must succeed at a DC 15 Will save or enter the rage involuntarily. You cannot enter a rage more times per day than you are normally entitled to.",
       "special": ""
     },
     {
@@ -822,8 +820,8 @@
       "type": "Flaw",
       "source": "Dragon #326",
       "prerequisite": "Devotion to a specific deity.",
-      "description": "",
-      "effect": "",
+      "description": "You are attuned to your deity's weapon and no other.",
+      "effect": "You lose proficiency with all weapons except the favored weapon of your deity. This flaw does not grant you proficiency with that weapon.",
       "special": ""
     },
     {
@@ -831,8 +829,8 @@
       "type": "Flaw",
       "source": "Dragon #329",
       "prerequisite": "Survival 1 rank.",
-      "description": "",
-      "effect": "",
+      "description": "Accustomed only to a free life in the wild, you panic when captured or restrained.",
+      "effect": "Whenever you are entangled, pinned, or bound, you immediately become panicked. Your fear is alleviated 1 round after you are free of all bonds. Spells and effects that remove fear do not prevent this effect.",
       "special": ""
     }
   ]

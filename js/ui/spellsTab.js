@@ -174,9 +174,10 @@ class SpellsTab {
         });
 
         // Reset all slots button
-        this.container.addEventListener('click', (e) => {
+        this.container.addEventListener('click', async (e) => {
             if (e.target.id === 'resetAllSlotsBtn') {
-                if (confirm('Reset all spell slots to full?')) {
+                const confirmed = await InfoModal.confirm('Reset all spell slots to full?', 'Reset Spell Slots');
+                if (confirmed) {
                     character.resetSpellSlots();
                 }
             }
@@ -214,11 +215,12 @@ class SpellsTab {
         });
 
         // Delete spell button
-        this.container.addEventListener('click', (e) => {
+        this.container.addEventListener('click', async (e) => {
             if (e.target.classList.contains('delete-spell-btn')) {
                 const level = parseInt(e.target.dataset.level);
                 const index = parseInt(e.target.dataset.index);
-                if (confirm('Delete this spell?')) {
+                const confirmed = await InfoModal.confirm('Delete this spell?', 'Delete Spell', { confirmText: 'Delete', danger: true });
+                if (confirmed) {
                     character.removeSpell(level, index);
                 }
             }
@@ -481,7 +483,7 @@ class SpellsTab {
         const notes = document.getElementById('newSpellNotes').value.trim();
 
         if (!name) {
-            alert('Please enter a spell name');
+            InfoModal.toast('Please enter a spell name.', 'warning');
             return;
         }
 
@@ -552,7 +554,7 @@ class SpellsTab {
 
         if (!hasCasterClass) {
             document.getElementById('spellSlotsDisplay').innerHTML = `
-                <p class="info-text">No caster class detected. Add a Wizard, Cleric, Druid, Sorcerer, or Bard level to see spell slots.</p>
+                <p class="info-text">No caster class detected. Add a Wizard, Cleric, Druid, Sorcerer, Bard, Ranger, or Paladin level to see spell slots.</p>
             `;
             return;
         }
@@ -629,22 +631,41 @@ class SpellsTab {
         const accordion = document.getElementById('spellListAccordion');
         accordion.innerHTML = '';
 
+        // Get spells per day for slot capacity info
+        const spellsPerDay = stats.spellsPerDay || Array(10).fill(0);
+
         for (let level = 0; level <= 9; level++) {
             const spells = data.spells.spellsByLevel[level] || [];
             const isExpanded = this.expandedLevels.has(level);
             const preparedCount = spells.filter(s => s.prepared).length;
+            const slotsTotal = spellsPerDay[level] || 0;
+            const slotsUsed = (data.spells.slotsUsed || {})[level] || 0;
+            const slotsRemaining = slotsTotal - slotsUsed;
+
+            // Determine if this level is full (prepared >= slots per day)
+            const isFull = slotsTotal > 0 && preparedCount >= slotsTotal;
 
             const section = document.createElement('div');
             section.className = 'spell-level-section';
 
+            // Build remaining slots indicator
+            let remainingIndicator = '';
+            if (slotsTotal > 0) {
+                remainingIndicator = ` | ${slotsRemaining}/${slotsTotal} slots remaining`;
+                if (isFull) {
+                    remainingIndicator += ' (FULL)';
+                }
+            }
+
             // Header
             const header = document.createElement('div');
-            header.className = `spell-level-header ${isExpanded ? 'expanded' : ''}`;
+            header.className = `spell-level-header ${isExpanded ? 'expanded' : ''} ${isFull ? 'spell-level-full' : ''}`;
             header.dataset.level = level;
             header.innerHTML = `
                 <span class="spell-level-title">
                     ${level === 0 ? 'Cantrips (Level 0)' : `Level ${level} Spells`}
-                    <span class="spell-count">(${spells.length} known, ${preparedCount} prepared)</span>
+                    <span class="spell-count">(${spells.length} known, ${preparedCount} prepared${remainingIndicator})</span>
+                    ${isFull ? '<span class="spell-full-badge">FULL</span>' : ''}
                 </span>
                 <span class="accordion-icon">${isExpanded ? '▼' : '▶'}</span>
             `;

@@ -256,12 +256,12 @@ class ClassesTab {
         const hp = parseInt(hpInput.value);
 
         if (!className) {
-            alert('Please select a class');
+            InfoModal.toast('Please select a class', 'warning');
             return;
         }
 
         if (!hp || hp < 1) {
-            alert('Please enter valid HP');
+            InfoModal.toast('Please enter valid HP', 'warning');
             return;
         }
 
@@ -279,10 +279,15 @@ class ClassesTab {
         this.render();
     }
 
-    onRemoveLevel(e) {
+    async onRemoveLevel(e) {
         const level = parseInt(e.target.dataset.level);
 
-        if (confirm(`Remove level ${level}? This will also remove all subsequent levels.`)) {
+        const confirmed = await InfoModal.confirm(
+            `Remove level ${level}? This will also remove all subsequent levels.`,
+            'Remove Level',
+            { confirmText: 'Remove', danger: true }
+        );
+        if (confirmed) {
             const data = character.getData();
 
             // Remove this level and all higher levels
@@ -298,7 +303,7 @@ class ClassesTab {
         const nextLevel = data.level + 1;
 
         if (nextLevel > this.maxLevels) {
-            alert(`Maximum level (${this.maxLevels}) reached`);
+            InfoModal.toast(`Maximum level (${this.maxLevels}) reached`, 'warning');
             return;
         }
 

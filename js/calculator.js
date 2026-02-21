@@ -40,33 +40,51 @@ class Calculator {
     }
 
     // Calculate Base Attack Bonus
+    // D&D 3.5 rule: floor each class's BAB independently, then sum
     calculateBAB(characterData) {
-        let bab = 0;
-
+        // Group levels by class
+        const classLevels = {};
         characterData.classes.forEach(classLevel => {
-            const classData = this.dataLoader.getClass(classLevel.className);
+            if (!classLevels[classLevel.className]) {
+                classLevels[classLevel.className] = 0;
+            }
+            classLevels[classLevel.className]++;
+        });
+
+        let bab = 0;
+        Object.entries(classLevels).forEach(([className, levels]) => {
+            const classData = this.dataLoader.getClass(className);
             if (classData) {
                 const progression = classData.baseAttack;
-
                 if (progression === 'Full') {
-                    bab += 1;
+                    bab += levels; // +1 per level
                 } else if (progression === 'Good') {
-                    bab += 0.75;
+                    bab += Math.floor(levels * 0.75); // 3/4 per level, floored
                 } else if (progression === 'Poor') {
-                    bab += 0.5;
+                    bab += Math.floor(levels * 0.5); // 1/2 per level, floored
                 }
             }
         });
 
-        return Math.floor(bab);
+        return bab;
     }
 
     // Calculate save base values
+    // D&D 3.5 rule: Good = 2 + floor(levels/2), Poor = floor(levels/3)
+    // Each class contributes independently for multiclass characters
     calculateSaveBase(characterData, saveType) {
-        let base = 0;
-
+        // Group levels by class
+        const classLevels = {};
         characterData.classes.forEach(classLevel => {
-            const classData = this.dataLoader.getClass(classLevel.className);
+            if (!classLevels[classLevel.className]) {
+                classLevels[classLevel.className] = 0;
+            }
+            classLevels[classLevel.className]++;
+        });
+
+        let base = 0;
+        Object.entries(classLevels).forEach(([className, levels]) => {
+            const classData = this.dataLoader.getClass(className);
             if (classData) {
                 const saveMap = {
                     'fortitude': classData.fortSave,
@@ -75,11 +93,10 @@ class Calculator {
                 };
 
                 const progression = saveMap[saveType];
-
                 if (progression === 'Good') {
-                    base += 2 + Math.floor(1 * 0.5); // Level 1: 2, then +0.5 per level
+                    base += 2 + Math.floor(levels / 2);
                 } else if (progression === 'Poor') {
-                    base += Math.floor(1 * 0.333); // +0.333 per level
+                    base += Math.floor(levels / 3);
                 }
             }
         });
@@ -92,8 +109,16 @@ class Calculator {
         return characterData.classes.length;
     }
 
-    // NEW: Calculate all feat bonuses using feat parser
+    // Return cached feat bonuses if available, otherwise compute
     calculateFeatBonuses(characterData) {
+        if (this._cachedFeatBonuses) {
+            return this._cachedFeatBonuses;
+        }
+        return this._computeFeatBonuses(characterData);
+    }
+
+    // Compute all feat bonuses using feat parser
+    _computeFeatBonuses(characterData) {
         const bonuses = {
             fortitude: 0,
             reflex: 0,
@@ -463,12 +488,15 @@ class Calculator {
 
     // Calculate available skill points for a level
     calculateAvailableSkillPoints(characterData, level) {
-        if (level > characterData.classes.length) return 0;
+        const emptyResult = { total: 0, spent: 0, remaining: 0 };
+
+        if (level > characterData.classes.length || level < 1) return emptyResult;
 
         const classLevel = characterData.classes[level - 1];
-        const classData = this.dataLoader.getClass(classLevel.className);
+        if (!classLevel) return emptyResult;
 
-        if (!classData) return 0;
+        const classData = this.dataLoader.getClass(classLevel.className);
+        if (!classData) return emptyResult;
 
         // Get INT modifier at this level
         const abilities = this.calculateFinalAbilities(characterData);
@@ -668,11 +696,57 @@ class Calculator {
                 [4, 4, 4, 4, 4, 3, 0, 0, 0, 0], // Level 18
                 [4, 4, 4, 4, 4, 4, 0, 0, 0, 0], // Level 19
                 [4, 4, 4, 4, 4, 4, 0, 0, 0, 0]  // Level 20
+            ],
+            // Half-casters (Ranger, Paladin) — no cantrips, max 4th level spells, begin casting at level 4
+            // -1 = no access to this spell level; 0 = has access but 0 base slots (bonus spells only)
+            'Ranger': [
+                [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1], // Level 1
+                [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1], // Level 2
+                [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1], // Level 3
+                [-1,  0, -1, -1, -1, -1, -1, -1, -1, -1], // Level 4
+                [-1,  0, -1, -1, -1, -1, -1, -1, -1, -1], // Level 5
+                [-1,  1, -1, -1, -1, -1, -1, -1, -1, -1], // Level 6
+                [-1,  1, -1, -1, -1, -1, -1, -1, -1, -1], // Level 7
+                [-1,  1,  0, -1, -1, -1, -1, -1, -1, -1], // Level 8
+                [-1,  1,  0, -1, -1, -1, -1, -1, -1, -1], // Level 9
+                [-1,  1,  1, -1, -1, -1, -1, -1, -1, -1], // Level 10
+                [-1,  1,  1,  0, -1, -1, -1, -1, -1, -1], // Level 11
+                [-1,  1,  1,  1, -1, -1, -1, -1, -1, -1], // Level 12
+                [-1,  1,  1,  1, -1, -1, -1, -1, -1, -1], // Level 13
+                [-1,  2,  1,  1,  0, -1, -1, -1, -1, -1], // Level 14
+                [-1,  2,  1,  1,  1, -1, -1, -1, -1, -1], // Level 15
+                [-1,  2,  2,  1,  1, -1, -1, -1, -1, -1], // Level 16
+                [-1,  3,  2,  2,  1, -1, -1, -1, -1, -1], // Level 17
+                [-1,  3,  2,  2,  1, -1, -1, -1, -1, -1], // Level 18
+                [-1,  3,  3,  3,  2, -1, -1, -1, -1, -1], // Level 19
+                [-1,  3,  3,  3,  3, -1, -1, -1, -1, -1]  // Level 20
+            ],
+            'Paladin': [
+                [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1], // Level 1
+                [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1], // Level 2
+                [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1], // Level 3
+                [-1,  0, -1, -1, -1, -1, -1, -1, -1, -1], // Level 4
+                [-1,  0, -1, -1, -1, -1, -1, -1, -1, -1], // Level 5
+                [-1,  1, -1, -1, -1, -1, -1, -1, -1, -1], // Level 6
+                [-1,  1, -1, -1, -1, -1, -1, -1, -1, -1], // Level 7
+                [-1,  1,  0, -1, -1, -1, -1, -1, -1, -1], // Level 8
+                [-1,  1,  0, -1, -1, -1, -1, -1, -1, -1], // Level 9
+                [-1,  1,  1, -1, -1, -1, -1, -1, -1, -1], // Level 10
+                [-1,  1,  1,  0, -1, -1, -1, -1, -1, -1], // Level 11
+                [-1,  1,  1,  1, -1, -1, -1, -1, -1, -1], // Level 12
+                [-1,  1,  1,  1, -1, -1, -1, -1, -1, -1], // Level 13
+                [-1,  2,  1,  1,  0, -1, -1, -1, -1, -1], // Level 14
+                [-1,  2,  1,  1,  1, -1, -1, -1, -1, -1], // Level 15
+                [-1,  2,  2,  1,  1, -1, -1, -1, -1, -1], // Level 16
+                [-1,  3,  2,  2,  1, -1, -1, -1, -1, -1], // Level 17
+                [-1,  3,  2,  2,  1, -1, -1, -1, -1, -1], // Level 18
+                [-1,  3,  3,  3,  2, -1, -1, -1, -1, -1], // Level 19
+                [-1,  3,  3,  3,  3, -1, -1, -1, -1, -1]  // Level 20
             ]
         };
     }
 
-    // Calculate bonus spells from high ability scores
+    // Calculate bonus spells from high ability scores (D&D 3.5 PHB Table 1-1)
     calculateBonusSpells(abilityScore, spellLevel) {
         if (spellLevel === 0) return 0; // No bonus cantrips
 
@@ -680,17 +754,30 @@ class Calculator {
         const minScore = 10 + spellLevel;
         if (abilityScore < minScore) return 0;
 
-        // Bonus spells = (ability modifier - spell level + 1) / 4, minimum 0
+        // D&D 3.5 formula: bonus = 1 + floor((modifier - spellLevel) / 4)
+        // e.g., INT 14 (mod +2), level 1: 1 + floor(1/4) = 1 bonus spell
+        // e.g., INT 20 (mod +5), level 1: 1 + floor(4/4) = 2 bonus spells
         const modifier = Math.floor((abilityScore - 10) / 2);
-        const bonus = Math.floor((modifier - spellLevel + 1) / 4);
+        if (modifier < spellLevel) return 0;
 
-        return Math.max(0, bonus);
+        return 1 + Math.floor((modifier - spellLevel) / 4);
     }
 
     // Get spells per day for a character's class
     getSpellsPerDay(characterData, className, abilities) {
         const tables = this.getSpellProgressionTable();
-        const castingAbility = characterData.spells.castingAbility || 'int';
+
+        // Auto-detect casting ability based on class
+        const classCastingAbility = {
+            'Wizard': 'int',
+            'Cleric': 'wis',
+            'Druid': 'wis',
+            'Sorcerer': 'cha',
+            'Bard': 'cha',
+            'Ranger': 'wis',
+            'Paladin': 'cha'
+        };
+        const castingAbility = classCastingAbility[className] || characterData.spells.castingAbility || 'int';
         const abilityScore = abilities[castingAbility].score;
 
         // Find class levels for this class
@@ -709,8 +796,9 @@ class Calculator {
         const baseSpells = tables[className][classLevel - 1] || Array(10).fill(0);
 
         // Add bonus spells from high ability score
+        // -1 means no access to this spell level; 0 means access with 0 base slots (bonus spells only)
         const spellsPerDay = baseSpells.map((count, spellLevel) => {
-            if (count === 0) return 0; // Can't cast this level yet
+            if (count < 0) return 0; // No access to this spell level
             const bonus = this.calculateBonusSpells(abilityScore, spellLevel);
             return count + bonus;
         });
@@ -729,15 +817,17 @@ class Calculator {
         totalSlots += baseFeatSlots;
         breakdown.push({ source: 'Base (1st + every 3 levels)', slots: baseFeatSlots });
 
-        // Bonus feats from classes
-        characterData.classes.forEach((classLevel, index) => {
+        // Bonus feats from classes (count each class only once)
+        const countedClasses = new Set();
+        characterData.classes.forEach((classLevel) => {
             const className = classLevel.className;
-            const classData = this.dataLoader.getClass(className);
+            if (countedClasses.has(className)) return;
+            countedClasses.add(className);
 
             if (className === 'Fighter') {
                 // Fighter gets bonus feat at 1st, 2nd, and every 2 levels thereafter
                 const fighterLevels = characterData.classes.filter(c => c.className === 'Fighter').length;
-                const bonusFeats = 1 + Math.floor((fighterLevels + 1) / 2);
+                const bonusFeats = 1 + Math.floor(fighterLevels / 2);
                 totalSlots += bonusFeats;
                 breakdown.push({ source: 'Fighter Bonus Feats', slots: bonusFeats });
             } else if (className === 'Wizard') {
@@ -747,7 +837,6 @@ class Calculator {
                 totalSlots += bonusFeats;
                 breakdown.push({ source: 'Wizard Bonus Feats', slots: bonusFeats });
             }
-            // Add more class bonus feats as needed
         });
 
         // Human bonus feat
@@ -775,10 +864,11 @@ class Calculator {
             return { qualifies: true, missing: [] };
         }
 
-        const prereqText = featData.prerequisite.toLowerCase();
+        const prereqText = featData.prerequisite;
+        const prereqLower = prereqText.toLowerCase();
 
         // Check BAB requirement
-        const babMatch = prereqText.match(/base attack bonus \+?(\d+)/);
+        const babMatch = prereqLower.match(/base attack bonus \+?(\d+)/);
         if (babMatch) {
             const requiredBAB = parseInt(babMatch[1]);
             const currentBAB = this.calculateBAB(characterData);
@@ -787,44 +877,143 @@ class Calculator {
             }
         }
 
-        // Check ability score requirements
-        const abilityNames = ['str', 'dex', 'con', 'int', 'wis', 'cha'];
-        abilityNames.forEach(ability => {
-            const abilityUpper = ability.toUpperCase();
-            const regex = new RegExp(`${ability}(?:ength|exterity|onstitution|ntelligence|isdom|harisma)?\\s+(\\d+)`, 'i');
-            const match = prereqText.match(regex);
-            if (match) {
-                const required = parseInt(match[1]);
-                const current = abilities[ability].score;
-                if (current < required) {
-                    missing.push(`${abilityUpper} ${required} (current: ${current})`);
+        // Check ability score requirements — handle both abbreviated and full names
+        const abilityMap = {
+            'str': ['str', 'strength'],
+            'dex': ['dex', 'dexterity'],
+            'con': ['con', 'constitution'],
+            'int': ['int', 'intelligence'],
+            'wis': ['wis', 'wisdom'],
+            'cha': ['cha', 'charisma']
+        };
+
+        Object.entries(abilityMap).forEach(([key, names]) => {
+            for (const name of names) {
+                const regex = new RegExp(`\\b${name}\\s+(\\d+)`, 'i');
+                const match = prereqText.match(regex);
+                if (match) {
+                    const required = parseInt(match[1]);
+                    const current = abilities[key].score;
+                    if (current < required) {
+                        missing.push(`${key.toUpperCase()} ${required} (current: ${current})`);
+                    }
+                    break; // Only check once per ability
                 }
             }
         });
 
-        // Check for other feats
+        // Check feat prerequisites dynamically by extracting feat names from text
         const currentFeats = characterData.feats ? characterData.feats.map(f => f.name.toLowerCase()) : [];
+        const allKnownFeats = this.dataLoader.gameData.feats
+            ? new Map([...this.dataLoader.gameData.feats].map(([k, v]) => [k.toLowerCase(), k]))
+            : new Map();
 
-        // Common feat prerequisites (simplified - would need more complex parsing for all cases)
-        const featNames = [
-            'power attack', 'cleave', 'great cleave', 'combat expertise', 'improved trip',
-            'weapon focus', 'weapon finesse', 'dodge', 'mobility', 'spring attack',
-            'blind-fight', 'improved initiative', 'lightning reflexes', 'iron will'
-        ];
+        // Extract feat names from prerequisite text by matching against the feat database
+        // Sort by length descending so longer feat names match first (e.g., "Greater Weapon Focus" before "Weapon Focus")
+        const sortedFeatNames = [...allKnownFeats.keys()].sort((a, b) => b.length - a.length);
 
-        featNames.forEach(featName => {
-            if (prereqText.includes(featName)) {
-                if (!currentFeats.includes(featName)) {
-                    missing.push(featName.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '));
+        // Track which portions of the text we've already matched to avoid sub-matches
+        const matchedRanges = [];
+
+        for (const featNameLower of sortedFeatNames) {
+            // Skip very short names that might false-match (1-2 char feats)
+            if (featNameLower.length < 3) continue;
+
+            const idx = prereqLower.indexOf(featNameLower);
+            if (idx === -1) continue;
+
+            // Check this range hasn't already been matched by a longer feat name
+            const endIdx = idx + featNameLower.length;
+            const alreadyMatched = matchedRanges.some(
+                ([start, end]) => idx >= start && idx < end
+            );
+            if (alreadyMatched) continue;
+
+            // Don't match the feat's own name as a prerequisite
+            if (featNameLower === featData.name.toLowerCase()) continue;
+
+            matchedRanges.push([idx, endIdx]);
+
+            // Handle "Weapon Focus (any)" or "Weapon Focus with selected weapon" patterns
+            if (prereqLower.includes(featNameLower + ' (any)') ||
+                prereqLower.includes(featNameLower + ' with selected')) {
+                // Check if character has ANY variant of this feat
+                const hasAnyVariant = currentFeats.some(f => f.startsWith(featNameLower));
+                if (!hasAnyVariant) {
+                    const displayName = allKnownFeats.get(featNameLower) || featNameLower;
+                    missing.push(displayName);
+                }
+            } else {
+                if (!currentFeats.includes(featNameLower)) {
+                    const displayName = allKnownFeats.get(featNameLower) || featNameLower;
+                    missing.push(displayName);
                 }
             }
-        });
+        }
 
-        // Check skill rank requirements
-        const skillMatch = prereqText.match(/(\w+(?:\s+\w+)*)\s+(\d+)\s+ranks/i);
-        if (skillMatch) {
-            const skillName = skillMatch[1].trim();
+        // Check class level requirements
+        // Patterns: "Fighter level 4th", "caster level 5th", "3rd-level bard", "4th-level fighter"
+
+        // Pattern 1: "Fighter level 4th"
+        let clMatch;
+        const pattern1 = /(\w+)\s+level\s+(\d+)(?:st|nd|rd|th)?/gi;
+        while ((clMatch = pattern1.exec(prereqText)) !== null) {
+            const className = clMatch[1];
+            const requiredLevel = parseInt(clMatch[2]);
+
+            if (className.toLowerCase() === 'caster') {
+                // Caster level check
+                const casterLevel = characterData.spells.casterLevel || 0;
+                if (casterLevel < requiredLevel) {
+                    missing.push(`Caster level ${requiredLevel} (current: ${casterLevel})`);
+                }
+            } else {
+                // Specific class level check
+                const classLevels = characterData.classes.filter(
+                    c => c.className.toLowerCase() === className.toLowerCase()
+                ).length;
+                if (classLevels < requiredLevel) {
+                    const displayClass = className.charAt(0).toUpperCase() + className.slice(1);
+                    missing.push(`${displayClass} level ${requiredLevel} (current: ${classLevels})`);
+                }
+            }
+        }
+
+        // Pattern 2: "4th-level fighter"
+        const pattern2 = /(\d+)(?:st|nd|rd|th)?[- ]level\s+(\w+)/gi;
+        while ((clMatch = pattern2.exec(prereqText)) !== null) {
+            const requiredLevel = parseInt(clMatch[1]);
+            const className = clMatch[2];
+
+            if (className.toLowerCase() === 'caster') {
+                const casterLevel = characterData.spells.casterLevel || 0;
+                if (casterLevel < requiredLevel) {
+                    missing.push(`Caster level ${requiredLevel} (current: ${casterLevel})`);
+                }
+            } else {
+                const classLevels = characterData.classes.filter(
+                    c => c.className.toLowerCase() === className.toLowerCase()
+                ).length;
+                if (classLevels < requiredLevel) {
+                    const displayClass = className.charAt(0).toUpperCase() + className.slice(1);
+                    missing.push(`${displayClass} level ${requiredLevel} (current: ${classLevels})`);
+                }
+            }
+        }
+
+        // Check skill rank requirements — handle MULTIPLE skills
+        // Patterns: "Tumble 5 ranks", "Tumble 5 ranks, Balance 5 ranks"
+        const skillRankPattern = /([\w\s]+?)\s+(\d+)\s+ranks/gi;
+        let skillMatch;
+        while ((skillMatch = skillRankPattern.exec(prereqText)) !== null) {
+            let skillName = skillMatch[1].trim();
             const requiredRanks = parseInt(skillMatch[2]);
+
+            // Clean up skill name — remove leading comma/and
+            skillName = skillName.replace(/^[,;\s]+/, '').replace(/^and\s+/i, '').trim();
+
+            // Skip if this looks like it's not actually a skill name
+            if (skillName.length < 2) continue;
 
             // Find matching skill (case-insensitive)
             const skill = Object.entries(characterData.skills).find(
@@ -832,19 +1021,23 @@ class Calculator {
             );
 
             if (skill) {
-                const [_, skillData] = skill;
+                const [matchedName, skillData] = skill;
                 const currentRanks = skillData.totalRanks || 0;
                 if (currentRanks < requiredRanks) {
-                    missing.push(`${skillName} ${requiredRanks} ranks (current: ${currentRanks})`);
+                    missing.push(`${matchedName} ${requiredRanks} ranks (current: ${currentRanks})`);
                 }
             } else {
+                // Skill not on character sheet — report as missing
                 missing.push(`${skillName} ${requiredRanks} ranks`);
             }
         }
 
+        // Deduplicate missing entries
+        const uniqueMissing = [...new Set(missing)];
+
         return {
-            qualifies: missing.length === 0,
-            missing: missing
+            qualifies: uniqueMissing.length === 0,
+            missing: uniqueMissing
         };
     }
 
@@ -959,6 +1152,9 @@ class Calculator {
 
     // Calculate all character stats
     calculateAll(characterData) {
+        // Cache feat bonuses for this calculation cycle (avoids ~44 redundant calls)
+        this._cachedFeatBonuses = this._computeFeatBonuses(characterData);
+
         // Process flaw penalties first
         const flawPenalties = this.processFlawPenalties(characterData);
 
@@ -975,7 +1171,7 @@ class Calculator {
 
         // Calculate spells per day for primary caster class
         let spellsPerDay = Array(10).fill(0);
-        const casterClasses = ['Wizard', 'Cleric', 'Druid', 'Sorcerer', 'Bard'];
+        const casterClasses = ['Wizard', 'Cleric', 'Druid', 'Sorcerer', 'Bard', 'Ranger', 'Paladin'];
 
         // Find primary caster class (first one in character's class list)
         for (const cls of characterData.classes) {
@@ -984,6 +1180,9 @@ class Calculator {
                 break;
             }
         }
+
+        // Clear feat bonus cache after calculation cycle
+        this._cachedFeatBonuses = null;
 
         return {
             abilities,

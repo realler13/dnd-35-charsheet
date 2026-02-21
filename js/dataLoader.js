@@ -430,7 +430,8 @@ class DataLoader {
                 this.loadCalcData(),
                 this.loadTablesData(),
                 this.loadWeaponData(),
-                this.loadCreatureData(),
+                // loadCreatureData() removed — CSV adds ~500 monsters to the race dropdown.
+                // JSON races (data/json/races.json) now has curated playable races only.
                 // Load extended game data (all JSON now)
                 this.loadFeatData(),
                 this.loadFlawData(),
@@ -650,11 +651,15 @@ class DataLoader {
             this.gameData.experienceTables = [];
 
             // Carrying capacity table (STR -> Light, Medium, Heavy, Lift, Drag)
+            // The STR column in the CSV has an empty header, so we use a counter
+            // since rows are in sequential STR order (1, 2, 3, ..., 29)
+            let strScore = 0;
             data.forEach(row => {
-                const str = parseInt(row['Light']);
-                if (str) {
-                    this.gameData.carryingCapacity.set(str, {
-                        light: parseInt(row['Light']) || 0,
+                const light = parseInt(row['Light']);
+                if (light > 0) {
+                    strScore++;
+                    this.gameData.carryingCapacity.set(strScore, {
+                        light: light,
                         medium: parseInt(row['Medium']) || 0,
                         heavy: parseInt(row['Heavy']) || 0,
                         lift: parseInt(row['Lift']) || 0,

@@ -45,7 +45,7 @@ class FeatsTab {
 
             <div class="card">
                 <h2>Character Flaws</h2>
-                <p class="flaw-info-text">In D&D 3.5, characters may take up to 2 flaws. Each flaw grants an additional bonus feat.</p>
+                <p class="flaw-info-text">In 3.5 edition, characters may take up to 2 flaws. Each flaw grants an additional bonus feat.</p>
                 <div class="feats-controls">
                     <button id="addFlawBtn" class="btn btn-primary">Add Flaw</button>
                 </div>
@@ -228,10 +228,6 @@ class FeatsTab {
                 this.closeAddFeatModal();
             } else if (e.target.id === 'cancelAddFlaw') {
                 this.closeAddFlawModal();
-            } else if (e.target.id === 'closeViewFeat') {
-                this.closeViewFeatModal();
-            } else if (e.target.id === 'closeViewFlaw') {
-                this.closeViewFlawModal();
             } else if (e.target.closest('.feat-item')) {
                 const featItem = e.target.closest('.feat-item');
                 if (featItem.dataset.feat) {
@@ -718,13 +714,13 @@ class FeatsTab {
             if (choiceInfo.multiSelect) {
                 // Multi-select feat
                 if (!this.selectedFeatChoices || this.selectedFeatChoices.length !== (choiceInfo.maxSelections || 1)) {
-                    alert(`Please select exactly ${choiceInfo.maxSelections || 1} option(s) for this feat.`);
+                    InfoModal.toast(`Please select exactly ${choiceInfo.maxSelections || 1} option(s) for this feat.`, 'warning');
                     return;
                 }
             } else {
                 // Single select feat
                 if (!this.selectedFeatChoice) {
-                    alert('Please select an option for this feat.');
+                    InfoModal.toast('Please select an option for this feat.', 'warning');
                     return;
                 }
             }
@@ -733,7 +729,7 @@ class FeatsTab {
         // Check if already has this feat
         const alreadyHas = data.feats.some(f => f.name === this.selectedFeat);
         if (alreadyHas && !featData.multiple) {
-            alert('You already have this feat and it cannot be taken multiple times.');
+            InfoModal.toast('You already have this feat and it cannot be taken multiple times.', 'warning');
             return;
         }
 
@@ -759,15 +755,13 @@ class FeatsTab {
 
         // Special handling for Skill Knowledge - add skills to characterClassSkills
         if (this.selectedFeat === 'Skill Knowledge' && this.selectedFeatChoices) {
-            if (!data.characterClassSkills) {
-                data.characterClassSkills = [];
-            }
+            const classSkills = data.characterClassSkills || [];
             this.selectedFeatChoices.forEach(skill => {
-                if (!data.characterClassSkills.includes(skill)) {
-                    data.characterClassSkills.push(skill);
+                if (!classSkills.includes(skill)) {
+                    classSkills.push(skill);
                 }
             });
-            character.updateData(data);
+            character.updateCharacterClassSkills(classSkills);
         }
 
         // Add feat to character
@@ -777,22 +771,22 @@ class FeatsTab {
         this.render(this.stats);
     }
 
-    removeFeat(index) {
-        if (confirm('Remove this feat?')) {
+    async removeFeat(index) {
+        const confirmed = await InfoModal.confirm('Remove this feat?', 'Remove Feat', { confirmText: 'Remove', danger: true });
+        if (confirmed) {
             const data = character.getData();
             const feat = data.feats[index];
 
             // Special handling for Skill Knowledge - remove skills from characterClassSkills
             if (feat && feat.name === 'Skill Knowledge' && feat.choices) {
-                if (data.characterClassSkills) {
-                    feat.choices.forEach(skill => {
-                        const skillIndex = data.characterClassSkills.indexOf(skill);
-                        if (skillIndex !== -1) {
-                            data.characterClassSkills.splice(skillIndex, 1);
-                        }
-                    });
-                    character.updateData(data);
-                }
+                const classSkills = data.characterClassSkills || [];
+                feat.choices.forEach(skill => {
+                    const skillIndex = classSkills.indexOf(skill);
+                    if (skillIndex !== -1) {
+                        classSkills.splice(skillIndex, 1);
+                    }
+                });
+                character.updateCharacterClassSkills(classSkills);
             }
 
             character.removeFeat(index);
@@ -801,56 +795,9 @@ class FeatsTab {
     }
 
     viewFeatDetails(featName) {
-        // Check current feats first
         const data = character.getData();
-        const currentFeat = data.feats.find(f => f.name === featName);
-
-        // Then check database
-        const featData = dataLoader.gameData.feats.get(featName);
-        if (!featData && !currentFeat) return;
-
-        const modal = document.getElementById('viewFeatModal');
-        modal.classList.remove('hidden');
-
-        const feat = featData || currentFeat;
-
-        document.getElementById('viewFeatName').textContent = feat.name;
-        document.getElementById('viewFeatType').textContent = feat.type || 'General';
-
-        // Add source to type display if available
-        if (featData && featData.source) {
-            document.getElementById('viewFeatType').textContent = `${feat.type || 'General'} (${featData.source})`;
-        }
-
-        document.getElementById('viewFeatPrereq').textContent = feat.prerequisite || 'None';
-
-        if (featData) {
-            const benefit = featData.benefit.replace(/<[^>]*>/g, '').trim();
-            document.getElementById('viewFeatBenefit').textContent = benefit || 'No description available.';
-
-            if (featData.normal) {
-                const normal = featData.normal.replace(/<[^>]*>/g, '').trim();
-                document.getElementById('viewFeatNormal').innerHTML = `<p><strong>Normal:</strong> ${normal}</p>`;
-            } else {
-                document.getElementById('viewFeatNormal').innerHTML = '';
-            }
-
-            if (featData.special) {
-                const special = featData.special.replace(/<[^>]*>/g, '').trim();
-                document.getElementById('viewFeatSpecial').innerHTML = `<p><strong>Special:</strong> ${special}</p>`;
-            } else {
-                document.getElementById('viewFeatSpecial').innerHTML = '';
-            }
-        } else {
-            document.getElementById('viewFeatBenefit').textContent = 'No description available.';
-            document.getElementById('viewFeatNormal').innerHTML = '';
-            document.getElementById('viewFeatSpecial').innerHTML = '';
-        }
-    }
-
-    closeViewFeatModal() {
-        document.getElementById('viewFeatModal').classList.remove('hidden');
-        document.getElementById('viewFeatModal').classList.add('hidden');
+        const stats = this.stats || calculator.calculateAll(data);
+        showFeatDetail(featName, data, stats);
     }
 
     // ========== FLAW METHODS ==========
@@ -896,7 +843,7 @@ class FeatsTab {
         const flaws = data.flaws || [];
 
         if (flaws.length >= 2) {
-            alert('You already have the maximum number of flaws (2). Remove a flaw before adding a new one.');
+            InfoModal.toast('Maximum flaws (2) reached. Remove a flaw before adding a new one.', 'warning');
             return;
         }
 
@@ -1013,7 +960,7 @@ class FeatsTab {
         // Check if already has this flaw
         const alreadyHas = data.flaws.some(f => f.name === this.selectedFlaw);
         if (alreadyHas) {
-            alert('You already have this flaw.');
+            InfoModal.toast('You already have this flaw.', 'warning');
             return;
         }
 
@@ -1029,48 +976,47 @@ class FeatsTab {
         this.render(this.stats);
     }
 
-    removeFlaw(index) {
-        if (confirm('Remove this flaw?')) {
+    async removeFlaw(index) {
+        const confirmed = await InfoModal.confirm('Remove this flaw?', 'Remove Flaw', { confirmText: 'Remove', danger: true });
+        if (confirmed) {
             character.removeFlaw(index);
             this.render(this.stats);
         }
     }
 
     viewFlawDetails(flawName) {
-        // Check current flaws first
         const data = character.getData();
         const currentFlaw = data.flaws.find(f => f.name === flawName);
-
-        // Then check database
         const flawData = dataLoader.gameData.flaws.get(flawName);
         if (!flawData && !currentFlaw) return;
 
-        const modal = document.getElementById('viewFlawModal');
-        modal.classList.remove('hidden');
-
         const flaw = flawData || currentFlaw;
 
-        document.getElementById('viewFlawName').textContent = flaw.name;
-        document.getElementById('viewFlawSource').textContent = flaw.source || 'Unknown';
-        document.getElementById('viewFlawDescription').textContent = flaw.description || 'No description available.';
-        document.getElementById('viewFlawEffect').textContent = flaw.effect || 'No effect description available.';
+        const tags = [{ text: 'Flaw', color: 'var(--danger)' }];
+        if (flaw.source) {
+            tags.push({ text: flaw.source, color: 'var(--parchment-dim)' });
+        }
 
+        const sections = [];
+        if (flaw.description) {
+            sections.push({ label: 'Description', content: flaw.description });
+        }
+        if (flaw.effect) {
+            sections.push({ label: 'Effect', content: flaw.effect, type: 'highlight' });
+        }
         if (flaw.prerequisite) {
-            document.getElementById('viewFlawPrereq').innerHTML = `<p><strong>Prerequisites:</strong> ${flaw.prerequisite}</p>`;
-        } else {
-            document.getElementById('viewFlawPrereq').innerHTML = '';
+            sections.push({ label: 'Prerequisites', content: flaw.prerequisite });
         }
-
         if (flaw.special) {
-            document.getElementById('viewFlawSpecial').innerHTML = `<p><strong>Special:</strong> ${flaw.special}</p>`;
-        } else {
-            document.getElementById('viewFlawSpecial').innerHTML = '';
+            sections.push({ label: 'Special', content: flaw.special });
         }
-    }
 
-    closeViewFlawModal() {
-        document.getElementById('viewFlawModal').classList.remove('hidden');
-        document.getElementById('viewFlawModal').classList.add('hidden');
+        InfoModal.showDetail({
+            title: flaw.name,
+            subtitle: 'Character Flaw',
+            tags: tags,
+            sections: sections
+        });
     }
 
     // Helper: Get CSS class for feat category

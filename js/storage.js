@@ -65,7 +65,9 @@ class CharacterStorage {
             console.error('Error saving character:', error);
             // Check if quota exceeded
             if (error.name === 'QuotaExceededError') {
-                alert('Storage quota exceeded. Please export your character to a file.');
+                if (window.InfoModal) {
+                    InfoModal.toast('Storage quota exceeded. Please export your character to a file.', 'error', 6000);
+                }
             }
             return false;
         }

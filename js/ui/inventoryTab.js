@@ -255,9 +255,11 @@ class InventoryTab {
                 this.openCustomItemModal();
             } else if (e.target.classList.contains('delete-item-btn')) {
                 const index = parseInt(e.target.dataset.index);
-                if (confirm('Delete this item?')) {
-                    character.removeInventoryItem(index);
-                }
+                InfoModal.confirm('Delete this item?', 'Delete Item', { confirmText: 'Delete', danger: true }).then(confirmed => {
+                    if (confirmed) {
+                        character.removeInventoryItem(index);
+                    }
+                });
             }
         });
 
@@ -584,7 +586,7 @@ class InventoryTab {
                               (data.inventory.wealth.copper / 100);
 
         if (currentWealth < totalCost) {
-            alert('Not enough money to buy this item!');
+            InfoModal.toast('Not enough money to buy this item!', 'error');
             return;
         }
 
@@ -618,7 +620,7 @@ class InventoryTab {
             notes: 'Purchased'
         });
 
-        alert(`Purchased ${quantity}× ${name} for ${totalCost.toFixed(2)} GP!`);
+        InfoModal.toast(`Purchased ${quantity}\u00D7 ${name} for ${totalCost.toFixed(2)} GP!`, 'success');
         this.closeItemDatabaseModal();
     }
 
@@ -681,7 +683,7 @@ class InventoryTab {
         const notes = document.getElementById('customItemNotes').value.trim();
 
         if (!name) {
-            alert('Please enter an item name');
+            InfoModal.toast('Please enter an item name.', 'warning');
             return;
         }
 

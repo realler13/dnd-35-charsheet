@@ -181,6 +181,32 @@ const FEAT_CHOICES = {
             return dataLoader.gameData.skills.map(skill => skill.name).sort();
         },
         note: 'Choose any two skills. They become class skills for you.'
+    },
+
+    // Weapon proficiency feats
+    'Exotic Weapon Proficiency': {
+        type: FEAT_CHOICE_TYPES.WEAPON,
+        label: 'Choose Exotic Weapon',
+        getOptions: () => {
+            const weapons = Array.from(dataLoader.gameData.weapons.values())
+                .filter(w => w.proficiency === 'Exotic' || w.category === 'Exotic')
+                .map(w => w.name)
+                .sort();
+            // Fallback: if filtering yields nothing, show all weapons
+            return weapons.length > 0 ? weapons : Array.from(dataLoader.gameData.weapons.keys()).sort();
+        }
+    },
+
+    'Martial Weapon Proficiency': {
+        type: FEAT_CHOICE_TYPES.WEAPON,
+        label: 'Choose Martial Weapon',
+        getOptions: () => {
+            const weapons = Array.from(dataLoader.gameData.weapons.values())
+                .filter(w => w.proficiency === 'Martial' || w.category === 'Martial')
+                .map(w => w.name)
+                .sort();
+            return weapons.length > 0 ? weapons : Array.from(dataLoader.gameData.weapons.keys()).sort();
+        }
     }
 };
 
@@ -198,4 +224,73 @@ function getFeatChoiceInfo(featName) {
 function formatFeatName(featName, choice) {
     if (!choice) return featName;
     return `${featName} (${choice})`;
+}
+
+// Auto-detect if a feat needs a choice based on its benefit/description text.
+// Used as a fallback when a feat isn't in FEAT_CHOICES.
+function detectFeatChoices(featData) {
+    if (!featData) return null;
+
+    const text = ((featData.benefit || '') + ' ' + (featData.description || '')).toLowerCase();
+
+    // Weapon choice patterns
+    if (/choose\s+(one\s+)?type\s+of\s+weapon/i.test(text) ||
+        /select\s+(a|one)\s+weapon/i.test(text) ||
+        /pick\s+(a|one)\s+weapon/i.test(text) ||
+        /applies\s+to\s+one\s+weapon/i.test(text)) {
+        return {
+            type: FEAT_CHOICE_TYPES.WEAPON,
+            label: 'Choose Weapon',
+            getOptions: () => Array.from(dataLoader.gameData.weapons.keys()).sort(),
+            autoDetected: true
+        };
+    }
+
+    // Skill choice patterns
+    if (/choose\s+(a|one)\s+skill/i.test(text) ||
+        /select\s+(a|one)\s+skill/i.test(text) ||
+        /pick\s+(a|one)\s+skill/i.test(text) ||
+        /applies\s+to\s+one\s+skill/i.test(text)) {
+        return {
+            type: FEAT_CHOICE_TYPES.SKILL,
+            label: 'Choose Skill',
+            getOptions: () => dataLoader.gameData.skills.map(s => s.name).sort(),
+            autoDetected: true
+        };
+    }
+
+    // School of magic choice patterns
+    if (/choose\s+(a|one)\s+school\s+of\s+magic/i.test(text) ||
+        /select\s+(a|one)\s+school/i.test(text) ||
+        /pick\s+(a|one|an?)\s+(arcane\s+)?school/i.test(text)) {
+        return {
+            type: FEAT_CHOICE_TYPES.SCHOOL,
+            label: 'Choose School',
+            getOptions: () => [
+                'Abjuration', 'Conjuration', 'Divination', 'Enchantment',
+                'Evocation', 'Illusion', 'Necromancy', 'Transmutation'
+            ],
+            autoDetected: true
+        };
+    }
+
+    // Energy type choice patterns
+    if (/choose\s+(a|one)\s+energy\s+type/i.test(text) ||
+        /select\s+(a|one)\s+(type\s+of\s+)?energy/i.test(text)) {
+        return {
+            type: FEAT_CHOICE_TYPES.ENERGY_TYPE,
+            label: 'Choose Energy Type',
+            getOptions: () => ['Acid', 'Cold', 'Electricity', 'Fire', 'Sonic'],
+            autoDetected: true
+        };
+    }
+
+    return null;
+}
+
+// Extended lookup: check FEAT_CHOICES first, then fall back to auto-detection
+function getFeatChoiceInfoExtended(featName, featData) {
+    const explicit = FEAT_CHOICES[featName];
+    if (explicit) return explicit;
+    return detectFeatChoices(featData);
 }

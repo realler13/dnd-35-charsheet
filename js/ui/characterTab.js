@@ -369,9 +369,9 @@ class CharacterTab {
                         input.value = '';
                         this.renderLanguages();
                     } else if (result === 'limit') {
-                        alert('You have reached your language limit! Your Intelligence modifier determines how many bonus languages you can learn. Remove a language or increase your Intelligence to add more.');
+                        InfoModal.toast('Language limit reached! Your Intelligence modifier determines bonus languages.', 'warning', 5000);
                     } else {
-                        alert('Language already known!');
+                        InfoModal.toast('Language already known!', 'warning');
                     }
                 }
             });
@@ -391,10 +391,13 @@ class CharacterTab {
         this.container.addEventListener('click', (e) => {
             if (e.target.classList.contains('remove-language-btn')) {
                 const languageName = e.target.dataset.language;
-                if (confirm(`Remove ${languageName}?`)) {
-                    character.removeLanguage(languageName);
-                    this.renderLanguages();
-                }
+                InfoModal.confirm(`Remove ${languageName}?`, 'Remove Language', { confirmText: 'Remove', danger: true })
+                    .then(confirmed => {
+                        if (confirmed) {
+                            character.removeLanguage(languageName);
+                            this.renderLanguages();
+                        }
+                    });
             }
         });
 

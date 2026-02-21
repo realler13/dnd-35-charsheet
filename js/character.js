@@ -548,6 +548,11 @@ class Character {
         this.notifyListeners();
     }
 
+    // Update character class skills (without triggering notification - caller handles that)
+    updateCharacterClassSkills(skills) {
+        this.data.characterClassSkills = skills;
+    }
+
     // NEW: Update class specialization
     updateClassSpecialization(levelNum, specialization) {
         if (this.data.classes[levelNum - 1]) {

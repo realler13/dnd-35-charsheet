@@ -7,9 +7,32 @@ class DnDCharacterSheet {
         this.stats = null;
     }
 
+    // Initialize theme from localStorage (called early to prevent flash)
+    initTheme() {
+        const saved = localStorage.getItem('dnd35_theme');
+        if (saved === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    }
+
+    // Toggle between light and dark themes
+    toggleTheme() {
+        const current = document.documentElement.getAttribute('data-theme');
+        const next = current === 'light' ? 'dark' : 'light';
+        if (next === 'dark') {
+            document.documentElement.removeAttribute('data-theme');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+        localStorage.setItem('dnd35_theme', next);
+    }
+
     // Initialize the application
     async init() {
         console.log('Initializing D&D 3.5 Character Sheet...');
+
+        // Apply saved theme immediately
+        this.initTheme();
 
         try {
             // Load game data
@@ -47,7 +70,9 @@ class DnDCharacterSheet {
 
         } catch (error) {
             console.error('Error initializing application:', error);
-            alert('Error loading application. Please check the console for details.');
+            if (window.InfoModal) {
+                InfoModal.toast('Error loading application. Check the console for details.', 'error', 8000);
+            }
         }
     }
 
@@ -84,6 +109,12 @@ class DnDCharacterSheet {
 
     // Setup character management (new, load, save, export, import)
     setupCharacterManagement() {
+        // Theme toggle
+        const themeBtn = document.getElementById('themeToggle');
+        if (themeBtn) {
+            themeBtn.addEventListener('click', () => this.toggleTheme());
+        }
+
         // New character
         const newBtn = document.getElementById('newCharacter');
         if (newBtn) {
@@ -114,6 +145,16 @@ class DnDCharacterSheet {
         const loadBtn = document.getElementById('loadCharacter');
         if (loadBtn) {
             loadBtn.addEventListener('click', () => this.showLoadCharacterDialog());
+        }
+
+        // Print / PDF
+        const printBtn = document.getElementById('printCharacter');
+        if (printBtn) {
+            printBtn.addEventListener('click', () => {
+                if (window.pdfExport) {
+                    window.pdfExport.print();
+                }
+            });
         }
     }
 
@@ -181,8 +222,13 @@ class DnDCharacterSheet {
     }
 
     // New character
-    newCharacter() {
-        if (confirm('Create a new character? Any unsaved changes will be lost.')) {
+    async newCharacter() {
+        const confirmed = await InfoModal.confirm(
+            'Create a new character? Any unsaved changes will be lost.',
+            'New Character',
+            { confirmText: 'Create New', danger: true }
+        );
+        if (confirmed) {
             character.setData(character.createDefaultCharacter());
             character.initializeSkills(dataLoader.gameData.skills);
             this.recalculateAll();
@@ -195,7 +241,7 @@ class DnDCharacterSheet {
     saveCharacter() {
         const saved = characterStorage.saveCharacter(character.getData());
         if (saved) {
-            alert('Character saved successfully!');
+            InfoModal.toast('Character saved!', 'success');
         }
     }
 
@@ -213,9 +259,9 @@ class DnDCharacterSheet {
             if (success) {
                 character.setData(data);
                 this.recalculateAll();
-                alert('Character imported successfully!');
+                InfoModal.toast('Character imported successfully!', 'success');
             } else {
-                alert('Error importing character file.');
+                InfoModal.toast('Error importing character file.', 'error');
             }
         });
 
@@ -228,22 +274,15 @@ class DnDCharacterSheet {
         const characterList = characterStorage.getCharacterList();
 
         if (characterList.length === 0) {
-            alert('No saved characters found.');
+            InfoModal.toast('No saved characters found.', 'info');
             return;
         }
 
-        let message = 'Select a character to load:\n\n';
-        characterList.forEach((name, index) => {
-            message += `${index + 1}. ${name}\n`;
-        });
-
-        const selection = prompt(message + '\nEnter character number:');
-        if (selection) {
-            const index = parseInt(selection) - 1;
-            if (index >= 0 && index < characterList.length) {
-                this.loadCharacter(characterList[index]);
-            }
-        }
+        InfoModal.showCharacterLoadModal(
+            characterList,
+            (name) => this.loadCharacter(name),
+            (name) => characterStorage.deleteCharacter(name)
+        );
     }
 
     // Load character by name
@@ -252,9 +291,10 @@ class DnDCharacterSheet {
         if (data) {
             character.setData(data);
             this.recalculateAll();
+            InfoModal.toast(`Loaded: ${characterName}`, 'success');
             console.log(`Loaded character: ${characterName}`);
         } else {
-            alert(`Could not load character: ${characterName}`);
+            InfoModal.toast(`Could not load character: ${characterName}`, 'error');
         }
     }
 

@@ -76,10 +76,11 @@ class GameLogTab {
         });
 
         // Delete entry button
-        this.container.addEventListener('click', (e) => {
+        this.container.addEventListener('click', async (e) => {
             if (e.target.classList.contains('delete-log-btn')) {
                 const index = parseInt(e.target.dataset.index);
-                if (confirm('Delete this log entry?')) {
+                const confirmed = await InfoModal.confirm('Delete this log entry?', 'Delete Entry', { confirmText: 'Delete', danger: true });
+                if (confirmed) {
                     this.deleteLogEntry(index);
                 }
             }
@@ -118,7 +119,7 @@ class GameLogTab {
         const type = document.getElementById('logType').value;
 
         if (!message) {
-            alert('Please enter a message');
+            InfoModal.toast('Please enter a message.', 'warning');
             return;
         }
 
