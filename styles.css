@@ -1124,6 +1124,30 @@ header::after {
 .legend-item .class-skill-badge { color: var(--gold); font-size: 1.2em; }
 .legend-item .skill-focus-badge { font-size: 1.2em; }
 
+.skill-focus-badge { font-size: 1.1em; cursor: help; }
+
+.skill-focus-highlight {
+    background: rgba(212, 167, 68, 0.08);
+}
+
+.skill-focus-highlight:hover {
+    background: rgba(212, 167, 68, 0.12);
+}
+
+.skill-focus-note {
+    color: var(--positive);
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+[data-theme="light"] .skill-focus-highlight {
+    background: rgba(139, 105, 20, 0.08);
+}
+
+[data-theme="light"] .skill-focus-highlight:hover {
+    background: rgba(139, 105, 20, 0.12);
+}
+
 .skills-controls { margin-bottom: 14px; }
 
 .skills-table-container { overflow-x: auto; }

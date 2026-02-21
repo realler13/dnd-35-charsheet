@@ -37,7 +37,7 @@ class SkillsTab {
                         <span class="legend-item"><span class="trained-only">*</span> = Trained Only (requires at least 1 rank)</span>
                         <span class="legend-item"><span class="class-skill-badge">★</span> = Class Skill (1 point per rank)</span>
                         <span class="legend-item">Cross-Class (2 points per rank)</span>
-                        <span class="legend-item"><span class="skill-focus-badge">⭐</span> = Skill Focus feat (+3 bonus)</span>
+                        <span class="legend-item"><span class="skill-focus-badge">🌟</span> = Skill Focus feat (+3 bonus)</span>
                     </div>
                 </div>
 
@@ -323,7 +323,7 @@ class SkillsTab {
             <td>
                 <strong>${skillName}</strong>
                 ${skillData.trained ? ' <span class="trained-only" title="Trained Only">*</span>' : ''}
-                ${hasSkillFocus ? ' <span class="skill-focus-badge" title="Skill Focus (+3 bonus)">⭐</span>' : ''}
+                ${hasSkillFocus ? ' <span class="skill-focus-badge" title="Skill Focus (+3 bonus)">🌟</span>' : ''}
             </td>
             <td>${skillData.ability}</td>
             <td>${isClassSkill ? '<span class="class-skill-badge" title="Class Skill">★</span>' : ''}</td>

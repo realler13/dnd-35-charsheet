@@ -223,3 +223,212 @@ The theme toggle is wired up in `setupCharacterManagement()` alongside all the o
 - **Skill-class matrix is hardcoded**: The mapping of which skills are class skills for which classes is in `dataLoader.js:createSkillClassMatrix()`, not derived from the JSON data.
 - **localStorage limits**: Characters are saved per-name with prefix `dnd35_character_`. Heavy use with many characters could hit the ~5MB browser limit. The app warns on quota exceeded but has no automatic cleanup.
 - **CORS/file:// issues**: The app **must** be served via HTTP (not opened as a local file) because it uses `fetch()` for JSON loading.
+
+## Phase 3 Research: Desktop App Wrapping Options (February 2026)
+
+### The Goal
+
+Turn this zero-build vanilla JS web app into a standalone macOS desktop application. The constraints: no server-side logic, uses `fetch()` for local JSON data, relies on `localStorage` for persistence, and ideally shouldn't require adopting a build system or rewriting anything.
+
+### The Contenders
+
+We evaluated six approaches: Electron, Tauri, Neutralinojs, PWA, pywebview, and a native Swift/WKWebView wrapper. Here's what we found.
+
+---
+
+### 1. Electron — The Reliable Heavyweight
+
+**How it works**: Bundles a full Chromium browser + Node.js runtime into your app. Your HTML/CSS/JS runs inside this private Chromium instance. It's essentially shipping a dedicated browser with your app baked in.
+
+**Bundle size**: ~115-150 MB minimum for a "Hello World" app. Your actual app code is negligible next to Chromium's weight. DMG installers compress to ~80 MB, but the installed `.app` bundle expands significantly.
+
+**Setup for a vanilla JS app**: Requires Node.js and npm. You'd create a `package.json` and a `main.js` entry point (~20 lines) that creates a `BrowserWindow` and loads your `index.html`. Electron Forge (`npm init electron-app@latest`) scaffolds this instantly. Total setup: ~15 minutes.
+
+**fetch() to local files**: Works out of the box. `BrowserWindow.loadFile('index.html')` serves your files from the `file://` protocol, and `fetch()` with relative paths resolves correctly against that base. This is the smoothest experience of any option — your existing code just works.
+
+**localStorage**: Persists between sessions by default. Uses Chromium's standard localStorage implementation. The only gotcha: if you configure a non-persistent session partition, storage disappears on restart (but the default is persistent, so don't touch it).
+
+**macOS features**: Full support. Menu bar, dock icon, DMG distribution via `electron-builder`, code signing, notarization, auto-updates. Electron is what VS Code, Slack, Discord, and Notion use on Mac.
+
+**Gotchas**:
+- Memory usage: ~200-300 MB at idle (it's a whole browser)
+- Startup time: 1-2 seconds on mid-range hardware
+- Node.js dependency for development (but not for the end user)
+- `nodeIntegration` defaults to `false` for security; if you need Node APIs, use a preload script
+- Annual Electron version churn (tied to Chromium releases)
+
+**Verdict**: The "it just works" option. Overkill for a small app, but zero surprises. If you don't care about bundle size, this is the fastest path from "web app" to "Mac app."
+
+---
+
+### 2. Tauri 2.0 — The Lean Contender
+
+**How it works**: Uses the OS-native WebView (WebKit/WKWebView on macOS) instead of bundling Chromium. The backend is a small Rust binary that manages the window and provides system APIs. Your HTML/CSS/JS runs in the system's WebKit engine.
+
+**Bundle size**: Under 10 MB for a basic app (some reports say as low as 600 KB for the binary alone, though the full `.app` bundle with framework dependencies is typically 3-8 MB). That's 15-20x smaller than Electron.
+
+**Setup for a vanilla JS app**: `create-tauri-app` has a vanilla HTML/CSS/JS template. However, you still need the Rust toolchain installed (`rustup`), and Tauri compiles a Rust binary as part of every build. The `tauri.conf.json` configuration points `frontendDist` (formerly `distDir`) to your static files folder. Setup: ~30 minutes including Rust installation.
+
+**fetch() to local files**: This is where it gets interesting. Tauri serves your frontend via a custom `tauri://` protocol, not `http://` or `file://`. Standard `fetch()` with relative paths works for files inside your declared frontend directory. However, if your app expects an HTTP-like environment (cookies, certain CORS behaviors), you may need the `tauri-plugin-localhost` plugin, which spins up a local HTTP server. The plugin works but the Tauri team warns about security implications. For a simple app fetching local JSON, the default custom protocol should work fine.
+
+**localStorage**: Works. WebKit's localStorage persists between sessions. The data lives in the app's WebKit data directory.
+
+**macOS features**: Full support. Native `.app` bundles, DMG distribution, code signing, notarization, dock icon, menu bar. Since it uses the native WebView, rendering feels more "native" than Electron's.
+
+**Gotchas**:
+- Requires Rust toolchain (even though you write zero Rust for a simple wrapper)
+- Build times: first build compiles Rust dependencies (~2-5 minutes). Subsequent builds are fast.
+- WebKit rendering differences: your app was likely tested in Chrome/Firefox. WebKit may render some CSS differently (flexbox edge cases, font rendering). Test thoroughly.
+- The `fetch()` compatibility with Tauri's custom protocol has been a source of GitHub issues. Simple relative-path fetches work, but complex fetch configurations (custom headers, specific CORS modes) may need the localhost plugin.
+- Rust compile errors can be cryptic if you're not a Rust developer
+
+**Verdict**: The best balance of size, performance, and features. The Rust toolchain requirement is the only real friction point. If you're comfortable installing `rustup`, this is the recommended option.
+
+---
+
+### 3. Neutralinojs — The Ultra-Lightweight Outsider
+
+**How it works**: Similar to Tauri — uses the OS native WebView (WebKit on macOS). But instead of Rust, the backend is a lightweight C++ binary. No Chromium, no Node.js.
+
+**Bundle size**: ~2 MB uncompressed, ~0.5 MB compressed. The smallest of all options by far.
+
+**Setup for a vanilla JS app**: Install the `neu` CLI (`npm install -g @neutralinojs/neu` or download the binary). Run `neu create` to scaffold, then point it at your static files. Configuration lives in `neutralino.config.json`. Setup: ~10 minutes.
+
+**fetch() to local files**: Works via the native WebView. Your files are served to the WebView and relative `fetch()` calls resolve.
+
+**localStorage**: Has been reported to have issues specifically on macOS when running as a bundled `.app`. The storage feature works fine from the terminal but encounters problems inside Apple bundles. This is a significant concern for your app since localStorage is your persistence layer.
+
+**macOS features**: Basic `.app` bundle support via the `--macos-bundle` CLI flag. But: no built-in auto-updater, no built-in installer/DMG creation, no code signing tooling, limited desktop integration. These are things you'd have to handle yourself.
+
+**Gotchas**:
+- Largely a single-developer hobby project with limited financial backing
+- No built-in system for auto-updates
+- No proper bundler like electron-builder for creating installers
+- Limited desktop integration (no native notifications, limited menu bar control)
+- The macOS localStorage bug is a potential showstopper for this specific app
+- Smaller community = fewer Stack Overflow answers when things go wrong
+
+**Verdict**: Tempting for its tiny size, but the localStorage issues on macOS and the limited distribution tooling make it risky for anything beyond a personal-use tool. Not recommended for this project.
+
+---
+
+### 4. PWA (Progressive Web App) — The Zero-Dependency Option
+
+**How it works**: No wrapping at all. You add a `manifest.json` and a service worker to your existing web app, and browsers can "install" it as a standalone window. No separate runtime, no compilation.
+
+**Bundle size**: Zero additional bytes (it's just your web app). The browser is the runtime.
+
+**Setup**: Add a `manifest.json` file (app name, icons, display mode) and a service worker JS file (for offline caching). ~20 minutes of work. No build tools needed.
+
+**fetch() to local files**: Here's the catch. PWAs still run in the browser, and "local files" means files served from your web server. You'd still need to serve the app via `python3 -m http.server` or similar. The PWA just gives you a standalone window — it doesn't bundle your files into a distributable package.
+
+**localStorage**: Works perfectly (it's still a browser).
+
+**macOS features**:
+- **Chrome/Chromium**: Full PWA install support. Standalone window, dock icon, can be launched from Spotlight. Works well.
+- **Safari**: Only supports "Add to Dock" (Safari 17+ / macOS Sonoma). This creates a shortcut but it's NOT a true standalone PWA install. The app still shows browser chrome, and you don't get a true standalone window. Safari's PWA support on macOS is still limited compared to Chrome.
+- No DMG distribution (the user installs it from the browser)
+- No code signing, no App Store distribution
+- No auto-updater (just update the server and the service worker handles it)
+
+**Gotchas**:
+- Not a real "app" — it's a browser window in disguise
+- Users must visit the URL first, then click "Install" (not intuitive for non-technical users)
+- Safari's limited support means Mac users who use Safari (the default browser) get a second-class experience
+- You still need a server running somewhere (can't just double-click an icon on an offline machine)
+- No access to native APIs (file system, OS notifications beyond web push)
+
+**Verdict**: The simplest approach if you just want a standalone-ish window and your users are technical enough to "install" from Chrome. But it doesn't solve the core problem — you still can't distribute a `.app` or `.dmg` file. It's a half-measure.
+
+---
+
+### 5. pywebview — The Python-Native Option
+
+**How it works**: A Python library that opens a native WebView window (Cocoa/WebKit on macOS) and loads your HTML into it. Includes a built-in HTTP server for serving static files.
+
+**Bundle size**: ~10-15 MB when bundled with py2app or PyInstaller. Much smaller than Electron, comparable to Tauri.
+
+**Setup for a vanilla JS app**: Since this project already uses Python (for the PCGen migration pipeline), pywebview is a natural fit. A launcher script is ~10 lines of Python: `import webview; webview.create_window('3.5 Character Sheet', 'index.html'); webview.start()`. The built-in HTTP server handles static file serving. Setup: ~15 minutes.
+
+**fetch() to local files**: Works out of the box. pywebview's built-in HTTP server serves your files over `http://localhost`, so `fetch()` with relative paths works exactly as it does in development.
+
+**localStorage**: Works (it's WebKit's localStorage). Persists between sessions.
+
+**macOS features**: Native window via Cocoa. Dock icon, window management, and basic menu bar. For distribution, use py2app to create a `.app` bundle. DMG creation requires separate tooling (create-dmg or similar). No built-in auto-updater. Code signing is possible but manual.
+
+**Gotchas**:
+- Requires Python to be bundled (py2app handles this, but adds to bundle size)
+- py2app can be finicky with dependency detection — you may need to manually specify includes/excludes
+- No official auto-update mechanism
+- Smaller ecosystem than Electron or Tauri for desktop-specific features
+- WebKit rendering (same caveat as Tauri — test for Safari/WebKit compatibility)
+- PyInstaller bundles can accidentally include unnecessary libraries; use a virtual environment
+
+**Verdict**: A surprisingly good fit for this specific project because Python is already in the toolchain. The built-in HTTP server solves the `fetch()` problem elegantly. If you want something quick and pragmatic without learning Rust, this is a strong second choice after Tauri.
+
+---
+
+### 6. Native Swift/WKWebView — The DIY Approach
+
+**How it works**: Write a small Swift/SwiftUI macOS app that embeds a WKWebView and loads your HTML files from the app bundle. No framework, no runtime — just Apple's own tools.
+
+**Bundle size**: Under 5 MB. The smallest distributable option (your app + the HTML/JS/CSS, and WebKit is part of macOS).
+
+**Setup**: Requires Xcode. Create a new SwiftUI macOS App project, add an NSViewRepresentable wrapper for WKWebView (~30 lines of Swift), copy your web files into the Xcode project as bundle resources. Setup: ~30-60 minutes depending on Xcode familiarity.
+
+**fetch() to local files**: This is the hard part. WKWebView's `loadFileURL` restricts access to a specific directory. You need to set the `allowingReadAccessTo` parameter to the directory containing your JSON files. Relative `fetch()` paths should work once this is configured correctly, but you may need to adjust paths or use a custom URL scheme handler for more complex scenarios.
+
+**localStorage**: WKWebView supports localStorage, but persistence behavior depends on your WKWebsiteDataStore configuration. The default persistent store works, but if you're not careful, data can get cleared.
+
+**macOS features**: It IS a native Mac app. Full menu bar, dock, notifications, App Store distribution, code signing, notarization — everything. The gold standard for macOS integration.
+
+**Gotchas**:
+- Requires Xcode (~12 GB download) and macOS development knowledge
+- Swift/SwiftUI learning curve if you've never done Apple development
+- WKWebView security restrictions can make `fetch()` to local files tricky
+- JavaScript-to-Swift bridge requires explicit setup via `WKScriptMessageHandler`
+- No cross-platform — this is macOS only (though that matches the requirement)
+- Debugging WebView content requires Safari's Web Inspector (must be enabled manually)
+- Every WKWebView update with macOS can subtly change behavior
+
+**Verdict**: Maximum native quality, maximum setup effort. Only recommended if you want App Store distribution or already know Swift/Xcode.
+
+---
+
+### 7. Other Notable Mentions
+
+**Gluon**: Uses the user's already-installed browser (Chrome or Firefox) rather than bundling one or using a WebView. App size under 1 MB. However, it's still experimental (started December 2022), requires Node.js/Bun/Deno, and has uncertain long-term support. Not recommended for production use.
+
+**Nativefier**: Unmaintained as of 2023-2024. Was the go-to "one command to wrap a URL as an Electron app." The spiritual successor is **ToDesktop** (commercial SaaS) or just using Electron Forge directly. Skip Nativefier for new projects.
+
+**Naty**: A nativefier alternative using system WebView. Under 7 MB. Very new, limited documentation. Interesting but not proven.
+
+---
+
+### The Recommendation Matrix
+
+| Criterion | Electron | Tauri 2 | Neutralinojs | PWA | pywebview | Swift/WKWebView |
+|---|---|---|---|---|---|---|
+| Bundle size | 115-150 MB | 3-8 MB | ~2 MB | 0 (browser) | 10-15 MB | <5 MB |
+| Setup time | 15 min | 30 min | 10 min | 20 min | 15 min | 30-60 min |
+| fetch() works? | Yes | Yes* | Yes | Needs server | Yes (built-in server) | Tricky |
+| localStorage? | Yes | Yes | Buggy on macOS | Yes | Yes | Yes (with care) |
+| DMG distribution? | Yes (electron-builder) | Yes (built-in) | Manual | No | Manual (py2app) | Yes (Xcode) |
+| New toolchain? | Node.js/npm | Rust | neu CLI | None | None (Python exists) | Xcode/Swift |
+| Community size | Massive | Large & growing | Small | N/A | Medium | Apple's ecosystem |
+
+*With default custom protocol; localhost plugin available if needed.
+
+### The Bottom Line
+
+**For this specific project (D&D 3.5 Character Sheet):**
+
+1. **Best overall**: **Tauri 2.0** — Tiny bundle, native feel, great macOS support, and the fetch/localStorage story is solid for a simple static app. The Rust toolchain is the only friction, but it's a one-time install.
+
+2. **Quickest pragmatic path**: **pywebview** — Python is already in the project toolchain. Ten lines of Python + py2app gives you a distributable `.app`. The built-in HTTP server means zero changes to the existing codebase.
+
+3. **Safest/most proven**: **Electron** — If bundle size doesn't matter and you want the maximum ecosystem support, Electron is battle-tested. Your code works without any changes.
+
+4. **Lightest touch**: **PWA** — If "runs in a standalone Chrome window" is good enough and you don't need to distribute a `.app` file, adding a manifest + service worker takes 20 minutes and changes nothing about how the app works.
+
+The **anti-recommendations**: Skip Neutralinojs (localStorage bug on macOS is a dealbreaker). Skip Nativefier (dead project). Skip Gluon (too experimental). Skip native Swift unless you specifically want App Store distribution.
