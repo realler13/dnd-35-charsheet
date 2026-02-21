@@ -1,0 +1,6911 @@
+{
+  "metadata": {
+    "source": "PCGen RSRD 3.5e",
+    "version": "6.08.00RC10",
+    "generated": "2026-01-31T04:59:25.498139Z",
+    "category": "classes",
+    "entry_count": 690
+  },
+  "data": [
+    {
+      "name": "Barbarian",
+      "hitDie": 12,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Barbarian",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Barbarian",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Climb,All Craft skills,Handle Animal,Intimidate,Jump,Listen,Ride,Survival,Swim"
+    },
+    {
+      "name": "Bard",
+      "hitDie": 6,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Bard",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Bard",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Appraise,Balance,Bluff,Climb,Concentration,All Craft skills,Decipher Script,Diplomacy,Disguise,Escape Artist,Gather Information,Hide,Jump,All Knowledge skills,Listen,Move Silently,All Perform skills,All Profession skills,Sense Motive,Sleight of Hand,Speak Language,Spellcraft,Swim,Tumble,Use Magic Device"
+    },
+    {
+      "name": "Bard",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Cleric",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Cleric",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,Diplomacy,Heal,Knowledge (Arcana),Knowledge (History),Knowledge (Religion),Knowledge (The Planes),All Profession skills,Spellcraft"
+    },
+    {
+      "name": "Cleric",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Druid",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Druid",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Druid",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,Diplomacy,Handle Animal,Heal,Knowledge (Nature),Listen,All Profession skills,Ride,Spellcraft,Spot,Survival,Swim"
+    },
+    {
+      "name": "Druid",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Fighter",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Fighter",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Climb,All Craft skills,Handle Animal,Intimidate,Jump,Ride,Swim"
+    },
+    {
+      "name": "Monk",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Monk",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Monk",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Balance,Climb,Concentration,All Craft skills,Diplomacy,Escape Artist,Hide,Jump,Knowledge (Arcana),Knowledge (Religion),Listen,Move Silently,All Perform skills,All Profession skills,Sense Motive,Spot,Swim,Tumble"
+    },
+    {
+      "name": "Paladin",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Paladin",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Paladin",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,Diplomacy,Handle Animal,Heal,Knowledge (Nobility and Royalty),Knowledge (Religion),All Profession skills,Ride,Sense Motive"
+    },
+    {
+      "name": "Paladin",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Ranger",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Ranger",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Climb,Concentration,All Craft skills,Handle Animal,Heal,Hide,Jump,Knowledge (Dungeoneering),Knowledge (Geography),Knowledge (Nature),Listen,Move Silently,All Profession skills,Ride,Search,Spot,Survival,Swim,Use Rope"
+    },
+    {
+      "name": "Ranger",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Rogue",
+      "hitDie": 6,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Good",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Rogue",
+      "hitDie": 8,
+      "skillPoints": 8,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Appraise,Balance,Bluff,Climb,All Craft skills,Decipher Script,Diplomacy,Disable Device,Disguise,Escape Artist,Forgery,Gather Information,Hide,Intimidate,Jump,Knowledge (Local),Listen,Move Silently,Open Lock,All Perform skills,All Profession skills,Search,Sense Motive,Sleight of Hand,Spot,Swim,Tumble,Use Magic Device,Use Rope"
+    },
+    {
+      "name": "Sorcerer",
+      "hitDie": 4,
+      "skillPoints": 2,
+      "baseAttack": "Poor",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Sorcerer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Bluff,Concentration,All Craft skills,Knowledge (Arcana),All Profession skills,Spellcraft"
+    },
+    {
+      "name": "Sorcerer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Wizard",
+      "hitDie": 4,
+      "skillPoints": 2,
+      "baseAttack": "Poor",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Wizard",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,Decipher Script,All Knowledge skills,All Profession skills,Spellcraft"
+    },
+    {
+      "name": "Wizard",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Abjurer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:1",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Conjurer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:1",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Diviner",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:1",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Enchanter",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:1",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Evoker",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:1",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Illusionist",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:1",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Necromancer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:1",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Transmuter",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:1",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Adept",
+      "hitDie": 6,
+      "skillPoints": 2,
+      "baseAttack": "Poor",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Adept",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,Handle Animal,Heal,All Knowledge skills,All Profession skills,Spellcraft,Survival"
+    },
+    {
+      "name": "Adept",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Aristocrat",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Aristocrat",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Appraise,Bluff,Diplomacy,Disguise,Forgery,Gather Information,Handle Animal,Intimidate,All Knowledge skills,Listen,All Perform skills,Ride,Sense Motive,Speak Language,Spot,Swim,Survival"
+    },
+    {
+      "name": "Commoner",
+      "hitDie": 4,
+      "skillPoints": 2,
+      "baseAttack": "Poor",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Commoner",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Climb,All Craft skills,Handle Animal,Jump,Listen,All Profession skills,Ride,Spot,Swim,Use Rope"
+    },
+    {
+      "name": "Expert",
+      "hitDie": 6,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Expert",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Warrior",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Warrior",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Climb,Handle Animal,Intimidate,Jump,Ride,Swim"
+    },
+    {
+      "name": "Arcane Archer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Arcane Archer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Arcane Archer",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "All Craft skills,Hide,Listen,Move Silently,Ride,Spot,Survival,Use Rope"
+    },
+    {
+      "name": "14:REPEATLEVEL:4",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Arcane Trickster",
+      "hitDie": 4,
+      "skillPoints": 2,
+      "baseAttack": "Poor",
+      "fortSave": "Poor",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Arcane Trickster",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Arcane Trickster",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Appraise,Balance,Bluff,Climb,Concentration,All Craft skills,Decipher Script,Diplomacy,Disable Device,Disguise,Escape Artist,Gather Information,Hide,Jump,All Knowledge skills,Listen,Move Silently,Open Lock,All Profession skills,Sense Motive,Search,Sleight of Hand,Speak Language,Spellcraft,Spot,Swim,Tumble,Use Rope"
+    },
+    {
+      "name": "11:REPEATLEVEL:1",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "14:REPEATLEVEL:4",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Archmage",
+      "hitDie": 4,
+      "skillPoints": 2,
+      "baseAttack": "Poor",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Archmage",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Archmage",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,Craft (Alchemy),All Knowledge skills,All Profession skills,Search,Spellcraft"
+    },
+    {
+      "name": "Assassin",
+      "hitDie": 6,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Good",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Assassin",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Assassin",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Balance,Bluff,Climb,All Craft skills,Decipher Script,Diplomacy,Disable Device,Disguise,Escape Artist,Forgery,Gather Information,Hide,Intimidate,Jump,Listen,Move Silently,Open Lock,Search,Sense Motive,Sleight of Hand,Spot,Swim,Tumble,Use Magic Device,Use Rope"
+    },
+    {
+      "name": "Assassin",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Blackguard",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Blackguard",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Blackguard",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,Diplomacy,Handle Animal,Heal,Hide,Intimidate,Knowledge (Religion),All Profession skills,Ride"
+    },
+    {
+      "name": "Blackguard",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Dragon Disciple",
+      "hitDie": 12,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Dragon Disciple",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Dragon Disciple",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,Diplomacy,Escape Artist,Gather Information,All Knowledge skills,Listen,All Profession skills,Search,Speak Language,Spellcraft,Spot"
+    },
+    {
+      "name": "Black Dragon Disciple",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:10",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Blue Dragon Disciple",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:10",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Green Dragon Disciple",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:10",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Red Dragon Disciple",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:10",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "White Dragon Disciple",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:10",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Brass Dragon Disciple",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:10",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Bronze Dragon Disciple",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:10",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Copper Dragon Disciple",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:10",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Gold Dragon Disciple",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:10",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Silver Dragon Disciple",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "SUBCLASSLEVEL:10",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Duelist",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Poor",
+      "reflexSave": "Good",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Duelist",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Duelist",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Balance,Bluff,Escape Artist,Jump,Listen,All Perform skills,Sense Motive,Spot,Tumble"
+    },
+    {
+      "name": "Dwarven Defender",
+      "hitDie": 12,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Dwarven Defender",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Dwarven Defender",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "All Craft skills,Listen,Sense Motive,Spot"
+    },
+    {
+      "name": "Eldritch Knight",
+      "hitDie": 6,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Eldritch Knight",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Eldritch Knight",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,Decipher Script,Jump,Knowledge (Arcana),Knowledge (Nobility and Royalty),Ride,Sense Motive,Spellcraft,Swim"
+    },
+    {
+      "name": "Hierophant",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Poor",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Hierophant",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Hierophant",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,Diplomacy,Heal,Knowledge (Arcana),Knowledge (Religion),All Profession skills,Spellcraft"
+    },
+    {
+      "name": "Horizon Walker",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Horizon Walker",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Horizon Walker",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Balance,Climb,Diplomacy,Handle Animal,Hide,Knowledge (Geography),Listen,Move Silently,All Profession skills,Ride,Speak Language,Spot,Survival"
+    },
+    {
+      "name": "Loremaster",
+      "hitDie": 4,
+      "skillPoints": 2,
+      "baseAttack": "Poor",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Loremaster",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Loremaster",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Appraise,Concentration,Craft (Alchemy),Decipher Script,Gather Information,Handle Animal,Heal,All Knowledge skills,All Perform skills,All Profession skills,Speak Language,Spellcraft,Use Magic Device"
+    },
+    {
+      "name": "Mystic Theurge",
+      "hitDie": 4,
+      "skillPoints": 2,
+      "baseAttack": "Poor",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Mystic Theurge",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Mystic Theurge",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,Decipher Script,Knowledge (Arcana),Knowledge (Religion),All Profession skills,Sense Motive,Spellcraft"
+    },
+    {
+      "name": "Shadowdancer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Good",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Shadowdancer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Shadowdancer",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Balance,Bluff,Decipher Script,Diplomacy,Disguise,Escape Artist,Hide,Jump,Listen,Move Silently,All Perform skills,All Profession skills,Search,Sleight of Hand,Spot,Tumble,Use Rope"
+    },
+    {
+      "name": "Thaumaturgist",
+      "hitDie": 4,
+      "skillPoints": 2,
+      "baseAttack": "Poor",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Thaumaturgist",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Thaumaturgist",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,Diplomacy,Knowledge (Religion),Knowledge (The Planes),All Profession skills,Sense Motive,Speak Language,Spellcraft"
+    },
+    {
+      "name": "Aberration",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Aberration",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Aberration",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Animal",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Animal",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Animal",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Animal (Will)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Animal (Will)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Animal (Will)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Construct",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Construct",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Construct",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Construct (Mindless)",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Construct (Mindless)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Construct (Mindless)",
+      "hitDie": 8,
+      "skillPoints": 0,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Dragon",
+      "hitDie": 12,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Dragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Dragon",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Elemental",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Good",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Elemental",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Elemental",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Elemental (Air/Fire)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Good",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Elemental (Air/Fire)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Elemental (Air/Fire)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Elemental (Earth/Water)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Elemental (Earth/Water)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Elemental (Earth/Water)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Elemental (Mindless)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Good",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Elemental (Mindless)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Elemental (Mindless)",
+      "hitDie": 8,
+      "skillPoints": 0,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Fey",
+      "hitDie": 6,
+      "skillPoints": 2,
+      "baseAttack": "Poor",
+      "fortSave": "Poor",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Fey",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Fey",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Giant",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Giant",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Giant",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Humanoid",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Good",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Humanoid",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Humanoid",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Humanoid (Fortitude)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Humanoid (Fortitude)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Humanoid (Fortitude)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Humanoid (Will)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Humanoid (Will)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Humanoid (Will)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Magical Beast",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Magical Beast",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Magical Beast",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Monstrous Humanoid",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Poor",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Monstrous Humanoid",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Monstrous Humanoid",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Ooze",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Ooze",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Ooze",
+      "hitDie": 8,
+      "skillPoints": 0,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Ooze (Intelligent)",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Ooze (Intelligent)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Ooze (Intelligent)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Outsider",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Outsider",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Outsider",
+      "hitDie": 8,
+      "skillPoints": 8,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Plant",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Plant",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Plant",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Plant (Mindless)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Plant (Mindless)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Plant (Mindless)",
+      "hitDie": 8,
+      "skillPoints": 0,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Undead",
+      "hitDie": 12,
+      "skillPoints": 2,
+      "baseAttack": "Poor",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Undead",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Undead",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Undead (Mindless)",
+      "hitDie": 12,
+      "skillPoints": 2,
+      "baseAttack": "Poor",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Undead (Mindless)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Undead (Mindless)",
+      "hitDie": 8,
+      "skillPoints": 0,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Vermin",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Vermin",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Vermin",
+      "hitDie": 8,
+      "skillPoints": 0,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Vermin (Intelligent)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Vermin (Intelligent)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Vermin (Intelligent)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Sorcerer/Cleric (Arcane)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Sorcerer/Cleric (Arcane)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "24:REPEATLEVEL:4",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "23:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "23:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "24:REPEATLEVEL:4",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "22:REPEATLEVEL:2",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "25:REPEATLEVEL:5",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "23:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "23:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "24:REPEATLEVEL:4",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "23:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "23:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Agent Retriever",
+      "hitDie": 6,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Agent Retriever",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Agent Retriever",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Appraise,Decipher Script,Diplomacy,Forgery,Gather Information,Knowledge (Arcana),Knowledge (Geography),Knowledge (History),Knowledge (Local),Knowledge (The Planes),Listen,Search,Spot,Survival"
+    },
+    {
+      "name": "1:REPEATLEVEL:1",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "5:REPEATLEVEL:5",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Cosmic Descryer",
+      "hitDie": 4,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Cosmic Descryer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Cosmic Descryer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Bluff,Concentration,Diplomacy,Knowledge (Arcana),Knowledge (Religion),Knowledge (The Planes),Sense Motive,Spellcraft,All Craft skills,All Profession skills"
+    },
+    {
+      "name": "2:REPEATLEVEL:2",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "5:REPEATLEVEL:5",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Divine Emissary",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Divine Emissary",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Divine Emissary",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,Diplomacy,Disguise,Gather Information,Heal,Intimidate,Knowledge (Religion),Search,Sense Motive,Spellcraft,Spot,All Craft skills,All Profession skills,Use Magic Device"
+    },
+    {
+      "name": "1:REPEATLEVEL:1",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "6:REPEATLEVEL:10",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Epic Infiltrator",
+      "hitDie": 6,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Epic Infiltrator",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Epic Infiltrator",
+      "hitDie": 8,
+      "skillPoints": 8,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Appraise,Balance,Bluff,Climb,Decipher Script,Diplomacy,Disable Device,Disguise,Escape Artist,Forgery,Gather Information,Hide,Intimidate,Jump,Listen,Move Silently,Open Lock,Sense Motive,Sleight of Hand,Spot,All Craft skills,All Profession skills"
+    },
+    {
+      "name": "2:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Guardian Paramount",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Guardian Paramount",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Guardian Paramount",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Bluff,Climb,Diplomacy,Intimidate,Jump,Listen,Spot,All Profession skills"
+    },
+    {
+      "name": "4:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "High Proselytizer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "High Proselytizer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "High Proselytizer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,Diplomacy,Heal,Knowledge (Arcana),Knowledge (Religion),Sense Motive,Spellcraft,All Craft skills,All Profession skills"
+    },
+    {
+      "name": "2:REPEATLEVEL:2",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "4:REPEATLEVEL:4",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Legendary Dreadnought",
+      "hitDie": 12,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Legendary Dreadnought",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Legendary Dreadnought",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Climb,Intimidate,Jump,Swim,All Craft skills"
+    },
+    {
+      "name": "5:REPEATLEVEL:5",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Perfect Wight",
+      "hitDie": 6,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Perfect Wight",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Perfect Wight",
+      "hitDie": 8,
+      "skillPoints": 8,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Appraise,Balance,Bluff,Climb,Diplomacy,Disable Device,Disguise,Escape Artist,Gather Information,Hide,Intimidate,Jump,All Knowledge skills,Listen,Move Silently,Open Lock,Search,Spot,Survival,All Craft skills,Tumble,Use Rope"
+    },
+    {
+      "name": "5:REPEATLEVEL:5",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Union Sentinel",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Union Sentinel",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Union Sentinel",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Diplomacy,Gather Information,Intimidate,Knowledge (Local),Listen,Search,Sense Motive,Spot,All Profession skills"
+    },
+    {
+      "name": "Epic Spells (Arcane/INT)",
+      "hitDie": 1,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Epic Spells (Arcane/INT)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Epic Spells (Arcane/WIS)",
+      "hitDie": 1,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Epic Spells (Arcane/WIS)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Epic Spells (Arcane/CHA)",
+      "hitDie": 1,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Epic Spells (Arcane/CHA)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Epic Spells (Divine/INT)",
+      "hitDie": 1,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Epic Spells (Divine/INT)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Epic Spells (Divine/WIS)",
+      "hitDie": 1,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Epic Spells (Divine/WIS)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Epic Spells (Divine/CHA)",
+      "hitDie": 1,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Epic Spells (Divine/CHA)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Force Dragon",
+      "hitDie": 12,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Force Dragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Force Dragon",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "54:REPEATLEVEL:5",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Prismatic Dragon",
+      "hitDie": 12,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Prismatic Dragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Prismatic Dragon",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "53:REPEATLEVEL:5",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "40:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "40:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "40:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "40:REPEATLEVEL:6",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "49:REPEATLEVEL:9",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "54:REPEATLEVEL:9",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "42:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "42:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "42:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "45:REPEATLEVEL:6",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "48:REPEATLEVEL:9",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "53:REPEATLEVEL:9",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "41:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "41:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "41:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "44:REPEATLEVEL:6",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "47:REPEATLEVEL:9",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "52:REPEATLEVEL:9",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "43:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "43:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "43:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "46:REPEATLEVEL:6",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "46:REPEATLEVEL:9",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "51:REPEATLEVEL:9",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "39:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "39:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "39:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "42:REPEATLEVEL:6",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "51:REPEATLEVEL:9",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "56:REPEATLEVEL:9",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "40:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "40:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "40:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "40:REPEATLEVEL:6",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "43:REPEATLEVEL:9",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "48:REPEATLEVEL:9",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "42:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "42:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "42:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "42:REPEATLEVEL:6",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "45:REPEATLEVEL:9",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "50:REPEATLEVEL:9",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "41:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "41:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "41:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "41:REPEATLEVEL:6",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "44:REPEATLEVEL:9",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "49:REPEATLEVEL:9",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "44:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "44:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "44:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "47:REPEATLEVEL:6",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "47:REPEATLEVEL:9",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "52:REPEATLEVEL:9",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "43:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "43:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "43:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "46:REPEATLEVEL:6",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "46:REPEATLEVEL:9",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "51:REPEATLEVEL:9",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "14:REPEATLEVEL:4",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "11:REPEATLEVEL:1",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "14:REPEATLEVEL:4",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "14:REPEATLEVEL:4",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "13:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "14:REPEATLEVEL:4",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "13:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "15:REPEATLEVEL:5",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "11:REPEATLEVEL:1",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "14:REPEATLEVEL:4",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "11:REPEATLEVEL:1",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "14:REPEATLEVEL:4",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "11:REPEATLEVEL:1",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "13:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "11:REPEATLEVEL:2",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "12:REPEATLEVEL:2",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "16:REPEATLEVEL:6",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "13:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "23:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "21:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "23:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "11:REPEATLEVEL:2",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "12:REPEATLEVEL:2",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "16:REPEATLEVEL:6",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Black Dragon",
+      "hitDie": 12,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Black Dragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Black Dragon",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Listen,Search,Spot,Concentration,Diplomacy,Escape Artist,Intimidate,All Knowledge skills,Sense Motive,Use Magic Device,Hide,Move Silently,Swim"
+    },
+    {
+      "name": "18:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "19:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Blue Dragon",
+      "hitDie": 12,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Blue Dragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Blue Dragon",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Listen,Search,Spot,Concentration,Diplomacy,Escape Artist,Intimidate,All Knowledge skills,Sense Motive,Use Magic Device,Bluff,Hide,Spellcraft"
+    },
+    {
+      "name": "Blue Dragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Green Dragon",
+      "hitDie": 12,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Green Dragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Green Dragon",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Listen,Search,Spot,Concentration,Diplomacy,Escape Artist,Intimidate,All Knowledge skills,Sense Motive,Use Magic Device,Bluff,Hide,Move Silently"
+    },
+    {
+      "name": "16:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "17:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Red Dragon",
+      "hitDie": 12,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Red Dragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Red Dragon",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Listen,Search,Spot,Concentration,Diplomacy,Escape Artist,Intimidate,All Knowledge skills,Sense Motive,Use Magic Device,Appraise,Bluff,Jump"
+    },
+    {
+      "name": "Red Dragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "White Dragon",
+      "hitDie": 12,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "White Dragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "White Dragon",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Listen,Search,Spot,Concentration,Diplomacy,Escape Artist,Intimidate,All Knowledge skills,Sense Motive,Use Magic Device,Hide,Move Silently,Swim"
+    },
+    {
+      "name": "20:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "21:REPEATLEVEL:3",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Brass Dragon",
+      "hitDie": 12,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Brass Dragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Brass Dragon",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Listen,Search,Spot,Concentration,Diplomacy,Escape Artist,Intimidate,All Knowledge skills,Sense Motive,Use Magic Device,Bluff,Gather Information,Survival"
+    },
+    {
+      "name": "Brass Dragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Bronze Dragon",
+      "hitDie": 12,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Bronze Dragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Bronze Dragon",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Listen,Search,Spot,Concentration,Diplomacy,Escape Artist,Intimidate,All Knowledge skills,Sense Motive,Use Magic Device,Disguise,Swim,Survival"
+    },
+    {
+      "name": "Bronze Dragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Copper Dragon",
+      "hitDie": 12,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Copper Dragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Copper Dragon",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Listen,Search,Spot,Concentration,Diplomacy,Escape Artist,Intimidate,All Knowledge skills,Sense Motive,Use Magic Device,Bluff,Hide,Jump"
+    },
+    {
+      "name": "Copper Dragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Gold Dragon",
+      "hitDie": 12,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Gold Dragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Gold Dragon",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Listen,Search,Spot,Concentration,Diplomacy,Escape Artist,Intimidate,All Knowledge skills,Sense Motive,Use Magic Device,Disguise,Heal,Swim"
+    },
+    {
+      "name": "Gold Dragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Silver Dragon",
+      "hitDie": 12,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Silver Dragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Silver Dragon",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Listen,Search,Spot,Concentration,Diplomacy,Escape Artist,Intimidate,All Knowledge skills,Sense Motive,Use Magic Device,Bluff,Disguise,Jump"
+    },
+    {
+      "name": "Silver Dragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Planetar",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Planetar",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Planetar",
+      "hitDie": 8,
+      "skillPoints": 8,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Solar",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Solar",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Solar",
+      "hitDie": 8,
+      "skillPoints": 8,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Trumpet Archon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Trumpet Archon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Trumpet Archon",
+      "hitDie": 8,
+      "skillPoints": 8,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Aranea",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Aranea",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Aranea",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Couatl",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Couatl",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Couatl",
+      "hitDie": 8,
+      "skillPoints": 8,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Drider Cleric",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Drider Cleric",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Drider Cleric",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Drider Sorcerer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Drider Sorcerer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Drider Sorcerer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Drider Wizard",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Drider Wizard",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Drider Wizard",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Formian Queen",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Formian Queen",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Formian Queen",
+      "hitDie": 8,
+      "skillPoints": 8,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Ghaele",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Ghaele",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Ghaele",
+      "hitDie": 8,
+      "skillPoints": 8,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Lammasu",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Lammasu",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Lammasu",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Lillend",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Lillend",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Lillend",
+      "hitDie": 8,
+      "skillPoints": 8,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Dark Naga",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Dark Naga",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Dark Naga",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Guardian Naga",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Guardian Naga",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Guardian Naga",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Spirit Naga",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Spirit Naga",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Spirit Naga",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Water Naga",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Water Naga",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Water Naga",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Nymph",
+      "hitDie": 6,
+      "skillPoints": 2,
+      "baseAttack": "Poor",
+      "fortSave": "Poor",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Nymph",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Nymph",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Rakshasa",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Rakshasa",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Rakshasa",
+      "hitDie": 8,
+      "skillPoints": 8,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Androsphinx",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Androsphinx",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Androsphinx",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Lycanthrope (Generic)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Lycanthrope (Generic)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Lycanthrope (Generic)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Lycanthrope (Werebear)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Lycanthrope (Werebear)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Lycanthrope (Werebear)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Listen,Spot,Swim"
+    },
+    {
+      "name": "Lycanthrope (Wereboar)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Lycanthrope (Wereboar)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Lycanthrope (Wereboar)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Listen,Spot"
+    },
+    {
+      "name": "Lycanthrope (Wererat)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Lycanthrope (Wererat)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Lycanthrope (Wererat)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Balance,Climb,Hide,Move Silently,Swim"
+    },
+    {
+      "name": "Lycanthrope (Weretiger)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Lycanthrope (Weretiger)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Lycanthrope (Weretiger)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Balance,Hide,Listen,Move Silently,Spot,Swim"
+    },
+    {
+      "name": "Lycanthrope (Werewolf)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Lycanthrope (Werewolf)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Lycanthrope (Werewolf)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Hide,Listen,Move Silently,Spot,Survival"
+    },
+    {
+      "name": "Lycanthrope (Dire Wereboar)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Lycanthrope (Dire Wereboar)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Lycanthrope (Dire Wereboar)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Listen,Spot"
+    },
+    {
+      "name": "Psion",
+      "hitDie": 4,
+      "skillPoints": 2,
+      "baseAttack": "Poor",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Psion",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Psion",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Egoist",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,All Knowledge skills,All Profession skills,Psicraft,Autohypnosis,Balance,Heal"
+    },
+    {
+      "name": "Kineticist",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,All Knowledge skills,All Profession skills,Psicraft,Autohypnosis,Disable Device,Intimidate"
+    },
+    {
+      "name": "Nomad",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,All Knowledge skills,All Profession skills,Psicraft,Climb,Jump,Ride,Survival,Swim"
+    },
+    {
+      "name": "Seer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,All Knowledge skills,All Profession skills,Psicraft,Gather Information,Listen,Spot"
+    },
+    {
+      "name": "Shaper",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,All Knowledge skills,All Profession skills,Psicraft,Bluff,Disguise,Use Psionic Device"
+    },
+    {
+      "name": "Telepath",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,All Knowledge skills,All Profession skills,Psicraft,Bluff,Diplomacy,Gather Information,Sense Motive"
+    },
+    {
+      "name": "Psychic Warrior",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Psychic Warrior",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Autohypnosis,Climb,Concentration,All Craft skills,Jump,Knowledge (Psionics),All Profession skills,Ride,Search,Swim"
+    },
+    {
+      "name": "Psychic Warrior",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Soulknife",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Soulknife",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Autohypnosis,Climb,Concentration,All Craft skills,Hide,Jump,Knowledge (Psionics),Listen,Move Silently,All Profession skills,Spot,Tumble"
+    },
+    {
+      "name": "Wilder",
+      "hitDie": 6,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Wilder",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Autohypnosis,Balance,Bluff,Climb,Concentration,All Craft skills,Escape Artist,Intimidate,Jump,Knowledge (Psionics),Listen,All Profession skills,Psicraft,Sense Motive,Spot,Swim,Tumble"
+    },
+    {
+      "name": "Wilder",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Egoist (Psion)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Kineticist (Psion)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Nomad (Psion)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Seer (Psion)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Shaper (Psion)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Telepath (Psion)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Companion (Psicrystal)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Cerebremancer",
+      "hitDie": 4,
+      "skillPoints": 2,
+      "baseAttack": "Poor",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Cerebremancer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Cerebremancer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,Decipher Script,Knowledge (Arcana),Knowledge (Psionics),All Profession skills,Psicraft,Spellcraft"
+    },
+    {
+      "name": "Elocator",
+      "hitDie": 6,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Elocator",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Elocator",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Autohypnosis,Balance,Climb,Concentration,All Craft skills,Disable Device,Escape Artist,Gather Information,Hide,Jump,Knowledge (Local),Knowledge (Psionics),Listen,Move Silently,Open Lock,All Perform skills,All Profession skills,Psicraft,Search,Sense Motive,Sleight of Hand,Spot,Swim,Tumble,Use Psionic Device,Use Rope"
+    },
+    {
+      "name": "Psionic Fist",
+      "hitDie": 6,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Psionic Fist",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Psionic Fist",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Autohypnosis,Concentration,All Craft skills,Escape Artist,Hide,Jump,Knowledge (Psionics),Listen,Move Silently,Psicraft,Sense Motive,Spot,Tumble"
+    },
+    {
+      "name": "Psionic Fist",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Slayer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Slayer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Slayer",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Bluff,Concentration,Knowledge (Dungeoneering),Listen,Psicraft,Sense Motive,Spot,Survival"
+    },
+    {
+      "name": "Metamind",
+      "hitDie": 4,
+      "skillPoints": 2,
+      "baseAttack": "Poor",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Metamind",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Metamind",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Autohypnosis,Bluff,Concentration,All Craft skills,Disguise,Knowledge (The Planes),Knowledge (Psionics),Psicraft,Sense Motive"
+    },
+    {
+      "name": "Psion Uncarnate",
+      "hitDie": 4,
+      "skillPoints": 2,
+      "baseAttack": "Poor",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Psion Uncarnate",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Psion Uncarnate",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Autohypnosis,Bluff,Concentration,All Craft skills,Disguise,Knowledge (The Planes),Knowledge (Psionics),Psicraft,Sense Motive"
+    },
+    {
+      "name": "Pyrokineticist",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Pyrokineticist",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Pyrokineticist",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Climb,Concentration,All Craft skills,Intimidate,Jump,Psicraft"
+    },
+    {
+      "name": "Thrallherd",
+      "hitDie": 4,
+      "skillPoints": 2,
+      "baseAttack": "Poor",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Thrallherd",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Thrallherd",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Autohypnosis,Bluff,Concentration,All Craft skills,Diplomacy,Knowledge (Psionics),Psicraft,Sense Motive"
+    },
+    {
+      "name": "War Mind",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "War Mind",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "War Mind",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Autohypnosis,Concentration,Intimidate,Knowledge (History),Knowledge (Psionics),Psicraft"
+    },
+    {
+      "name": "War Mind",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Unbodied",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Poor",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Unbodied",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Unbodied",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Bardic Sage",
+      "hitDie": 6,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Bardic Sage",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Bardic Sage",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Appraise,Balance,Bluff,Climb,Concentration,All Craft skills,Decipher Script,Diplomacy,Disguise,Escape Artist,Gather Information,Hide,Jump,All Knowledge skills,Listen,Move Silently,All Perform skills,All Profession skills,Sense Motive,Sleight of Hand,Speak Language,Spellcraft,Swim,Tumble,Use Magic Device"
+    },
+    {
+      "name": "Bardic Sage",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Divine Bard",
+      "hitDie": 6,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Divine Bard",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Divine Bard",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Appraise,Balance,Bluff,Climb,Concentration,All Craft skills,Decipher Script,Diplomacy,Disguise,Escape Artist,Gather Information,Hide,Jump,All Knowledge skills,Listen,Move Silently,All Perform skills,All Profession skills,Sense Motive,Sleight of Hand,Speak Language,Spellcraft,Swim,Tumble,Use Magic Device"
+    },
+    {
+      "name": "Divine Bard",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Savage Bard",
+      "hitDie": 6,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Savage Bard",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Savage Bard",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Appraise,Balance,Bluff,Climb,Concentration,All Craft skills,Diplomacy,Disguise,Escape Artist,Gather Information,Hide,Jump,All Knowledge skills,Listen,Move Silently,All Perform skills,All Profession skills,Sense Motive,Sleight of Hand,Spellcraft,Swim,Tumble,Use Magic Device,Survival"
+    },
+    {
+      "name": "Savage Bard",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Cleric (Cloistered Cleric)",
+      "hitDie": 6,
+      "skillPoints": 2,
+      "baseAttack": "Poor",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Cleric (Cloistered Cleric)",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,Diplomacy,Heal,All Knowledge skills,All Profession skills,Spellcraft,Decipher Script,Speak Language"
+    },
+    {
+      "name": "Cleric (Cloistered Cleric)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Druid (Druidic Avenger)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Druid (Druidic Avenger)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Druid (Druidic Avenger)",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,Handle Animal,Heal,Knowledge (Nature),Listen,All Profession skills,Ride,Spellcraft,Spot,Survival,Swim,Intimidate"
+    },
+    {
+      "name": "Druid (Druidic Avenger)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Fighter (Thug)",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Fighter (Thug)",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Climb,All Craft skills,Handle Animal,Intimidate,Jump,Ride,Swim,Bluff,Gather Information,Knowledge (local),Sleight of Hand"
+    },
+    {
+      "name": "Paladin of Freedom",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Paladin of Freedom",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Paladin of Freedom",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Bluff,Concentration,All Craft skills,Handle Animal,Heal,Knowledge (Nobility and Royalty),Knowledge (religion),All Profession skills,Ride,Sense Motive"
+    },
+    {
+      "name": "Paladin of Freedom",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Paladin of Slaughter",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Paladin of Slaughter",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Paladin of Slaughter",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,Handle Animal,Heal,Intimidate,Knowledge (Nobility and Royalty),Knowledge (religion),All Profession skills,Ride,Sense Motive"
+    },
+    {
+      "name": "Paladin of Slaughter",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Paladin of Tyranny",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Paladin of Tyranny",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Paladin of Tyranny",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,Diplomacy,Handle Animal,Heal,Knowledge (Nobility and Royalty),Knowledge (religion),All Profession skills,Ride,Sense Motive"
+    },
+    {
+      "name": "Paladin of Tyranny",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Ranger (Planar Ranger)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Ranger (Planar Ranger)",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Climb,Concentration,All Craft skills,Handle Animal,Heal,Hide,Jump,Knowledge (geography),Listen,Move Silently,All Profession skills,Ride,Search,Spot,Survival,Swim,Use Rope,Knowledge (the Planes),Speak Language"
+    },
+    {
+      "name": "Ranger (Planar Ranger)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Ranger (Urban Ranger)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Ranger (Urban Ranger)",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Climb,Concentration,All Craft skills,Handle Animal,Heal,Hide,Jump,Knowledge (geography),Listen,Move Silently,All Profession skills,Ride,Search,Spot,Swim,Use Rope,Gather Information,Knowledge (local),Sense Motive"
+    },
+    {
+      "name": "Ranger (Urban Ranger)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Rogue (Wilderness Rogue)",
+      "hitDie": 6,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Good",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Rogue (Wilderness Rogue)",
+      "hitDie": 8,
+      "skillPoints": 8,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Balance,Bluff,Climb,All Craft skills,Disable Device,Disguise,Escape Artist,Hide,Intimidate,Jump,Knowledge (local),Listen,Move Silently,Open Lock,All Perform skills,All Profession skills,Search,Sense Motive,Sleight of Hand,Spot,Swim,Tumble,Use Magic Device,Use Rope,Handle Animal,Knowledge (geography),Knowledge (Nature),Ride,Survival"
+    },
+    {
+      "name": "Battle Sorcerer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Battle Sorcerer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,Knowledge (arcana),All Profession skills,Spellcraft,Intimidate"
+    },
+    {
+      "name": "Battle Sorcerer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Cleric (Spontaneous)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Cleric (Spontaneous)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,Diplomacy,Heal,Knowledge (arcana),Knowledge (history),Knowledge (religion),Knowledge (the Planes),All Profession skills,Spellcraft"
+    },
+    {
+      "name": "Cleric (Spontaneous)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Druid (Spontaneous)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Druid (Spontaneous)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Druid (Spontaneous)",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,Diplomacy,Handle Animal,Heal,Knowledge (Nature),Listen,All Profession skills,Ride,Spellcraft,Spot,Survival,Swim"
+    },
+    {
+      "name": "Druid (Spontaneous)",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Prestige Bard",
+      "hitDie": 6,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Prestige Bard",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Prestige Bard",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Appraise,Balance,Bluff,Climb,Concentration,All Craft skills,Decipher Script,Diplomacy,Disguise,Escape Artist,Gather Information,Hide,Jump,All Knowledge skills,Listen,Move Silently,All Perform skills,All Profession skills,Sense Motive,Sleight of Hand,Speak Language,Spellcraft,Swim,Tumble,Use Magic Device"
+    },
+    {
+      "name": "Prestige Paladin",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Prestige Paladin",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Prestige Paladin",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,Diplomacy,Handle Animal,Heal,Knowledge (Nobility and Royalty),Knowledge (religion),All Profession skills,Ride,Sense Motive"
+    },
+    {
+      "name": "Prestige Ranger",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Prestige Ranger",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Prestige Ranger",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Climb,Concentration,All Craft skills,Handle Animal,Heal,Hide,Jump,Knowledge (dungeoneering),Knowledge (geography),Knowledge (Nature),Listen,Move Silently,All Profession skills,Ride,Search,Spot,Survival,Swim,Use Rope"
+    },
+    {
+      "name": "Drow Paragon",
+      "hitDie": 6,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Good",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Drow Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Drow Paragon",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Climb,All Craft skills,Hide,Intimidate,Jump,All Knowledge skills,Listen,Move Silently,All Profession skills,Spellcraft,Spot,Survival,Swim"
+    },
+    {
+      "name": "Dwarf Paragon",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Dwarf Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Dwarf Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Appraise,Climb,All Craft skills,Intimidate,Jump,Knowledge (dungeoneering),All Profession skills,Sense Motive,Survival"
+    },
+    {
+      "name": "Elf Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Good",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Elf Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Elf Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Climb,All Craft skills,Diplomacy,Hide,Jump,All Knowledge skills,Listen,Move Silently,All Profession skills,Spellcraft,Spot,Survival,Swim"
+    },
+    {
+      "name": "Gnome Paragon",
+      "hitDie": 6,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Gnome Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Gnome Paragon",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Bluff,Climb,All Craft skills,Diplomacy,Hide,Jump,All Knowledge skills,Listen,Move Silently,All Perform skills,All Profession skills,Spellcraft,Swim"
+    },
+    {
+      "name": "Half-Dragon Paragon",
+      "hitDie": 12,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Half-Dragon Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Half-Dragon Paragon",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,Diplomacy,Intimidate,All Knowledge skills,Listen,Search,Sense Motive,Spot"
+    },
+    {
+      "name": "Black Half-Dragon Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Hide,Move Silently,Swim"
+    },
+    {
+      "name": "Blue Half-Dragon Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Bluff,Hide,Spellcraft"
+    },
+    {
+      "name": "Brass Half-Dragon Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Bluff,Gather Information,Survival"
+    },
+    {
+      "name": "Bronze Half-Dragon Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Disguise,Survival,Swim"
+    },
+    {
+      "name": "Copper Half-Dragon Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Bluff,Hide,Jump"
+    },
+    {
+      "name": "Gold Half-Dragon Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Disguise,Heal,Swim"
+    },
+    {
+      "name": "Green Half-Dragon Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Bluff,Hide,Move Silently"
+    },
+    {
+      "name": "Red Half-Dragon Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Appraise,Bluff,Jump"
+    },
+    {
+      "name": "Silver Half-Dragon Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Bluff,Jump,All Perform skills"
+    },
+    {
+      "name": "White Half-Dragon Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Hide,Move Silently,Swim"
+    },
+    {
+      "name": "Half-Elf Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Half-Elf Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Half-Elf Paragon",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Bluff,Climb,All Craft skills,Diplomacy,Hide,Jump,Listen,Move Silently,All Perform skills,All Profession skills,Swim"
+    },
+    {
+      "name": "Half-Orc Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Half-Orc Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Half-Orc Paragon",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Climb,All Craft skills,Handle Animal,Intimidate,Jump,All Profession skills,Ride,Survival,Swim"
+    },
+    {
+      "name": "Halfling Paragon",
+      "hitDie": 6,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Good",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Halfling Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Halfling Paragon",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Bluff,Climb,All Craft skills,Diplomacy,Hide,Jump,Listen,Move Silently,All Perform skills,All Profession skills,Survival,Swim"
+    },
+    {
+      "name": "Human Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Human Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Human Paragon",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Orc Paragon",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Orc Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Orc Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Climb,All Craft skills,Intimidate,Jump,Listen,Spot,Survival,Swim"
+    },
+    {
+      "name": "Tiefling Paragon",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Good",
+      "reflexSave": "Good",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Tiefling Paragon",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Tiefling Paragon",
+      "hitDie": 8,
+      "skillPoints": 4,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Bluff,All Craft skills,Disguise,Hide,Knowledge (the Planes),Listen,Move Silently,All Profession skills,Sleight of Hand,Spot"
+    },
+    {
+      "name": "Bloodline",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "1:REPEATLEVEL:1",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Expert",
+      "hitDie": 6,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Expert",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Expert",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Spellcaster",
+      "hitDie": 4,
+      "skillPoints": 2,
+      "baseAttack": "Poor",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Spellcaster",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Spellcaster",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "GC_Divine Spellcaster",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "All Craft skills,All Knowledge skills,All Profession skills"
+    },
+    {
+      "name": "GC_Divine Spellcaster",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Spellcaster",
+      "hitDie": 4,
+      "skillPoints": 2,
+      "baseAttack": "Poor",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Spellcaster",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Spellcaster",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "GC_Arcane Spellcaster",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Warrior",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Warrior",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Warrior",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "GC_Warrior",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "TYPE=Craft"
+    },
+    {
+      "name": "Battle Scion",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Battle Scion",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Climb,All Craft skills,Handle Animal,Intimidate,Jump,Ride,Swim"
+    },
+    {
+      "name": "Faith Scion",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Faith Scion",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,Diplomacy,Heal,Knowledge (arcana),Knowledge (Nature),Knowledge (religion),All Profession skills,Ride,Spellcraft,Survival"
+    },
+    {
+      "name": "1:REPEATLEVEL:1",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Spell Scion",
+      "hitDie": 6,
+      "skillPoints": 2,
+      "baseAttack": "Poor",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Good",
+      "skills": ""
+    },
+    {
+      "name": "Spell Scion",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Concentration,All Craft skills,All Knowledge skills,All Profession skills,Spellcraft"
+    },
+    {
+      "name": "1:REPEATLEVEL:1",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Swift Scion",
+      "hitDie": 10,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Swift Scion",
+      "hitDie": 8,
+      "skillPoints": 6,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Balance,Bluff,Climb,All Craft skills,Diplomacy,Escape Artist,Hide,Jump,Listen,Move Silently,All Perform skills,All Profession skills,Search,Sense Motive,Spot,Swim,Tumble,Use Rope"
+    },
+    {
+      "name": "Tainted Sorcerer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Tainted Sorcerer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Tainted Sorcerer",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Bluff,Concentration,Disguise,Hide,Knowledge (arcana),Knowledge (the Planes),Spellcraft"
+    },
+    {
+      "name": "1:REPEATLEVEL:1",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Tainted Warrior",
+      "hitDie": 12,
+      "skillPoints": 2,
+      "baseAttack": "Full",
+      "fortSave": "Good",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Tainted Warrior",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": ""
+    },
+    {
+      "name": "Tainted Warrior",
+      "hitDie": 8,
+      "skillPoints": 2,
+      "baseAttack": "Good",
+      "fortSave": "Poor",
+      "reflexSave": "Poor",
+      "willSave": "Poor",
+      "skills": "Climb,Intimidate,Jump,Ride,Sense Motive,Swim"
+    }
+  ]
+}

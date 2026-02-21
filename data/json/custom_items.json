@@ -1,0 +1,28 @@
+{
+  "metadata": {
+    "source": "User Custom Items",
+    "version": "1.0",
+    "category": "custom_items",
+    "description": "Add your own items from non-OGL sourcebooks here"
+  },
+  "data": [
+    {
+      "name": "Healing Belt",
+      "category": "Belt",
+      "subcategory": "Wondrous Item",
+      "type": "Magic Item",
+      "cost": 750,
+      "weight": 0,
+      "description": "3 charges per day. Spend 1 charge to heal 2d8 hp, 2 charges for 3d8, 3 charges for 4d8. Source: Magic Item Compendium p101"
+    },
+    {
+      "name": "Everlasting Rations",
+      "category": "Goods",
+      "subcategory": "Wondrous Item",
+      "type": "Magic Item",
+      "cost": 350,
+      "weight": 2,
+      "description": "Provides enough food for one Medium creature for one day. Rations magically replenish every 24 hours. Source: Complete Adventurer"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+# PCGen source data (238MB)
+data/pcgen-6.08.00RC10/
+
+# Scraped web data (289MB)
+data/www.realmshelps.net/
+
+# Legacy CSV data files
+data/*.csv
+
+# Python migration/analysis scripts
+*.py
+parsers/
+transformers/
+tests/
+validators/
+
+# Development archives and samples
+dev-archive/
+sample/
+
+# Analysis artifacts
+feat_analysis.json
+
+# Development/status markdown docs (keep README.md, QUICKSTART.md, CLAUDE.md)
+AUDIT_REPORT.md
+COMPLETE_TESTING_CHECKLIST.md
+CUSTOM_ITEMS_README.md
+DATA_CLEANUP_SUMMARY.md
+DATA_CONSOLIDATION_SUMMARY.md
+FEAT_IMPLEMENTATION_COMPLETE.md
+FEAT_IMPLEMENTATION_STATUS.md
+FEAT_PARSER_IMPLEMENTATION.md
+FEAT_REALITY_CHECK.md
+FEAT_SYSTEM_SUMMARY.md
+INVENTORY_LANGUAGES_IMPROVEMENTS.md
+ITEMS_FIX_SUMMARY.md
+LANGUAGES_FEATURE_COMPLETE.md
+MIGRATION.md
+PROJECT_SUMMARY.md
+SKILLS_TAB_IMPROVEMENTS.md
+
+# Test HTML
+test_data_load.html
+
+# OS files
+.DS_Store

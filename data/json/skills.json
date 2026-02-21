@@ -1,0 +1,956 @@
+{
+  "metadata": {
+    "source": "PCGen RSRD 3.5e",
+    "version": "6.08.00RC10",
+    "generated": "2026-01-31T04:59:25.387735Z",
+    "category": "skills",
+    "entry_count": 189
+  },
+  "data": [
+    {
+      "name": "Appraise",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Balance",
+      "ability": "DEX",
+      "trained": true
+    },
+    {
+      "name": "Bluff",
+      "ability": "CHA",
+      "trained": true
+    },
+    {
+      "name": "Climb",
+      "ability": "STR",
+      "trained": true
+    },
+    {
+      "name": "Concentration",
+      "ability": "CON",
+      "trained": true
+    },
+    {
+      "name": "Control Shape",
+      "ability": "WIS",
+      "trained": true
+    },
+    {
+      "name": "Craft (Alchemy)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Armorsmithing)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Bowmaking)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Blacksmithing)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Carpentry)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Leatherworking)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Painting)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Pottery)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Sculpting)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Shipmaking)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Stonemasonry)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Trapmaking)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Weaponsmithing)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Woodworking)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Untrained)",
+      "ability": "INT",
+      "trained": false
+    },
+    {
+      "name": "Decipher Script",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Diplomacy",
+      "ability": "CHA",
+      "trained": true
+    },
+    {
+      "name": "Disable Device",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Disguise",
+      "ability": "CHA",
+      "trained": true
+    },
+    {
+      "name": "Escape Artist",
+      "ability": "DEX",
+      "trained": true
+    },
+    {
+      "name": "Forgery",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Gather Information",
+      "ability": "CHA",
+      "trained": true
+    },
+    {
+      "name": "Handle Animal",
+      "ability": "CHA",
+      "trained": true
+    },
+    {
+      "name": "Heal",
+      "ability": "WIS",
+      "trained": true
+    },
+    {
+      "name": "Hide",
+      "ability": "DEX",
+      "trained": true
+    },
+    {
+      "name": "Intimidate",
+      "ability": "CHA",
+      "trained": true
+    },
+    {
+      "name": "Jump",
+      "ability": "STR",
+      "trained": true
+    },
+    {
+      "name": "Knowledge (Arcana)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Knowledge (Architecture and Engineering)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Knowledge (Dungeoneering)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Knowledge (Geography)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Knowledge (History)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Knowledge (Local)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Knowledge (Nature)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Knowledge (Nobility and Royalty)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Knowledge (Religion)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Knowledge (The Planes)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Listen",
+      "ability": "WIS",
+      "trained": true
+    },
+    {
+      "name": "Literacy",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Move Silently",
+      "ability": "DEX",
+      "trained": true
+    },
+    {
+      "name": "Open Lock",
+      "ability": "DEX",
+      "trained": true
+    },
+    {
+      "name": "Perform (Untrained)",
+      "ability": "CHA",
+      "trained": false
+    },
+    {
+      "name": "Perform (Act)",
+      "ability": "CHA",
+      "trained": true
+    },
+    {
+      "name": "Perform (Comedy)",
+      "ability": "CHA",
+      "trained": true
+    },
+    {
+      "name": "Perform (Dance)",
+      "ability": "CHA",
+      "trained": true
+    },
+    {
+      "name": "Perform (Keyboard Instruments)",
+      "ability": "CHA",
+      "trained": true
+    },
+    {
+      "name": "Perform (Oratory)",
+      "ability": "CHA",
+      "trained": true
+    },
+    {
+      "name": "Perform (Percussion Instruments)",
+      "ability": "CHA",
+      "trained": true
+    },
+    {
+      "name": "Perform (String Instruments)",
+      "ability": "CHA",
+      "trained": true
+    },
+    {
+      "name": "Perform (Wind Instruments)",
+      "ability": "CHA",
+      "trained": true
+    },
+    {
+      "name": "Perform (Sing)",
+      "ability": "CHA",
+      "trained": true
+    },
+    {
+      "name": "Profession (Hunter)",
+      "ability": "WIS",
+      "trained": true
+    },
+    {
+      "name": "Profession (Miner)",
+      "ability": "WIS",
+      "trained": true
+    },
+    {
+      "name": "Profession (Siege Engineer)",
+      "ability": "WIS",
+      "trained": true
+    },
+    {
+      "name": "Ride",
+      "ability": "DEX",
+      "trained": true
+    },
+    {
+      "name": "Search",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Sense Motive",
+      "ability": "WIS",
+      "trained": true
+    },
+    {
+      "name": "Sleight of Hand",
+      "ability": "DEX",
+      "trained": true
+    },
+    {
+      "name": "Speak Language",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Spellcraft",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Spot",
+      "ability": "WIS",
+      "trained": true
+    },
+    {
+      "name": "Survival",
+      "ability": "WIS",
+      "trained": true
+    },
+    {
+      "name": "Swim",
+      "ability": "STR",
+      "trained": true
+    },
+    {
+      "name": "Tumble",
+      "ability": "DEX",
+      "trained": true
+    },
+    {
+      "name": "Use Magic Device",
+      "ability": "CHA",
+      "trained": true
+    },
+    {
+      "name": "Use Rope",
+      "ability": "DEX",
+      "trained": true
+    },
+    {
+      "name": "Craft (Dreamweaving)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Gemcutting)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Metalworking)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Stoneworking)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Profession (Bookkeeper)",
+      "ability": "WIS",
+      "trained": true
+    },
+    {
+      "name": "Climb.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Concentration.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Disguise.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Diplomacy.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Escape Artist.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Search.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Search.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Spellcraft.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Survival.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Survival.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Survival.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Survival.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Survival.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Swim.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Use Magic Device.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Use Rope.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Handle Animal.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Ride.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Alchemy)",
+      "ability": "INT",
+      "trained": false
+    },
+    {
+      "name": "Craft (Armorsmithing)",
+      "ability": "INT",
+      "trained": false
+    },
+    {
+      "name": "Craft (Bowmaking)",
+      "ability": "INT",
+      "trained": false
+    },
+    {
+      "name": "Craft (Blacksmithing)",
+      "ability": "INT",
+      "trained": false
+    },
+    {
+      "name": "Craft (Carpentry)",
+      "ability": "INT",
+      "trained": false
+    },
+    {
+      "name": "Craft (Leatherworking)",
+      "ability": "INT",
+      "trained": false
+    },
+    {
+      "name": "Craft (Painting)",
+      "ability": "INT",
+      "trained": false
+    },
+    {
+      "name": "Craft (Pottery)",
+      "ability": "INT",
+      "trained": false
+    },
+    {
+      "name": "Craft (Sculpting)",
+      "ability": "INT",
+      "trained": false
+    },
+    {
+      "name": "Craft (Shipmaking)",
+      "ability": "INT",
+      "trained": false
+    },
+    {
+      "name": "Craft (Stonemasonry)",
+      "ability": "INT",
+      "trained": false
+    },
+    {
+      "name": "Craft (Trapmaking)",
+      "ability": "INT",
+      "trained": false
+    },
+    {
+      "name": "Craft (Weaponsmithing)",
+      "ability": "INT",
+      "trained": false
+    },
+    {
+      "name": "Craft (Woodworking)",
+      "ability": "INT",
+      "trained": false
+    },
+    {
+      "name": "Craft (Dreamweaving)",
+      "ability": "INT",
+      "trained": false
+    },
+    {
+      "name": "Craft (Gemcutting)",
+      "ability": "INT",
+      "trained": false
+    },
+    {
+      "name": "Craft (Metalworking)",
+      "ability": "INT",
+      "trained": false
+    },
+    {
+      "name": "Craft (Stoneworking)",
+      "ability": "INT",
+      "trained": false
+    },
+    {
+      "name": "Perform (Act)",
+      "ability": "CHA",
+      "trained": false
+    },
+    {
+      "name": "Perform (Comedy)",
+      "ability": "CHA",
+      "trained": false
+    },
+    {
+      "name": "Perform (Dance)",
+      "ability": "CHA",
+      "trained": false
+    },
+    {
+      "name": "Perform (Keyboard Instruments)",
+      "ability": "CHA",
+      "trained": false
+    },
+    {
+      "name": "Perform (Oratory)",
+      "ability": "CHA",
+      "trained": false
+    },
+    {
+      "name": "Perform (Percussion Instruments)",
+      "ability": "CHA",
+      "trained": false
+    },
+    {
+      "name": "Perform (String Instruments)",
+      "ability": "CHA",
+      "trained": false
+    },
+    {
+      "name": "Perform (Wind Instruments)",
+      "ability": "CHA",
+      "trained": false
+    },
+    {
+      "name": "Perform (Sing)",
+      "ability": "CHA",
+      "trained": false
+    },
+    {
+      "name": "Bluff.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Decipher Script.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Escape Artist.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Knowledge (Architecture and Engineering).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Knowledge (Dungeoneering).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Knowledge (Geography).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Knowledge (Nature).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Knowledge (The Planes).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Search.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Spellcraft.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Use Magic Device.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Use Rope.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Perform (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Perform (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Perform (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Perform (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Perform (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Perform (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Perform (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Perform (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Perform (Untrained).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Diplomacy.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Ride.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Balance.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Diplomacy.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Disguise.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Escape Artist.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Gather Information.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Intimidate.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Jump.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Knowledge (Nature).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Ride.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Search.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Sleight of Hand.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Spellcraft.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Tumble.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Survival.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Survival.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Survival.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Survival.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Autohypnosis.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Knowledge (Psionics).MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Psicraft.MOD",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Autohypnosis",
+      "ability": "WIS",
+      "trained": true
+    },
+    {
+      "name": "Knowledge (Psionics)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Psicraft",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Use Psionic Device",
+      "ability": "CHA",
+      "trained": true
+    },
+    {
+      "name": "Knowledge (Forbidden Lore)",
+      "ability": "INT",
+      "trained": true
+    },
+    {
+      "name": "Craft (Shipbuilding)",
+      "ability": "INT",
+      "trained": true
+    }
+  ]
+}

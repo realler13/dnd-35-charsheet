@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D 3.5 Character Sheet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with character management -->
+        <header>
+            <div class="header-content">
+                <div class="header-left">
+                    <h1>D&D 3.5 Character Sheet</h1>
+                    <p class="char-name-display" id="charNameDisplay">New Character</p>
+                </div>
+                <div class="header-right">
+                    <button id="newCharacter" class="btn btn-secondary">New</button>
+                    <button id="loadCharacter" class="btn btn-secondary">Load</button>
+                    <button id="saveCharacter" class="btn btn-primary">Save</button>
+                    <button id="exportCharacter" class="btn btn-secondary">Export</button>
+                    <button id="importCharacter" class="btn btn-secondary">Import</button>
+                    <input type="file" id="importFile" accept=".json" style="display: none;">
+                </div>
+            </div>
+        </header>
+
+        <!-- Tab Navigation -->
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="character">Character</button>
+            <button class="tab-btn" data-tab="abilities">Abilities</button>
+            <button class="tab-btn" data-tab="classes">Classes</button>
+            <button class="tab-btn" data-tab="skills">Skills</button>
+            <button class="tab-btn" data-tab="feats">Feats</button>
+            <button class="tab-btn" data-tab="inventory">Inventory</button>
+            <button class="tab-btn" data-tab="spells">Spells</button>
+            <button class="tab-btn" data-tab="gamelog">Game Log</button>
+        </nav>
+
+        <!-- Tab Content -->
+        <main class="tab-content">
+            <!-- Character Tab -->
+            <div id="character-tab" class="tab-pane active">
+                <div id="characterTabContent"></div>
+            </div>
+
+            <!-- Abilities Tab -->
+            <div id="abilities-tab" class="tab-pane">
+                <div id="abilitiesTabContent"></div>
+            </div>
+
+            <!-- Classes Tab -->
+            <div id="classes-tab" class="tab-pane">
+                <div id="classesTabContent"></div>
+            </div>
+
+            <!-- Skills Tab -->
+            <div id="skills-tab" class="tab-pane">
+                <div id="skillsTabContent"></div>
+            </div>
+
+            <!-- Feats Tab -->
+            <div id="feats-tab" class="tab-pane">
+                <div id="featsTabContent"></div>
+            </div>
+
+            <!-- Inventory Tab -->
+            <div id="inventory-tab" class="tab-pane">
+                <div id="inventoryTabContent"></div>
+            </div>
+
+            <!-- Spells Tab -->
+            <div id="spells-tab" class="tab-pane">
+                <div id="spellsTabContent"></div>
+            </div>
+
+            <!-- Game Log Tab -->
+            <div id="gamelog-tab" class="tab-pane">
+                <div id="gamelogTabContent"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>D&D 3.5 Character Sheet - Based on HeroForge Anew</p>
+        </footer>
+    </div>
+
+    <!-- Load all JavaScript modules -->
+    <script src="js/dataLoader.js"></script>
+    <script src="js/character.js"></script>
+    <script src="js/featParser.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/storage.js"></script>
+
+    <!-- Load UI modules -->
+    <script src="js/ui/characterTab.js"></script>
+    <script src="js/ui/abilitiesTab.js"></script>
+    <script src="js/ui/classesTab.js"></script>
+    <script src="js/ui/skillsTab.js"></script>
+    <script src="js/featChoices.js"></script>
+    <script src="js/ui/featsTab.js"></script>
+    <script src="js/ui/inventoryTab.js"></script>
+    <script src="js/ui/spellsTab.js"></script>
+    <script src="js/ui/gameLogTab.js"></script>
+
+    <!-- Load main app last -->
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,839 @@
+{
+  "metadata": {
+    "source": "Converted from charbuild flaws.xml",
+    "version": "1.0",
+    "generated": "2026-01-30T21:13:34.153613Z",
+    "category": "flaws",
+    "entry_count": 92
+  },
+  "data": [
+    {
+      "name": "Aligned Devotion",
+      "type": "Flaw",
+      "source": "Dragon #326",
+      "prerequisite": "Ability to spontaneously cast cure spells.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Arcane Conundrum",
+      "type": "Flaw",
+      "source": "Dragon #328",
+      "prerequisite": "Gnome, Cha 10+.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Arcane Fatigue",
+      "type": "Flaw",
+      "source": "Dragon #333",
+      "prerequisite": "Ability to cast arcane spells.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Arcane Parasites",
+      "type": "Flaw",
+      "source": "Dragon #333",
+      "prerequisite": "Ability to cast arcane spells.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Arcane Performer",
+      "type": "Flaw",
+      "source": "Dragon #324",
+      "prerequisite": "Ability to cast arcane spells without preparation, Perform 1 rank.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Beady Eyes",
+      "type": "Flaw",
+      "source": "Dragon #328",
+      "prerequisite": "Darkvision.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Beastly",
+      "type": "Flaw",
+      "source": "Dragon #329",
+      "prerequisite": "Wild empathy.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Bestial Instinct",
+      "type": "Flaw",
+      "source": "Dragon #324",
+      "prerequisite": "",
+      "description": "You prefer to meet your foes so close that you can smell their blood.",
+      "effect": "You suffer a -2 penalty to hit while using anything other than unarmed strikes or natural weapons.",
+      "special": ""
+    },
+    {
+      "name": "Blind Rage",
+      "type": "Flaw",
+      "source": "Dragon #325",
+      "prerequisite": "Rage ability.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Brash",
+      "type": "Flaw",
+      "source": "Dragon #324",
+      "prerequisite": "",
+      "description": "You move about without careful consideration of foes.",
+      "effect": "You suffer a -6 penalty to your Armor Class against attacks of opportunity.",
+      "special": ""
+    },
+    {
+      "name": "Bravado",
+      "type": "Flaw",
+      "source": "Dragon #328",
+      "prerequisite": "",
+      "description": "You are rash in combat, refusing to show weakness by falling back from your enemies' blows.",
+      "effect": "You may not gain the benefit of any kind of dodge bonuses to your Armor Class. Spells, items, and effects that provide a dodge bonus provide no benefit for you. You cannot use the withdraw action during combat.",
+      "special": ""
+    },
+    {
+      "name": "Cautious (Flaw)",
+      "type": "Flaw",
+      "source": "Dragon #328",
+      "prerequisite": "",
+      "description": "You are uneasy engaging in behavior that carries a chance of failure.",
+      "effect": "You must spend twice as long performing any skill that requires an action. For example, deciphering a page of text would take 2 minutes for you instead of 1, while the Concentration skill is not affected by this flaw as it does not require an action. You also suffer a -2 penalty on initiative checks.",
+      "special": ""
+    },
+    {
+      "name": "Chivalrous Courtesy",
+      "type": "Flaw",
+      "source": "Dragon #324",
+      "prerequisite": "Good or lawful alignment.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "City Slicker (flaw)",
+      "type": "Flaw",
+      "source": "Dragon #324",
+      "prerequisite": "Survival as a class skill.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Claustrophobia",
+      "type": "Flaw",
+      "source": "Dragon #324",
+      "prerequisite": "",
+      "description": "You are uncomfortable in enclosed spaces.",
+      "effect": "You become shaken while in any space where you are within 10 feet of a wall or other solid surface on 2 or more sides, or if the ceiling is less than 10 feet above your head. (Such as while walking down a 20-foot-wide corridor or while you are in any room with a 10-foot-high ceiling.) Spells and effects that remove fear do not remove this condition.",
+      "special": ""
+    },
+    {
+      "name": "Code of Arms",
+      "type": "Flaw",
+      "source": "Dragon #324",
+      "prerequisite": "Good or lawful alignment.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Cold-Blooded",
+      "type": "Flaw",
+      "source": "Dragon #324",
+      "prerequisite": "",
+      "description": "You were raised in the arctic and cannot tolerate heat.",
+      "effect": "You automatically fail all Fortitude saves made to overcome the effects of high temperatures. Fire-based effects deal an additional 2 points of fire damage to you.",
+      "special": ""
+    },
+    {
+      "name": "Coward",
+      "type": "Flaw",
+      "source": "Dragon #324",
+      "prerequisite": "",
+      "description": "In dangerous circumstances, you are likely to run away.",
+      "effect": "You automatically fail all saves against fear effects. An ability that makes you immune to fear (such as becoming a 3rd-level paladin) instead grants you a saving throw, but at a -4 penalty on the save.",
+      "special": ""
+    },
+    {
+      "name": "Curious",
+      "type": "Flaw",
+      "source": "Dragon #328",
+      "prerequisite": "",
+      "description": "You are easily distracted by the sights and sounds around you.",
+      "effect": "You suffer a -2 penalty on Listen and Spot checks. You also suffer a -2 penalty on initiative rolls.",
+      "special": ""
+    },
+    {
+      "name": "Divine Gesture",
+      "type": "Flaw",
+      "source": "Dragon #326",
+      "prerequisite": "Ability to cast divine spells.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Domain Devotion",
+      "type": "Flaw",
+      "source": "Dragon #326",
+      "prerequisite": "Access to domains.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Elven Pride of Arms",
+      "type": "Flaw",
+      "source": "Dragon #328",
+      "prerequisite": "Elven blood.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Exhausting Rage",
+      "type": "Flaw",
+      "source": "Dragon #325",
+      "prerequisite": "Rage ability.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Feeble",
+      "type": "Flaw",
+      "source": "Unearthed Arcana",
+      "prerequisite": "",
+      "description": "You are unathletic and uncoordinated.",
+      "effect": "You take a -2 penalty on Strength-, Dexterity-, and Constitution-based ability checks and skill checks.",
+      "special": ""
+    },
+    {
+      "name": "Foe Specialist (flaw)",
+      "type": "Flaw",
+      "source": "Dragon #329",
+      "prerequisite": "Favored enemy.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Fool",
+      "type": "Flaw",
+      "source": "Dragon #324",
+      "prerequisite": "Bardic music.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Forlorn",
+      "type": "Flaw",
+      "source": "Dragon #333",
+      "prerequisite": "Ability to call a familiar.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Forlorn of Men",
+      "type": "Flaw",
+      "source": "Dragon #324",
+      "prerequisite": "",
+      "description": "You are uncomfortable in the presence of humanoids.",
+      "effect": "You become shaken if there is more than one humanoid within 30 feet of you, including members of your adventuring party or other friends. Spells and effects that remove fear do not remove this condition.",
+      "special": ""
+    },
+    {
+      "name": "Frail",
+      "type": "Flaw",
+      "source": "Unearthed Arcana",
+      "prerequisite": "",
+      "description": "You are thin and weak of frame.",
+      "effect": "Subtract 1 from the number of hit points you gain at each level. This flaw can reduce the number of hit points you gain to 0 (but not below).",
+      "special": "You must have a Constitution of 4 or higher to take this flaw."
+    },
+    {
+      "name": "Frail (Flaw)",
+      "type": "Flaw",
+      "source": "Dragon #328",
+      "prerequisite": "Constitution 11 or lower.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Free-Spirited",
+      "type": "Flaw",
+      "source": "Dragon #328",
+      "prerequisite": "Chaotic alignment.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Frivolous Performer",
+      "type": "Flaw",
+      "source": "Dragon #324",
+      "prerequisite": "Bardic knowledge.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Fussy",
+      "type": "Flaw",
+      "source": "Dragon #328",
+      "prerequisite": "",
+      "description": "You are uncomfortable ingesting anything but a small range of preferred foods and drinks.",
+      "effect": "You become sickened (no saving throw allowed) upon ingestion of any sort of potion for the duration of its effect. Potions with an instantaneous duration cause you to be sickened for a period of time equal to the potion's caster level in minutes. You also suffer a -4 penalty on saving throws made against ingested poisons.",
+      "special": ""
+    },
+    {
+      "name": "Glory-Hound",
+      "type": "Flaw",
+      "source": "Dragon #328",
+      "prerequisite": "Base attack bonus +1.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Grudge Keeper",
+      "type": "Flaw",
+      "source": "Dragon #328",
+      "prerequisite": "",
+      "description": "You have an overpowering need for vengeance and have difficulty letting go of grudges.",
+      "effect": "If you are damaged in combat, you suffer a -2 penalty on attacks rolls, skill checks, saving throws, and ability checks until you damage the foe who caused you harm. This penalty does not apply if you cannot discern the source of the damage. This penalty disappears when the combat ends.",
+      "special": ""
+    },
+    {
+      "name": "Gullible",
+      "type": "Flaw",
+      "source": "Dragon #325",
+      "prerequisite": "",
+      "description": "You believe what you see, and you trust others more than you should.",
+      "effect": "You suffer a -2 penalty on saving throws made to resist enchantment and illusion spells and effects. You also suffer a -4 penalty on Sense Motive checks.",
+      "special": ""
+    },
+    {
+      "name": "Half-Blood Outcast",
+      "type": "Flaw",
+      "source": "Dragon #328",
+      "prerequisite": "Half-elf or half-orc.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Hatred",
+      "type": "Flaw",
+      "source": "Dragon #329",
+      "prerequisite": "Favored enemy.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Haunted",
+      "type": "Flaw",
+      "source": "Dragon #327",
+      "prerequisite": "Ability to cast spells.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Honor of The Duel",
+      "type": "Flaw",
+      "source": "Dragon #324",
+      "prerequisite": "Good or lawful alignment.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Honorable Challenge",
+      "type": "Flaw",
+      "source": "Dragon #324",
+      "prerequisite": "Lawful alignment.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Hot-Blooded",
+      "type": "Flaw",
+      "source": "Dragon #324",
+      "prerequisite": "",
+      "description": "You were raised in the desert and cannot tolerate cold.",
+      "effect": "You automatically fail all Fortitude saves made to overcome the effects of low temperatures. Cold-based effects deal an additional 2 points of cold damage to you.",
+      "special": ""
+    },
+    {
+      "name": "Implacable",
+      "type": "Flaw",
+      "source": "Dragon #328",
+      "prerequisite": "Base attack bonus +1.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Inattentive (Flaw)",
+      "type": "Flaw",
+      "source": "Unearthed Arcana",
+      "prerequisite": "",
+      "description": "You are particularly unaware of your surroundings.",
+      "effect": "You take a -4 penalty on listen checks and Spot checks.",
+      "special": ""
+    },
+    {
+      "name": "Individualist",
+      "type": "Flaw",
+      "source": "Dragon #329",
+      "prerequisite": "",
+      "description": "You are committed to a path that requires complete independence from others.",
+      "effect": "You suffer a -2 penalty on all attack rolls made using weapons that you have not personally crafted. In addition, the armor check penalty of any suit of armor you wear that you did not craft increases by +1.",
+      "special": ""
+    },
+    {
+      "name": "Insomniac",
+      "type": "Flaw",
+      "source": "Dragon #328",
+      "prerequisite": "",
+      "description": "You have great difficulty achieving a full and restful sleep.",
+      "effect": "In order to get a full night of rest you must succeed at a DC 15 Fortitude save. If you are sleeping and a disturbance wakes you during the night, you must make an additional save (at the same DC) to return to sleep. If you fail the Fortitude save you are fatigued when you rise in the morning. If you are fatigued when you try to sleep, you gain a +2 bonus on your save. If you are exhausted, you gain a +6 bonus. Comfortable conditions, such as those found in most inns, grant you a +4 bonus on this save. Poor conditions, such as sleeping on the ground or in armor, give you a -4 penalty on this save. Even if you sleep poorly, you may prepare arcane spells as normal after 8 hours of fitful rest.",
+      "special": ""
+    },
+    {
+      "name": "Light Sensitivity",
+      "type": "Flaw",
+      "source": "Dragon #328",
+      "prerequisite": "Darkvision.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Lightweight",
+      "type": "Flaw",
+      "source": "Dragon #328",
+      "prerequisite": "",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Living Faith",
+      "type": "Flaw",
+      "source": "Dragon #326",
+      "prerequisite": "Ability to turn or rebuke undead.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Loner",
+      "type": "Flaw",
+      "source": "Dragon #327",
+      "prerequisite": "Ability to summon a familiar or animal companion.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Loudmouth",
+      "type": "Flaw",
+      "source": "Dragon #324",
+      "prerequisite": "",
+      "description": "You are a loud, obnoxious, boisterous, and compulsive talker.",
+      "effect": "You suffer a -4 penalty on all Diplomacy and Move Silently checks.",
+      "special": ""
+    },
+    {
+      "name": "Love of Nature",
+      "type": "Flaw",
+      "source": "Dragon #324",
+      "prerequisite": "",
+      "description": "You do not wish harm upon any natural creature.",
+      "effect": "You must succeed at a DC 12 Will save before you can attack any creature with the animal, plant, or vermin type, or you lose your action. Note that animals, plants, and vermin may attack you without penalty.",
+      "special": ""
+    },
+    {
+      "name": "Magical Fascination",
+      "type": "Flaw",
+      "source": "Dragon #328",
+      "prerequisite": "",
+      "description": "You have a tendency to become fascinated by spells and elaborate magical effects.",
+      "effect": "You suffer a -2 penalty on attack rolls and skill checks when in sight of a visible magical effect with a duration greater than instantaneous (such as a",
+      "special": ""
+    },
+    {
+      "name": "Magical Overload",
+      "type": "Flaw",
+      "source": "Dragon #327",
+      "prerequisite": "Ability to cast spells.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Material Devotion",
+      "type": "Flaw",
+      "source": "Dragon #326",
+      "prerequisite": "Access to domains.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Meager Fortitude",
+      "type": "Flaw",
+      "source": "Unearthed Arcana",
+      "prerequisite": "",
+      "description": "You are sickly and weak of stomach.",
+      "effect": "You take a -3 penalty on Fortitude saves.",
+      "special": ""
+    },
+    {
+      "name": "Metal Intolerance",
+      "type": "Flaw",
+      "source": "Dragon #324",
+      "prerequisite": "",
+      "description": "You are allergic to metals.",
+      "effect": "You suffer an additional point of damage when struck by metal weapons. The natural attacks of inevitables, iron golems, and other creatures composed of metal also deal this additional damage.",
+      "special": ""
+    },
+    {
+      "name": "Methodical Magical Methods",
+      "type": "Flaw",
+      "source": "Dragon #333",
+      "prerequisite": "Ability to cast spells.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Meticulous Performer",
+      "type": "Flaw",
+      "source": "Dragon #324",
+      "prerequisite": "Bardic music.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Mounted Warrior",
+      "type": "Flaw",
+      "source": "Dragon #324",
+      "prerequisite": "Ride 1 rank.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Murky-Eyed",
+      "type": "Flaw",
+      "source": "Unearthed Arcana",
+      "prerequisite": "",
+      "description": "Your vision is obscured.",
+      "effect": "In combat, every time you attack an opponent that has concealment, roll your miss chance twice. If either or both results indicate that you miss, your attack fails.",
+      "special": ""
+    },
+    {
+      "name": "No Time For Book Learning",
+      "type": "Flaw",
+      "source": "Dragon #324",
+      "prerequisite": "",
+      "description": "You put no faith in the written word.",
+      "effect": "You are illiterate. You can never learn to read any language, and you suffer a -2 penalty on all Knowledge checks except Knowledge (nature).",
+      "special": ""
+    },
+    {
+      "name": "Noncombatant",
+      "type": "Flaw",
+      "source": "Unearthed Arcana",
+      "prerequisite": "",
+      "description": "You are relatively inept at melee combat.",
+      "effect": "You take a -2 penalty on all melee attack rolls.",
+      "special": ""
+    },
+    {
+      "name": "Obese",
+      "type": "Flaw",
+      "source": "Dragon #328",
+      "prerequisite": "Small size, Dexterity 13 or lower, you may not be Lightweight.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Pathetic",
+      "type": "Flaw",
+      "source": "Unearthed Arcana",
+      "prerequisite": "",
+      "description": "You are weaker in an attribute than you should be.",
+      "effect": "Reduce one of your ability scores by 2.",
+      "special": "You cannot take this flaw if the total of your ability modifiers is 8 or higher."
+    },
+    {
+      "name": "Phantom Spark",
+      "type": "Flaw",
+      "source": "Dragon #327",
+      "prerequisite": "Ability to cast spells.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Ponderous Spellcaster",
+      "type": "Flaw",
+      "source": "Dragon #326",
+      "prerequisite": "Ability to cast spells.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Poor Reflexes",
+      "type": "Flaw",
+      "source": "Unearthed Arcana",
+      "prerequisite": "",
+      "description": "You often zig when you should have zagged.",
+      "effect": "You take a -3 penalty on Reflex saves.",
+      "special": ""
+    },
+    {
+      "name": "Pride of Arms",
+      "type": "Flaw",
+      "source": "Dragon #324",
+      "prerequisite": "Proficiency in all martial weapons.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Quarter Elf",
+      "type": "Flaw",
+      "source": "Dragon #328",
+      "prerequisite": "Half-elf.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Quick Burning Rage",
+      "type": "Flaw",
+      "source": "Dragon #325",
+      "prerequisite": "Rage ability.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Restricted Sorcery",
+      "type": "Flaw",
+      "source": "Dragon #327",
+      "prerequisite": "Ability to cast spells without preparation.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Shaky",
+      "type": "Flaw",
+      "source": "Unearthed Arcana",
+      "prerequisite": "",
+      "description": "You are relatively poor at ranged combat.",
+      "effect": "You take a -2 penalty on all ranged attack rolls.",
+      "special": ""
+    },
+    {
+      "name": "Short Attention Span",
+      "type": "Flaw",
+      "source": "Dragon #328",
+      "prerequisite": "",
+      "description": "You have little patience, causing you to have difficulty concentrating on repetitive tasks.",
+      "effect": "You suffer a -2 penalty on all skill checks made to retry an action that you previously failed. This penalty is cumulative, increasing by -2 for every failed attempt. In addition, you may not take 20 on any skill check.",
+      "special": ""
+    },
+    {
+      "name": "Short Temper",
+      "type": "Flaw",
+      "source": "Dragon #328",
+      "prerequisite": "",
+      "description": "You become angry and flustered under stressful circumstances.",
+      "effect": "If you suffer any damage during combat, you must make a DC 15 Will save or become enraged. While enraged you suffer a -2 penalty to your Armor Class and you cannot use any Charisma-, Dexterity-, or Intelligence-based skills (except for Balance, Escape Artist, Intimidate, and Ride), the Concentration skill, or any abilities that require patience or concentration. You cannot cast spells or activate magic items that require a command word, a spell trigger (such as a wand), or spell completion (such as a scroll) to function. You can use any feat you possess except Combat Expertise, item creation feats, and metamagic feats. This enraged state lasts for a number of rounds equal to 3 + your Constitution modifier and cannot be ended prematurely. This penalty stacks with those from the use of the barbarian rage ability, resulting in a -4 AC penalty.",
+      "special": ""
+    },
+    {
+      "name": "Short of Breath",
+      "type": "Flaw",
+      "source": "Dragon #333",
+      "prerequisite": "Constitution 13 or lower.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Skulker",
+      "type": "Flaw",
+      "source": "Dragon #328",
+      "prerequisite": "",
+      "description": "You are not prepared to stand face to face with your foes.",
+      "effect": "You must make a DC 15 Will save or become shaken whenever a foe engages you in melee. This penalty takes effect as soon as an enemy attacks you while you are within its threatened area. You recover from your fear as soon as you are not within an area threatened by foes.",
+      "special": ""
+    },
+    {
+      "name": "Slow (Flaw)",
+      "type": "Flaw",
+      "source": "Unearthed Arcana",
+      "prerequisite": "",
+      "description": "You move exceptionally slowly.",
+      "effect": "Your base land speed is halved (round down to the nearest 5-foot interval).",
+      "special": "You must have a base land speed of at least 20 feet to take this flaw."
+    },
+    {
+      "name": "Slow Healing",
+      "type": "Flaw",
+      "source": "Dragon #328",
+      "prerequisite": "Constitution 13 or lower.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Slow To Anger",
+      "type": "Flaw",
+      "source": "Dragon #325",
+      "prerequisite": "Rage ability.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Solitary Paragon",
+      "type": "Flaw",
+      "source": "Dragon #324",
+      "prerequisite": "",
+      "description": "You prefer to fight alone.",
+      "effect": "You gain no benefit from flanking a foe and instead suffer a -4 penalty on attack rolls made against a foe you flank.",
+      "special": ""
+    },
+    {
+      "name": "Stubby Fingers",
+      "type": "Flaw",
+      "source": "Dragon #328",
+      "prerequisite": "Dwarf, gnome, or halfling.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Superstitious",
+      "type": "Flaw",
+      "source": "Dragon #325",
+      "prerequisite": "Inability to cast spells.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Terrain Specialist",
+      "type": "Flaw",
+      "source": "Dragon #329",
+      "prerequisite": "Track, wild empathy.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Trivial Performer",
+      "type": "Flaw",
+      "source": "Dragon #324",
+      "prerequisite": "Bardic music.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Uncontrollable Rage",
+      "type": "Flaw",
+      "source": "Dragon #325",
+      "prerequisite": "Rage ability.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Unreactive",
+      "type": "Flaw",
+      "source": "Unearthed Arcana",
+      "prerequisite": "",
+      "description": "You are slow to react to danger.",
+      "effect": "You take a -6 penalty on initiative checks.",
+      "special": ""
+    },
+    {
+      "name": "Vulnerable",
+      "type": "Flaw",
+      "source": "Unearthed Arcana",
+      "prerequisite": "",
+      "description": "You are not good at defending yourself.",
+      "effect": "You take a -1 penalty to Armor Class.",
+      "special": ""
+    },
+    {
+      "name": "Warrior of The Phalanx",
+      "type": "Flaw",
+      "source": "Dragon #324",
+      "prerequisite": "",
+      "description": "Trained to fight in a group, you have difficulties when fighting alone.",
+      "effect": "You suffer a -4 penalty on attack rolls you make when not adjacent to an ally.",
+      "special": ""
+    },
+    {
+      "name": "Weak Will",
+      "type": "Flaw",
+      "source": "Unearthed Arcana",
+      "prerequisite": "",
+      "description": "You are highly suggestible and easily duped.",
+      "effect": "You take a -3 penalty on Will saves.",
+      "special": ""
+    },
+    {
+      "name": "Weapon Bound",
+      "type": "Flaw",
+      "source": "Dragon #326",
+      "prerequisite": "Devotion to a specific deity.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    },
+    {
+      "name": "Wild",
+      "type": "Flaw",
+      "source": "Dragon #329",
+      "prerequisite": "Survival 1 rank.",
+      "description": "",
+      "effect": "",
+      "special": ""
+    }
+  ]
+}

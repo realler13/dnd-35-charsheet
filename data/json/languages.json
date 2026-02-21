@@ -1,0 +1,214 @@
+{
+  "metadata": {
+    "source": "D&D 3.5 SRD",
+    "version": "1.0",
+    "category": "languages",
+    "entry_count": 29
+  },
+  "data": [
+    {
+      "name": "Common",
+      "type": "Standard",
+      "typicalSpeakers": "Humans, halflings",
+      "script": "Common",
+      "description": "The common tongue spoken across most civilized lands. All characters know Common.",
+      "free": true
+    },
+    {
+      "name": "Abyssal",
+      "type": "Exotic",
+      "typicalSpeakers": "Demons, chaotic evil outsiders",
+      "script": "Infernal",
+      "description": "The language of the Abyss, spoken by demons and chaotic evil creatures."
+    },
+    {
+      "name": "Aquan",
+      "type": "Exotic",
+      "typicalSpeakers": "Water-based creatures",
+      "script": "Aquan",
+      "description": "The language of water elementals and aquatic creatures."
+    },
+    {
+      "name": "Auran",
+      "type": "Exotic",
+      "typicalSpeakers": "Air-based creatures",
+      "script": "Auran",
+      "description": "The language of air elementals and flying creatures."
+    },
+    {
+      "name": "Celestial",
+      "type": "Exotic",
+      "typicalSpeakers": "Good outsiders",
+      "script": "Celestial",
+      "description": "The language of celestials, angels, and other good-aligned outsiders."
+    },
+    {
+      "name": "Draconic",
+      "type": "Exotic",
+      "typicalSpeakers": "Dragons, reptilian humanoids",
+      "script": "Draconic",
+      "description": "The ancient language of dragons, kobolds, troglodytes, and lizardfolk."
+    },
+    {
+      "name": "Druidic",
+      "type": "Secret",
+      "typicalSpeakers": "Druids only",
+      "script": "Druidic",
+      "description": "The secret language of druids. Only druids are permitted to know it. Non-druids who learn it are considered enemies of nature."
+    },
+    {
+      "name": "Dwarven",
+      "type": "Standard",
+      "typicalSpeakers": "Dwarves",
+      "script": "Dwarven",
+      "description": "The language of dwarves, known for its runic alphabet and association with stonework."
+    },
+    {
+      "name": "Elven",
+      "type": "Standard",
+      "typicalSpeakers": "Elves",
+      "script": "Elven",
+      "description": "The flowing language of elves, often considered the most beautiful of mortal tongues."
+    },
+    {
+      "name": "Giant",
+      "type": "Standard",
+      "typicalSpeakers": "Ogres, giants",
+      "script": "Dwarven",
+      "description": "The booming language spoken by giants, ogres, and related creatures."
+    },
+    {
+      "name": "Gnoll",
+      "type": "Standard",
+      "typicalSpeakers": "Gnolls",
+      "script": "Common",
+      "description": "The harsh, cackling language of gnolls and other hyena-like humanoids."
+    },
+    {
+      "name": "Gnome",
+      "type": "Standard",
+      "typicalSpeakers": "Gnomes",
+      "script": "Dwarven",
+      "description": "The language of gnomes, similar to Dwarven but with a lighter, more cheerful tone."
+    },
+    {
+      "name": "Goblin",
+      "type": "Standard",
+      "typicalSpeakers": "Goblins, hobgoblins, bugbears",
+      "script": "Dwarven",
+      "description": "The crude language spoken by goblins, hobgoblins, and bugbears."
+    },
+    {
+      "name": "Halfling",
+      "type": "Standard",
+      "typicalSpeakers": "Halflings",
+      "script": "Common",
+      "description": "The friendly language of halflings, full of homey expressions and food metaphors."
+    },
+    {
+      "name": "Ignan",
+      "type": "Exotic",
+      "typicalSpeakers": "Fire-based creatures",
+      "script": "Draconic",
+      "description": "The crackling language of fire elementals and creatures from the Elemental Plane of Fire."
+    },
+    {
+      "name": "Infernal",
+      "type": "Exotic",
+      "typicalSpeakers": "Devils, lawful evil outsiders",
+      "script": "Infernal",
+      "description": "The precise, contract-bound language of devils and the Nine Hells."
+    },
+    {
+      "name": "Orc",
+      "type": "Standard",
+      "typicalSpeakers": "Orcs",
+      "script": "Dwarven",
+      "description": "The guttural language of orcs, half-orcs, and their kin."
+    },
+    {
+      "name": "Sylvan",
+      "type": "Exotic",
+      "typicalSpeakers": "Fey creatures, dryads, brownies",
+      "script": "Elven",
+      "description": "The magical language of the fey, dryads, brownies, and leprechauns."
+    },
+    {
+      "name": "Terran",
+      "type": "Exotic",
+      "typicalSpeakers": "Earth-based creatures",
+      "script": "Dwarven",
+      "description": "The rumbling language of earth elementals and creatures from the Elemental Plane of Earth."
+    },
+    {
+      "name": "Undercommon",
+      "type": "Exotic",
+      "typicalSpeakers": "Drow, underdark traders",
+      "script": "Elven",
+      "description": "The trade language of the Underdark, spoken by drow and many subterranean races."
+    },
+    {
+      "name": "Aboleth",
+      "type": "Exotic",
+      "typicalSpeakers": "Aboleths",
+      "script": "Aboleth",
+      "description": "The ancient telepathic language of aboleths, one of the oldest languages in existence."
+    },
+    {
+      "name": "Sphinx",
+      "type": "Exotic",
+      "typicalSpeakers": "Sphinxes",
+      "script": "Draconic",
+      "description": "The riddling language of sphinxes, filled with double meanings and wordplay."
+    },
+    {
+      "name": "Githyanki",
+      "type": "Exotic",
+      "typicalSpeakers": "Githyanki",
+      "script": "Common",
+      "description": "The militant language of the githyanki, warriors from the Astral Plane."
+    },
+    {
+      "name": "Githzerai",
+      "type": "Exotic",
+      "typicalSpeakers": "Githzerai",
+      "script": "Common",
+      "description": "The monastic language of the githzerai, contemplatives from Limbo."
+    },
+    {
+      "name": "Slaad",
+      "type": "Exotic",
+      "typicalSpeakers": "Slaadi",
+      "script": "None",
+      "description": "The chaotic language of slaadi from the plane of Limbo."
+    },
+    {
+      "name": "Yuan-ti",
+      "type": "Exotic",
+      "typicalSpeakers": "Yuan-ti",
+      "script": "Draconic",
+      "description": "The serpentine language of yuan-ti, filled with hissing sounds."
+    },
+    {
+      "name": "Formian",
+      "type": "Exotic",
+      "typicalSpeakers": "Formians",
+      "script": "None",
+      "description": "The clicking, chemical-based language of formian ant-people."
+    },
+    {
+      "name": "Kuo-toa",
+      "type": "Exotic",
+      "typicalSpeakers": "Kuo-toa",
+      "script": "None",
+      "description": "The bubbly underwater language of the fish-like kuo-toa."
+    },
+    {
+      "name": "Sahuagin",
+      "type": "Exotic",
+      "typicalSpeakers": "Sahuagin",
+      "script": "None",
+      "description": "The harsh underwater language of the predatory sahuagin."
+    }
+  ]
+}
