@@ -45,5 +45,10 @@ test_data_load.html
 # Playwright MCP cache
 .playwright-mcp/
 
+# Tauri build artifacts
+src-tauri/target/
+src-tauri/gen/
+dist/
+
 # OS files
 .DS_Store

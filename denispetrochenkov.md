@@ -96,6 +96,8 @@ js/
 ├── storage.js          # localStorage + file export/import
 ├── featParser.js       # Extracts numeric bonuses from feat text
 ├── featChoices.js      # Defines feat choice UI (skill, weapon, school)
+├── lib/
+│   └── jszip.min.js    # Vendored JSZip 3.10.1 for ZIP export/import
 └── ui/
     ├── characterTab.js # Read-only character sheet display
     ├── abilitiesTab.js # Race selection, ability score management
@@ -432,3 +434,263 @@ We evaluated six approaches: Electron, Tauri, Neutralinojs, PWA, pywebview, and 
 4. **Lightest touch**: **PWA** — If "runs in a standalone Chrome window" is good enough and you don't need to distribute a `.app` file, adding a manifest + service worker takes 20 minutes and changes nothing about how the app works.
 
 The **anti-recommendations**: Skip Neutralinojs (localStorage bug on macOS is a dealbreaker). Skip Nativefier (dead project). Skip Gluon (too experimental). Skip native Swift unless you specifically want App Store distribution.
+
+## Phase 4: Tauri 2.0 Desktop Wrapper
+
+### The Goal
+
+Take the research from Phase 3 and actually wrap the app as a standalone macOS `.app` using Tauri 2.0 — our top recommendation. The key constraint: **zero changes to the web app itself**. The existing HTML/CSS/JS must work identically inside the Tauri WebView as it does in a browser.
+
+### The 500MB Problem
+
+The project root contains ~500MB+ of PCGen source data (`data/pcgen-6.08.00RC10/`), scraped web data (`data/www.realmshelps.net/`), Python migration scripts, screenshots, and markdown documentation. Tauri's `frontendDist` setting embeds everything in the target directory into the binary. If we pointed it at the project root, we'd ship a 500MB+ app for a 7MB web app.
+
+**The solution**: A `beforeBuildCommand` that copies only the web assets (~7MB) to a clean `dist/` directory. This runs automatically before every `cargo tauri build`:
+
+```sh
+rm -rf dist && mkdir -p dist/js/ui dist/data/json
+cp index.html dist/ && cp styles.css dist/
+cp js/*.js dist/js/ && cp js/ui/*.js dist/js/ui/
+cp data/json/*.json dist/data/json/
+```
+
+Result: a 9.8MB `.app` bundle instead of 500MB+.
+
+### What We Created
+
+All files live in `src-tauri/`:
+
+- **`Cargo.toml`** — Rust manifest with `tauri v2`, `serde`, and `serde_json` dependencies. The crate type includes `staticlib`, `cdylib`, and `rlib` to support Tauri's build system.
+- **`build.rs`** — One-liner: `tauri_build::build()`. This is Tauri's build script hook.
+- **`src/main.rs`** — Desktop entry point (4 lines). Sets `windows_subsystem = "windows"` to hide the console on Windows, then calls `lib::run()`.
+- **`src/lib.rs`** — App logic with a `print_page` Tauri command that calls `WebviewWindow::print()` for native print dialog support. The `generate_context!()` macro reads `tauri.conf.json` at compile time and embeds the frontend assets.
+- **`tauri.conf.json`** — The real configuration hub (see below).
+- **`capabilities/default.json`** — Security permissions for the main window. Just `core:default` since we don't need file system access or other native APIs.
+- **`icons/`** — Generated via `cargo tauri icon` from a programmatically-created 256x256 PNG.
+
+### The Configuration Deep Dive (`tauri.conf.json`)
+
+```json
+{
+  "frontendDist": "../dist",     // Points to clean web-only copy
+  "devUrl": "http://localhost:8000",  // Dev mode uses Python server
+  "beforeDevCommand": "python3 -m http.server 8000",
+  "beforeBuildCommand": "sh -c \"rm -rf dist && mkdir -p dist/js/ui dist/data/json && ...\"",
+  "windows": [{ "title": "3.5 Character Sheet", "width": 1200, "height": 900 }],
+  "security": {
+    "csp": "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'"
+  }
+}
+```
+
+The CSP (Content Security Policy) deserves explanation:
+- `'self'` — allows loading resources from the app's own origin (the `tauri://localhost` protocol)
+- `'unsafe-inline'` for styles — needed because the app uses inline styles and CSS-in-JS patterns
+- `fonts.googleapis.com` / `fonts.gstatic.com` — Google Fonts used by the app
+- `'unsafe-inline'` for scripts — the app uses inline event handlers and `<script>` tags
+
+### Bugs We Hit
+
+1. **`beforeBuildCommand` working directory**: The plan assumed the command ran from `src-tauri/` and used `cd ..` to reach the project root. Turns out Tauri runs it from the **project root** (parent of `src-tauri/`). The `cd ..` went one level too far, causing `cp: index.html: No such file or directory`. Fixed by removing `cd ..`.
+
+2. **Missing app icon**: Tauri's `generate_context!()` macro expects `src-tauri/icons/icon.png` at compile time. Without it, compilation fails with a proc-macro panic. We generated a basic icon programmatically (a D20-inspired design via Python's `struct`/`zlib` modules) then ran `cargo tauri icon` to create all required variants (`.icns`, `.ico`, various PNG sizes).
+
+3. **`window.print()` doesn't work in Tauri's WebView**: The web app used `window.print()` for its Print/PDF feature, but Tauri's WKWebView doesn't expose browser print from JS. Fixed by adding a Rust `print_page` command that calls `WebviewWindow::print()` (wry's native print API), exposed to JS via `withGlobalTauri: true`. The `pdfExport.js` detects `window.__TAURI__` and invokes the command, falling back to `window.print()` in browsers. This way the same code works in both environments.
+
+### How to Use
+
+**Development mode** (live reload from Python server):
+```bash
+cd src-tauri && cargo tauri dev
+```
+
+**Production build** (standalone `.app`):
+```bash
+cd src-tauri && cargo tauri build --bundles app
+# Output: src-tauri/target/release/bundle/macos/3.5 Character Sheet.app
+```
+
+**Run the built app**:
+```bash
+open "src-tauri/target/release/bundle/macos/3.5 Character Sheet.app"
+```
+
+### Lessons Learned
+
+- **Tauri's `generate_context!()` is a compile-time macro** — it reads `tauri.conf.json` and embeds your frontend assets into the Rust binary at compile time, not at runtime. This means your `frontendDist` directory must exist and be populated before `cargo build` runs (hence `beforeBuildCommand`).
+- **First Rust compile is slow (~3-5 min)**, but incremental builds are fast (~20 sec). The Tauri CLI caches compiled dependencies in `src-tauri/target/`.
+- **Tauri's custom protocol (`tauri://localhost`) handles `fetch()` seamlessly** for simple relative-path requests to local JSON files. No `tauri-plugin-localhost` needed.
+- **`localStorage` works identically** in Tauri's WebKit WebView as in Safari. Data persists between app launches.
+- **The `beforeBuildCommand` pattern is powerful** — it lets you maintain a clean separation between your full project (with dev tools, data sources, scripts) and the minimal set of files that ship in the app. Think of it as a poor man's build step for a no-build-step project.
+- **Browser APIs aren't guaranteed in WebViews** — `window.print()` is a browser feature, not a WebView feature. When wrapping a web app in Tauri/Electron/etc., audit all browser API calls (`print`, `Notification`, `navigator.share`, etc.) and provide native alternatives. The pattern of checking `window.__TAURI__` for feature detection is clean and keeps the web app working in both contexts.
+
+## Phase 5: Character Portrait & ZIP Export/Import
+
+### The Goal
+
+Add character portrait support and upgrade the export format from plain `.json` to `.zip` (containing the JSON + portrait image), while maintaining backward compatibility with old `.json` imports.
+
+### The Design Decisions
+
+**Why base64 data URLs for storage?** The portrait lives in `character.data.portrait` as a `data:image/png;base64,...` string. This keeps everything in a single JSON-serializable structure — no IndexedDB, no secondary storage, no complex async loading. The tradeoff is localStorage size, which is mitigated by resizing images to max 600x800 before storing (keeping the base64 string under ~150KB).
+
+**Why ZIP instead of just embedding base64 in the JSON export?** Two reasons: (1) binary image data is much smaller in a zip than as a base64 string in JSON (~33% overhead for base64 encoding), and (2) it's a cleaner format — users can peek inside the zip to see `character.json` and `portrait.png` as separate, recognizable files.
+
+**Why JSZip?** It's the de facto standard for client-side ZIP handling (10+ years old, 9k+ GitHub stars), works in all browsers, and is a single minified file (~98KB) that fits the project's `<script>` tag pattern with no build step needed.
+
+**Why 3:4 aspect ratio?** Character portraits in tabletop RPGs follow the trading-card / portrait-photo convention. A 3:4 ratio (like 195x260px on screen) feels natural for a character portrait and mirrors what players expect from character art in published books and online tools. The portrait sits to the right of the Character Information fields, filling the vertical space of the card.
+
+### What Changed
+
+**New file**: `js/lib/jszip.min.js` — Vendored JSZip 3.10.1 library.
+
+**`index.html`**: Added JSZip `<script>` tag before `storage.js` (it must load before the storage module that uses it). Changed the import file input `accept` from `.json` to `.json,.zip`.
+
+**`js/character.js`**: Added `portrait: ''` to `createDefaultCharacter()` and a migration check in `migrateCharacterData()` for backward compat with old saves.
+
+**`js/storage.js`** — The biggest change. `exportToFile()` became `async` and now:
+1. Clones the character data, extracts the portrait base64 string, and clears the portrait from the JSON (no double-storing)
+2. Creates a JSZip with `character.json` (clean, portrait-free)
+3. If a portrait exists, decodes the base64 data URL and adds it as `portrait.png`/`.jpg` (binary, not base64)
+4. Generates a zip blob and triggers download as `{Name}_Level{n}.zip`
+
+`importFromFile()` now dispatches based on file extension: `.json` files go through the original JSON parser (backward compat), `.zip` files get extracted via JSZip. The ZIP import reads `character.json`, then looks for a `portrait.*` image file, converts it back to a base64 data URL, and merges it into the character data.
+
+**`js/ui/characterTab.js`** — The portrait UI is a side-by-side layout inside the Character Information card:
+
+The card content is wrapped in a `.char-info-with-portrait` flexbox container. The left column (`.char-info-column`) holds all the existing character fields (name, race, class, level, XP, size, alignment). The right column (`.portrait-section`) holds the portrait frame.
+
+The portrait frame is 195px wide with `aspect-ratio: 3/4`, giving it a natural portrait-photo proportion. It has three states:
+- **Empty**: Shows a dashed border with a placeholder icon and "Drop image here or click to browse" text
+- **Has image**: Shows the portrait with `object-fit: cover` filling the frame. On hover, control buttons (change/remove) appear via a gradient overlay at the bottom
+- **Drag over**: Golden glow border with a "Drop image" overlay, signaling the drop target
+
+Interaction model:
+- **Click empty frame** → opens file picker
+- **Click portrait** → opens a full-screen lightbox with the image at full resolution
+- **Drag and drop** an image file onto the frame → auto-resizes and sets as portrait
+- **Hover controls** → camera button (change) and X button (remove) appear in a bottom gradient overlay
+- **Lightbox** → click anywhere or press Escape to close
+
+At 768px and below, the layout stacks vertically (portrait below the info fields) for mobile friendliness.
+
+**`styles.css`**: Added styles for `.char-info-with-portrait` flexbox layout, `.portrait-frame` with aspect-ratio, `.portrait-dragover` state, `.portrait-drop-overlay`, `.portrait-controls` gradient hover overlay, `.portrait-lightbox` fullscreen overlay, and responsive breakpoint.
+
+**`src-tauri/tauri.conf.json`**: Added `img-src 'self' data: blob:` to the CSP (needed for displaying base64 data URL images in the Tauri WebView). Updated `beforeBuildCommand` to include `js/lib/` in the dist copy.
+
+### The Canvas Resize Trick
+
+When a user uploads or drops a portrait, we resize it client-side using an HTML5 Canvas to a maximum of 600x800 (fitting the 3:4 ratio constraint):
+
+```javascript
+const MAX_W = 600, MAX_H = 800;
+let w = img.naturalWidth, h = img.naturalHeight;
+if (w > MAX_W || h > MAX_H) {
+    const ratio = Math.min(MAX_W / w, MAX_H / h);
+    w = Math.round(w * ratio);
+    h = Math.round(h * ratio);
+}
+const canvas = document.createElement('canvas');
+canvas.width = w; canvas.height = h;
+canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+const dataUrl = canvas.toDataURL('image/png', 0.85);
+```
+
+This ensures no 5MB DSLR photos end up in localStorage. The 600x800 max keeps the base64 string reasonable while providing enough resolution for the lightbox view.
+
+### Drag and Drop Implementation
+
+The drag-and-drop uses the standard HTML5 Drag and Drop API with careful event handling:
+- `dragenter`/`dragover` → prevent default (required to make the element a valid drop target), add `.portrait-dragover` class and show the drop overlay
+- `dragleave` → remove the visual feedback (but only when the pointer actually leaves the frame — child elements firing `dragleave` is the classic gotcha, handled by checking `relatedTarget`)
+- `drop` → prevent default, extract `DataTransfer.files[0]`, validate it's an image type, then run through the same resize pipeline as the file picker
+
+### Backward Compatibility
+
+The import system handles three scenarios gracefully:
+1. **`.zip` with portrait** — extracts both `character.json` and `portrait.png`, reconstitutes the base64 data URL
+2. **`.zip` without portrait** — extracts `character.json` only, portrait stays empty
+3. **`.json` (legacy)** — parsed directly, just like before. Old exports continue to work.
+
+Old character saves in localStorage also work fine — `migrateCharacterData()` adds the empty `portrait` field on load.
+
+### Lessons Learned
+
+- **Base64 in JSON is fine for small data** — don't over-engineer with IndexedDB or Blob storage when a ~150KB string in localStorage does the job. The complexity cost of a secondary storage system vastly outweighs the storage efficiency gains for images this small.
+- **ZIP is a great portable format for structured app data** — one file that contains both machine-readable data and human-inspectable assets. Users can open it and see what's inside.
+- **Canvas is a free image processor** — need to resize, crop, or convert images client-side? Create a temporary canvas, draw to it, and call `toDataURL()`. No libraries needed.
+- **CSP matters for data URLs** — if you're using base64 data URLs for images, your Content Security Policy must include `img-src data:`. This is easy to forget when the app works fine in a browser (no CSP by default) but breaks in Tauri/Electron.
+- **Drag and drop has a `dragleave` gotcha** — when the pointer moves over a child element inside the drop zone, `dragleave` fires on the parent even though the pointer is still "inside." You need to either check `relatedTarget`, use a counter, or structure your DOM to avoid child elements during drag. We used the overlay approach — the drop overlay sits on top and intercepts the events.
+- **Side-by-side layouts need responsive fallbacks** — a portrait that looks great at 1200px wide becomes cramped at 600px. The `@media (max-width: 768px)` breakpoint flips the flexbox to `column` direction, stacking the portrait below the info fields.
+- **Lightbox is trivial with CSS** — a `position: fixed; inset: 0` overlay with a dark background and centered `max-width/max-height: 90%` image. Toggle via an `.active` class. No JS library needed.
+
+## Phase 6: Native Save Dialog, Sample Character & Distribution
+
+### The Goal
+
+Three quality-of-life improvements for sharing the app with your D&D party: (1) export shows a native "Save As" dialog instead of auto-downloading, (2) a bundled sample character so new users see something in the Load dialog immediately, and (3) a cleaner upload icon for the portrait button.
+
+### Native Save As Dialog (Tauri Plugins)
+
+Previously, clicking Export silently dropped a `.zip` file into the user's Downloads folder via the browser's anchor-download trick (`a.href = blobURL; a.click()`). In a desktop app, this feels wrong — users expect to choose where files go.
+
+**The solution**: Tauri's `dialog` and `fs` plugins. These expose OS-native dialogs and file system access to the JavaScript frontend.
+
+**Rust side** (`src-tauri/`):
+- `Cargo.toml` — Added `tauri-plugin-dialog = "2"` and `tauri-plugin-fs = "2"` dependencies
+- `src/lib.rs` — Registered both plugins: `.plugin(tauri_plugin_dialog::init()).plugin(tauri_plugin_fs::init())`
+- `capabilities/default.json` — Added `dialog:default`, `fs:default`, and `fs:allow-write-file` permissions
+
+**JavaScript side** (`js/storage.js`):
+The `exportToFile()` method now branches on `window.__TAURI__`:
+- **Tauri path**: Generates the ZIP as a `Uint8Array` (not a blob), calls `__TAURI__.dialog.save()` for a native file picker, then `__TAURI__.fs.writeFile()` to write the bytes. If the user cancels the dialog (`save()` returns `null`), it returns early.
+- **Browser path**: Falls back to the existing anchor-download, unchanged.
+
+The `zip.generateAsync()` call takes a `type` parameter — `'uint8array'` for Tauri (which needs raw bytes for `writeFile`), `'blob'` for the browser (which needs a blob for `URL.createObjectURL`). Two separate calls rather than converting between types, because JSZip is efficient at generating either directly.
+
+### Sample Character (First-Launch Seeding)
+
+When a new user opens the app for the first time, there are zero saved characters. The Load dialog shows "No saved characters found." This is a terrible first impression.
+
+**The solution**: A `data/sample_character.json` file containing a pre-built Tordek Ironforge (Dwarf Fighter 3). On first launch, if the character list is empty, the app fetches this file and saves it to localStorage.
+
+**The character**: Tordek Ironforge is a classic D&D 3.5 pregen — Dwarf Fighter with 16 Str/13 Dex/18 Con (16 base + 2 racial)/10 Int/12 Wis/4 Cha (6 base - 2 racial). Three Fighter levels with HP rolls of 10, 7, 8. Feats: Power Attack, Cleave, Weapon Focus (Dwarven Waraxe). Equipped with scale mail, heavy steel shield, and a dwarven waraxe. Portrait embedded as a base64 data URL (the `data/hero.png` resized to 256px max dimension, ~131KB in base64).
+
+**The seeding logic** (`js/app.js:seedSampleCharacter()`):
+```javascript
+async seedSampleCharacter() {
+    if (characterStorage.getCharacterList().length > 0) return;
+    const resp = await fetch('data/sample_character.json');
+    if (!resp.ok) return;
+    const importData = await resp.json();
+    if (importData.data) characterStorage.saveCharacter(importData.data);
+}
+```
+
+This runs before `loadLastCharacter()` in `init()`. Three guard clauses make it non-critical: skip if characters exist, skip if fetch fails, skip on parse error. The `try/catch` wrapper means a broken or missing sample file never prevents the app from starting.
+
+The `beforeBuildCommand` in `tauri.conf.json` was updated to copy `data/sample_character.json` into the dist directory so it ships in the Tauri app bundle.
+
+### Upload Arrow Icon
+
+The portrait change button previously used 📷 (`&#x1F4F7;`) — a camera emoji. This is misleading because the button opens a file picker, not a camera. Changed to ⬆ (`&#x2B06;`) — an upload arrow — which matches the mental model of "upload an image file." The button's title attribute also changed from "Change portrait" to "Upload new portrait" for consistency.
+
+### Distributing the macOS App to Your Party
+
+**Simplest approach** — zip the `.app` bundle and share via Google Drive / Dropbox / Discord:
+```bash
+cd "src-tauri/target/release/bundle/macos"
+zip -r "3.5_Character_Sheet.zip" "3.5 Character Sheet.app"
+```
+
+**Gatekeeper warning**: macOS will block unsigned apps downloaded from the internet. Recipients should: right-click → Open → click "Open" in the confirmation dialog. Or remove the quarantine flag: `xattr -cr "3.5 Character Sheet.app"`.
+
+**DMG option**: For a more polished experience, build with `cargo tauri build --bundles dmg` (Tauri does this out of the box) or use `hdiutil create` manually.
+
+### Lessons Learned
+
+- **Plugin registration order matters in Tauri** — plugins must be registered with `.plugin()` before `.setup()` in the builder chain for their APIs to be available in the frontend.
+- **`dialog.save()` returns `null` on cancel** — always check the return value before writing. This is cleaner than the browser's download approach where there's no way to detect a cancelled save.
+- **First-launch seeding is a UX multiplier** — a single sample character transforms the experience from "empty app, now what?" to "oh, I see how this works." The cost is one 135KB JSON file and 10 lines of code.
+- **`Uint8Array` vs `Blob`** — Tauri's `fs.writeFile()` expects a `Uint8Array`, while the browser's `URL.createObjectURL()` expects a `Blob`. JSZip can generate either directly, so don't convert between them.
+- **Unsigned app distribution is fine for small groups** — code signing and notarization are important for public distribution, but for sharing with your D&D party, a zip file + "right-click → Open" instruction is plenty.

@@ -12,38 +12,93 @@ class CharacterTab {
             <!-- Basic Info -->
             <div class="card">
                 <h2>Character Information</h2>
-                <div class="char-info-grid">
-                    <div class="form-group">
-                        <label for="charNameInput">Name:</label>
-                        <input type="text" id="charNameInput" class="form-control" placeholder="Character Name">
+                <div class="char-info-with-portrait">
+                    <div class="char-info-column">
+                        <div class="char-info-grid">
+                            <div class="form-group">
+                                <label for="charNameInput">Name:</label>
+                                <input type="text" id="charNameInput" class="form-control" placeholder="Character Name">
+                            </div>
+                            <div class="info-display">
+                                <label>Race:</label>
+                                <span id="charRace">-</span>
+                            </div>
+                            <div class="info-display">
+                                <label>Class:</label>
+                                <span id="charClass">-</span>
+                            </div>
+                            <div class="info-display">
+                                <label>Level:</label>
+                                <span id="charLevel" class="char-level-value">1</span>
+                            </div>
+                        </div>
+                        <div class="char-xp-tracker">
+                            <div class="xp-progress-bar-container">
+                                <div class="xp-progress-bar" id="charXpBar" style="width: 0%"></div>
+                            </div>
+                            <div class="char-xp-info">
+                                <span id="charXpCurrent">0 XP</span>
+                                <span id="charXpNext">Next: 1,000 XP</span>
+                                <span id="charXpNeeded">1,000 XP needed</span>
+                            </div>
+                            <div id="charXpPenalty" class="xp-penalty-warning" style="display: none;"></div>
+                            <div class="char-xp-controls">
+                                <div class="form-group" style="margin-bottom:0">
+                                    <label for="charXpInput">Total XP:</label>
+                                    <input type="number" id="charXpInput" class="form-control" value="0" min="0">
+                                </div>
+                                <div class="char-xp-add-group">
+                                    <input type="number" id="charXpAddAmount" class="form-control" placeholder="+XP" min="0">
+                                    <button id="charXpAddBtn" class="btn btn-primary btn-small">Add XP</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="char-info-grid" style="margin-top: 12px;">
+                            <div class="info-display">
+                                <label>Size:</label>
+                                <span id="charSize">Medium</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="charAlignment">Alignment:</label>
+                                <select id="charAlignment" class="form-control">
+                                    <option value="">Select</option>
+                                    <option value="Lawful Good">Lawful Good</option>
+                                    <option value="Neutral Good">Neutral Good</option>
+                                    <option value="Chaotic Good">Chaotic Good</option>
+                                    <option value="Lawful Neutral">Lawful Neutral</option>
+                                    <option value="True Neutral">True Neutral</option>
+                                    <option value="Chaotic Neutral">Chaotic Neutral</option>
+                                    <option value="Lawful Evil">Lawful Evil</option>
+                                    <option value="Neutral Evil">Neutral Evil</option>
+                                    <option value="Chaotic Evil">Chaotic Evil</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <div class="info-display">
-                        <label>Race:</label>
-                        <span id="charRace">-</span>
+                    <div class="portrait-section">
+                        <div class="portrait-frame" id="portraitFrame">
+                            <img id="portraitImage" class="portrait-image" alt="Character portrait">
+                            <div id="portraitPlaceholder" class="portrait-placeholder">
+                                <div class="portrait-placeholder-icon">&#x1F464;</div>
+                                <div class="portrait-placeholder-text">Drop image here<br>or click to browse</div>
+                            </div>
+                            <div id="portraitDropOverlay" class="portrait-drop-overlay">Drop image</div>
+                            <div id="portraitControls" class="portrait-controls">
+                                <button id="portraitChangeBtn" class="portrait-ctrl-btn" title="Upload new portrait">&#x2B06;</button>
+                                <button id="portraitRemoveBtn" class="portrait-ctrl-btn portrait-ctrl-remove" title="Remove portrait">&#x2715;</button>
+                            </div>
+                        </div>
+                        <input type="file" id="portraitFileInput" accept="image/png,image/jpeg,image/gif,image/webp" style="display: none;">
                     </div>
-                    <div class="info-display">
-                        <label>Level:</label>
-                        <span id="charLevel">1</span>
-                    </div>
-                    <div class="info-display">
-                        <label>Size:</label>
-                        <span id="charSize">Medium</span>
-                    </div>
-                    <div class="form-group">
-                        <label for="charAlignment">Alignment:</label>
-                        <select id="charAlignment" class="form-control">
-                            <option value="">Select</option>
-                            <option value="Lawful Good">Lawful Good</option>
-                            <option value="Neutral Good">Neutral Good</option>
-                            <option value="Chaotic Good">Chaotic Good</option>
-                            <option value="Lawful Neutral">Lawful Neutral</option>
-                            <option value="True Neutral">True Neutral</option>
-                            <option value="Chaotic Neutral">Chaotic Neutral</option>
-                            <option value="Lawful Evil">Lawful Evil</option>
-                            <option value="Neutral Evil">Neutral Evil</option>
-                            <option value="Chaotic Evil">Chaotic Evil</option>
-                        </select>
-                    </div>
+                </div>
+            </div>
+
+            <!-- Portrait Lightbox -->
+            <div id="portraitLightbox" class="portrait-lightbox">
+                <div class="portrait-lightbox-backdrop"></div>
+                <div class="portrait-lightbox-content">
+                    <img id="portraitLightboxImg" alt="Character portrait">
+                    <button id="portraitLightboxClose" class="portrait-lightbox-close">&#x2715;</button>
                 </div>
             </div>
 
@@ -292,6 +347,99 @@ class CharacterTab {
     }
 
     attachEventListeners() {
+        // Portrait system
+        const portraitFrame = document.getElementById('portraitFrame');
+        const portraitFileInput = document.getElementById('portraitFileInput');
+        const portraitRemoveBtn = document.getElementById('portraitRemoveBtn');
+        const portraitChangeBtn = document.getElementById('portraitChangeBtn');
+        const portraitImage = document.getElementById('portraitImage');
+        const lightbox = document.getElementById('portraitLightbox');
+        const lightboxClose = document.getElementById('portraitLightboxClose');
+        const lightboxBackdrop = lightbox?.querySelector('.portrait-lightbox-backdrop');
+
+        // Click: empty = browse, has image = lightbox
+        if (portraitFrame) {
+            portraitFrame.addEventListener('click', (e) => {
+                // Don't trigger if clicking a control button
+                if (e.target.closest('.portrait-controls')) return;
+                const data = character.getData();
+                if (data.portrait) {
+                    this.openLightbox();
+                } else {
+                    portraitFileInput?.click();
+                }
+            });
+        }
+
+        // Change button always opens file picker
+        if (portraitChangeBtn) {
+            portraitChangeBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                portraitFileInput?.click();
+            });
+        }
+
+        // Remove button
+        if (portraitRemoveBtn) {
+            portraitRemoveBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                character.updateBasicInfo('portrait', '');
+                this.renderPortrait();
+            });
+        }
+
+        // File input change
+        if (portraitFileInput) {
+            portraitFileInput.addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (file) this.processPortraitFile(file);
+                e.target.value = '';
+            });
+        }
+
+        // Drag and drop
+        if (portraitFrame) {
+            const dropOverlay = document.getElementById('portraitDropOverlay');
+
+            portraitFrame.addEventListener('dragenter', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                portraitFrame.classList.add('portrait-dragover');
+                if (dropOverlay) dropOverlay.style.display = 'flex';
+            });
+
+            portraitFrame.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+            });
+
+            portraitFrame.addEventListener('dragleave', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                // Only remove if leaving the frame entirely
+                if (!portraitFrame.contains(e.relatedTarget)) {
+                    portraitFrame.classList.remove('portrait-dragover');
+                    if (dropOverlay) dropOverlay.style.display = 'none';
+                }
+            });
+
+            portraitFrame.addEventListener('drop', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                portraitFrame.classList.remove('portrait-dragover');
+                if (dropOverlay) dropOverlay.style.display = 'none';
+
+                const file = e.dataTransfer?.files[0];
+                if (file && file.type.startsWith('image/')) {
+                    this.processPortraitFile(file);
+                }
+            });
+        }
+
+        // Lightbox close
+        if (lightboxClose) lightboxClose.addEventListener('click', () => this.closeLightbox());
+        if (lightboxBackdrop) lightboxBackdrop.addEventListener('click', () => this.closeLightbox());
+
         // Character name
         const nameInput = document.getElementById('charNameInput');
         if (nameInput) {
@@ -305,6 +453,39 @@ class CharacterTab {
         if (alignmentSelect) {
             alignmentSelect.addEventListener('change', (e) => {
                 character.updateBasicInfo('alignment', e.target.value);
+            });
+        }
+
+        // XP total input
+        const xpInput = document.getElementById('charXpInput');
+        if (xpInput) {
+            xpInput.addEventListener('change', (e) => {
+                character.updateExperience(parseInt(e.target.value) || 0);
+            });
+        }
+
+        // Add XP button
+        const xpAddBtn = document.getElementById('charXpAddBtn');
+        if (xpAddBtn) {
+            xpAddBtn.addEventListener('click', () => {
+                const addInput = document.getElementById('charXpAddAmount');
+                const amount = parseInt(addInput.value) || 0;
+                if (amount > 0) {
+                    const data = character.getData();
+                    const currentXP = data.inventory.experience || 0;
+                    character.updateExperience(currentXP + amount);
+                    addInput.value = '';
+                }
+            });
+        }
+
+        // Add XP on Enter key
+        const xpAddAmount = document.getElementById('charXpAddAmount');
+        if (xpAddAmount) {
+            xpAddAmount.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    document.getElementById('charXpAddBtn').click();
+                }
             });
         }
 
@@ -531,6 +712,9 @@ class CharacterTab {
 
         const data = character.getData();
 
+        // Portrait
+        this.renderPortrait();
+
         // Basic info
         const nameInput = document.getElementById('charNameInput');
         if (nameInput) nameInput.value = data.name;
@@ -541,6 +725,43 @@ class CharacterTab {
         this.setText('charRace', data.race);
         this.setText('charLevel', data.level);
         this.setText('charSize', data.size);
+
+        // Class summary (e.g., "Fighter 3 / Wizard 2")
+        const classLevels = {};
+        data.classes.forEach(cl => {
+            classLevels[cl.className] = (classLevels[cl.className] || 0) + 1;
+        });
+        const classSummary = Object.entries(classLevels).map(([name, lvl]) => `${name} ${lvl}`).join(' / ') || '-';
+        this.setText('charClass', classSummary);
+
+        // XP tracker
+        const currentXP = data.inventory.experience || 0;
+        const currentLevel = data.level;
+        const currentLevelXP = calculator.calculateNextLevelXP(currentLevel - 1);
+        const nextLevelXP = calculator.calculateNextLevelXP(currentLevel);
+        const progress = currentLevel >= 20 ? 100 : ((currentXP - currentLevelXP) / (nextLevelXP - currentLevelXP) * 100);
+        const xpNeeded = Math.max(0, nextLevelXP - currentXP);
+
+        const xpBar = document.getElementById('charXpBar');
+        if (xpBar) xpBar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+        this.setText('charXpCurrent', `${currentXP.toLocaleString()} XP`);
+        this.setText('charXpNext', currentLevel >= 20 ? 'Max Level' : `Next (${currentLevel + 1}): ${nextLevelXP.toLocaleString()} XP`);
+        this.setText('charXpNeeded', currentLevel >= 20 ? 'Max level reached' : `${xpNeeded.toLocaleString()} XP needed`);
+        const xpInput = document.getElementById('charXpInput');
+        if (xpInput && document.activeElement !== xpInput) xpInput.value = currentXP;
+
+        // Multiclass XP penalty
+        const xpPenaltyEl = document.getElementById('charXpPenalty');
+        if (xpPenaltyEl) {
+            const xpPenalty = stats.multiclassXPPenalty;
+            if (xpPenalty && xpPenalty.penalty > 0) {
+                const pct = Math.round(xpPenalty.penalty * 100);
+                xpPenaltyEl.textContent = `-${pct}% XP penalty (${xpPenalty.details.join('; ')})`;
+                xpPenaltyEl.style.display = 'block';
+            } else {
+                xpPenaltyEl.style.display = 'none';
+            }
+        }
 
         // Abilities
         Object.entries(stats.abilities).forEach(([ability, values]) => {
@@ -756,6 +977,83 @@ class CharacterTab {
             if (summaryDiv) {
                 summaryDiv.innerHTML = '<p class="info-text" style="color: #dc3545;">Error loading languages. Please refresh the page.</p>';
             }
+        }
+    }
+
+    // Process an image file into a portrait
+    processPortraitFile(file) {
+        if (!file.type.startsWith('image/')) {
+            if (window.InfoModal) InfoModal.toast('Please select an image file.', 'warning');
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = (event) => {
+            const img = new Image();
+            img.onload = () => {
+                // Resize to max 600x800 (3:4 ratio max)
+                const maxW = 600;
+                const maxH = 800;
+                let width = img.width;
+                let height = img.height;
+
+                if (width > maxW || height > maxH) {
+                    const scaleW = maxW / width;
+                    const scaleH = maxH / height;
+                    const scale = Math.min(scaleW, scaleH);
+                    width = Math.round(width * scale);
+                    height = Math.round(height * scale);
+                }
+
+                const canvas = document.createElement('canvas');
+                canvas.width = width;
+                canvas.height = height;
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(img, 0, 0, width, height);
+
+                const dataUrl = canvas.toDataURL(file.type === 'image/png' ? 'image/png' : 'image/jpeg', 0.85);
+                character.updateBasicInfo('portrait', dataUrl);
+                this.renderPortrait();
+            };
+            img.src = event.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+
+    openLightbox() {
+        const data = character.getData();
+        if (!data.portrait) return;
+        const lightbox = document.getElementById('portraitLightbox');
+        const lightboxImg = document.getElementById('portraitLightboxImg');
+        if (lightbox && lightboxImg) {
+            lightboxImg.src = data.portrait;
+            lightbox.classList.add('active');
+        }
+    }
+
+    closeLightbox() {
+        const lightbox = document.getElementById('portraitLightbox');
+        if (lightbox) lightbox.classList.remove('active');
+    }
+
+    renderPortrait() {
+        const data = character.getData();
+        const portraitImage = document.getElementById('portraitImage');
+        const portraitPlaceholder = document.getElementById('portraitPlaceholder');
+        const portraitControls = document.getElementById('portraitControls');
+        const portraitFrame = document.getElementById('portraitFrame');
+
+        const hasPortrait = !!data.portrait;
+
+        if (portraitImage) {
+            portraitImage.src = hasPortrait ? data.portrait : '';
+            portraitImage.style.display = hasPortrait ? 'block' : 'none';
+        }
+        if (portraitPlaceholder) portraitPlaceholder.style.display = hasPortrait ? 'none' : 'flex';
+        if (portraitControls) portraitControls.style.display = hasPortrait ? 'flex' : 'none';
+        if (portraitFrame) {
+            portraitFrame.style.cursor = hasPortrait ? 'pointer' : 'pointer';
+            portraitFrame.title = hasPortrait ? 'Click to view full size' : 'Click to browse or drag an image here';
         }
     }
 

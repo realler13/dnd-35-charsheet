@@ -1,0 +1,36 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nicmr/tauri-schema/master/tauri.conf.json",
+  "productName": "3.5 Character Sheet",
+  "version": "1.0.0",
+  "identifier": "com.dnd35.charsheet",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:8000",
+    "beforeDevCommand": "python3 -m http.server 8000",
+    "beforeBuildCommand": "sh -c \"rm -rf dist && mkdir -p dist/js/ui dist/js/lib dist/data/json && cp index.html dist/ && cp styles.css dist/ && cp js/*.js dist/js/ && cp js/ui/*.js dist/js/ui/ && cp js/lib/*.js dist/js/lib/ && cp data/json/*.json dist/data/json/ && cp data/sample_character.json dist/data/\""
+  },
+  "bundle": {
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "3.5 Character Sheet",
+        "width": 1200,
+        "height": 900,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; img-src 'self' data: blob:"
+    }
+  }
+}

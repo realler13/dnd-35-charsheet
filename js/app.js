@@ -59,7 +59,8 @@ class DnDCharacterSheet {
             // Initialize all tab UIs
             this.initializeTabs();
 
-            // Load last character or create new
+            // Seed sample character on first launch, then load
+            await this.seedSampleCharacter();
             this.loadLastCharacter();
 
             // Initial calculation and render
@@ -155,6 +156,17 @@ class DnDCharacterSheet {
                     window.pdfExport.print();
                 }
             });
+        }
+
+        // Help button
+        const helpBtn = document.getElementById('helpButton');
+        if (helpBtn) {
+            helpBtn.addEventListener('click', () => HelpModal.show());
+        }
+
+        // Also listen for native Tauri menu event
+        if (window.__TAURI__) {
+            window.__TAURI__.event.listen('open-help', () => HelpModal.show());
         }
     }
 
@@ -295,6 +307,22 @@ class DnDCharacterSheet {
             console.log(`Loaded character: ${characterName}`);
         } else {
             InfoModal.toast(`Could not load character: ${characterName}`, 'error');
+        }
+    }
+
+    // Seed a sample character on first launch so new users have something to load
+    async seedSampleCharacter() {
+        try {
+            if (characterStorage.getCharacterList().length > 0) return;
+            const resp = await fetch('data/sample_character.json');
+            if (!resp.ok) return;
+            const importData = await resp.json();
+            if (importData.data) {
+                characterStorage.saveCharacter(importData.data);
+            }
+        } catch (e) {
+            // Non-critical — app works fine without the sample
+            console.warn('Could not seed sample character:', e);
         }
     }
 

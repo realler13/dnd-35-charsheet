@@ -461,6 +461,27 @@ class DataLoader {
 
             const json = await response.json();
             json.data.forEach(race => {
+                // Extract favored class from racialTraits
+                let favoredClass = '';
+                if (race.racialTraits && Array.isArray(race.racialTraits)) {
+                    for (const trait of race.racialTraits) {
+                        const fcMatch = trait.match(/Favored Class:\s*([^.]+)/);
+                        if (fcMatch) {
+                            favoredClass = fcMatch[1].trim();
+                            break;
+                        }
+                    }
+                }
+                // Fallback for core races with empty racialTraits
+                if (!favoredClass) {
+                    const coreFavored = {
+                        'Human': 'Any', 'Elf': 'Wizard', 'Dwarf': 'Fighter',
+                        'Halfling': 'Rogue', 'Gnome': 'Bard', 'Half-Elf': 'Any',
+                        'Half-Orc': 'Barbarian'
+                    };
+                    favoredClass = coreFavored[race.name] || '';
+                }
+
                 this.gameData.races.set(race.name, {
                     name: race.name,
                     type: race.type || 'Humanoid',
@@ -476,7 +497,8 @@ class DataLoader {
                     int: race.int || 0,
                     wis: race.wis || 0,
                     cha: race.cha || 0,
-                    senses: race.senses || ''
+                    senses: race.senses || '',
+                    favoredClass: favoredClass
                 });
             });
 

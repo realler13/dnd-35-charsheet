@@ -10,7 +10,12 @@ class PDFExport {
         const data = character.getData();
         const stats = calculator.calculateAll(data);
         this.generatePrintLayout(data, stats);
-        window.print();
+        // Use Tauri's native print when running as desktop app, otherwise browser print
+        if (window.__TAURI__) {
+            window.__TAURI__.core.invoke('print_page');
+        } else {
+            window.print();
+        }
     }
 
     // Build the print layout HTML

@@ -55,6 +55,7 @@ class GameLogTab {
                         <input type="text" id="logSearch" class="form-control" placeholder="Search entries..." style="width: 250px;">
                     </div>
                     <button id="clearFiltersBtn" class="btn btn-secondary btn-small" style="margin-top: 24px;">Clear Filters</button>
+                    <button id="clearAllLogsBtn" class="btn btn-danger btn-small" style="margin-top: 24px; margin-left: 8px;">Clear All Entries</button>
                 </div>
             </div>
 
@@ -110,6 +111,27 @@ class GameLogTab {
                 this.currentFilter = 'all';
                 this.searchTerm = '';
                 this.renderLogEntries();
+            }
+        });
+
+        // Clear all log entries
+        this.container.addEventListener('click', async (e) => {
+            if (e.target.id === 'clearAllLogsBtn') {
+                const data = character.getData();
+                const count = data.gameLog ? data.gameLog.length : 0;
+                if (count === 0) {
+                    InfoModal.toast('No log entries to clear.', 'info');
+                    return;
+                }
+                const confirmed = await InfoModal.confirm(
+                    `Delete all ${count} log entries? This cannot be undone.`,
+                    'Clear All Entries',
+                    { confirmText: 'Clear All', danger: true }
+                );
+                if (confirmed) {
+                    data.gameLog = [];
+                    character.setData(data);
+                }
             }
         });
     }

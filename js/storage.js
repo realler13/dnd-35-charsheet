@@ -125,36 +125,74 @@ class CharacterStorage {
         }, this.autosaveDelay);
     }
 
-    // Export character to JSON file
-    exportToFile(characterData) {
+    // Export character to ZIP file (with portrait as separate image)
+    async exportToFile(characterData) {
+        const characterName = characterData.name || 'Unnamed';
+        const level = characterData.level || 1;
+        const filename = `${characterName.replace(/\s+/g, '_')}_Level${level}.zip`;
+
+        // Clone data and extract portrait for separate storage in zip
+        const clonedData = JSON.parse(JSON.stringify(characterData));
+        const portrait = clonedData.portrait || '';
+        clonedData.portrait = ''; // Don't embed base64 in JSON
+
         const exportData = {
             version: '1.0',
             exportedAt: new Date().toISOString(),
-            data: characterData
+            data: clonedData
         };
 
-        const json = JSON.stringify(exportData, null, 2);
-        const blob = new Blob([json], { type: 'application/json' });
+        const zip = new JSZip();
+        zip.file('character.json', JSON.stringify(exportData, null, 2));
 
-        const characterName = characterData.name || 'Unnamed';
-        const level = characterData.level || 1;
-        const filename = `${characterName.replace(/\s+/g, '_')}_Level${level}.json`;
+        // If portrait exists, decode base64 and add as image file
+        if (portrait) {
+            const match = portrait.match(/^data:image\/(png|jpe?g|gif|webp);base64,(.+)$/);
+            if (match) {
+                const ext = match[1] === 'jpeg' ? 'jpg' : match[1];
+                const imageData = match[2];
+                zip.file(`portrait.${ext}`, imageData, { base64: true });
+            }
+        }
 
-        // Create download link
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = filename;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-
-        console.log(`Character exported to ${filename}`);
+        // Tauri: native Save As dialog
+        if (window.__TAURI__) {
+            const path = await window.__TAURI__.dialog.save({
+                defaultPath: filename,
+                filters: [{ name: 'Character Archive', extensions: ['zip'] }]
+            });
+            if (!path) return; // User cancelled
+            const bytes = await zip.generateAsync({ type: 'uint8array' });
+            await window.__TAURI__.fs.writeFile(path, bytes);
+            console.log(`Character exported to ${path}`);
+        } else {
+            // Browser: anchor-download fallback
+            const blob = await zip.generateAsync({ type: 'blob' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            console.log(`Character exported to ${filename}`);
+        }
     }
 
-    // Import character from JSON file
+    // Import character from file (ZIP or JSON for backward compat)
     importFromFile(file, callback) {
+        const name = file.name.toLowerCase();
+
+        if (name.endsWith('.zip')) {
+            this._importFromZip(file, callback);
+        } else {
+            this._importFromJSON(file, callback);
+        }
+    }
+
+    // Import from legacy JSON file
+    _importFromJSON(file, callback) {
         const reader = new FileReader();
 
         reader.onload = (event) => {
@@ -163,7 +201,7 @@ class CharacterStorage {
 
                 // Validate structure
                 if (importData.data) {
-                    console.log('Character imported from file');
+                    console.log('Character imported from JSON file');
                     callback(true, importData.data);
                 } else {
                     console.error('Invalid character file format');
@@ -181,6 +219,45 @@ class CharacterStorage {
         };
 
         reader.readAsText(file);
+    }
+
+    // Import from ZIP file
+    async _importFromZip(file, callback) {
+        try {
+            const zip = await JSZip.loadAsync(file);
+
+            // Read character.json
+            const jsonFile = zip.file('character.json');
+            if (!jsonFile) {
+                console.error('ZIP does not contain character.json');
+                callback(false, null);
+                return;
+            }
+
+            const jsonText = await jsonFile.async('text');
+            const importData = JSON.parse(jsonText);
+
+            if (!importData.data) {
+                console.error('Invalid character file format in ZIP');
+                callback(false, null);
+                return;
+            }
+
+            // Look for portrait image file
+            const imageFile = zip.file(/^portrait\.(png|jpe?g|gif|webp)$/i)[0];
+            if (imageFile) {
+                const imageData = await imageFile.async('base64');
+                const ext = imageFile.name.split('.').pop().toLowerCase();
+                const mimeType = ext === 'jpg' ? 'image/jpeg' : `image/${ext}`;
+                importData.data.portrait = `data:${mimeType};base64,${imageData}`;
+            }
+
+            console.log('Character imported from ZIP file');
+            callback(true, importData.data);
+        } catch (error) {
+            console.error('Error importing ZIP file:', error);
+            callback(false, null);
+        }
     }
 
     // Clear all autosave timers

@@ -31,13 +31,6 @@ class InventoryTab {
                 </div>
                 <div id="wealthTotal" class="wealth-total"></div>
 
-                <div class="xp-section">
-                    <div class="xp-input-group">
-                        <label>Experience Points</label>
-                        <input type="number" id="experienceInput" class="form-control" min="0" value="0">
-                    </div>
-                    <div id="xpProgress" class="xp-progress"></div>
-                </div>
             </div>
 
             <div class="card">
@@ -227,14 +220,6 @@ class InventoryTab {
                 const coinType = e.target.dataset.coin;
                 const value = parseInt(e.target.value) || 0;
                 character.updateWealth(coinType, value);
-            }
-        });
-
-        // XP change
-        this.container.addEventListener('change', (e) => {
-            if (e.target.id === 'experienceInput') {
-                const xp = parseInt(e.target.value) || 0;
-                character.updateExperience(xp);
             }
         });
 
@@ -719,26 +704,6 @@ class InventoryTab {
                         (data.inventory.wealth.copper / 100);
         document.getElementById('wealthTotal').innerHTML = `<strong>Total: ${totalGP.toFixed(2)} GP</strong>`;
 
-        // Update XP
-        document.getElementById('experienceInput').value = data.inventory.experience || 0;
-
-        // Update XP progress bar
-        const currentLevel = data.level;
-        const currentXP = data.inventory.experience;
-        const currentLevelXP = calculator.calculateNextLevelXP(currentLevel - 1);
-        const nextLevelXP = calculator.calculateNextLevelXP(currentLevel);
-
-        const progress = currentLevel >= 20 ? 100 : ((currentXP - currentLevelXP) / (nextLevelXP - currentLevelXP) * 100);
-        const xpNeeded = Math.max(0, nextLevelXP - currentXP);
-
-        document.getElementById('xpProgress').innerHTML = `
-            <div class="xp-progress-bar-container">
-                <div class="xp-progress-bar" style="width: ${Math.min(100, Math.max(0, progress))}%"></div>
-            </div>
-            <p class="info-text">
-                ${currentLevel >= 20 ? 'Max level reached' : `${xpNeeded} XP needed for level ${currentLevel + 1}`}
-            </p>
-        `;
 
         // Update carrying capacity
         this.renderCarryingCapacity(stats, data);

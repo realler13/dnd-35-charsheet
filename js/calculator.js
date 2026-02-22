@@ -1150,6 +1150,60 @@ class Calculator {
         return penalties;
     }
 
+    // Calculate multiclass XP penalty
+    calculateMulticlassXPPenalty(characterData) {
+        const result = { penalty: 0.0, details: [] };
+
+        // Count class levels
+        const classLevels = {};
+        characterData.classes.forEach(cl => {
+            classLevels[cl.className] = (classLevels[cl.className] || 0) + 1;
+        });
+
+        const classNames = Object.keys(classLevels);
+        if (classNames.length <= 1) return result;
+
+        // Get race favored class
+        const raceData = this.dataLoader.getRace(characterData.race);
+        const favoredClass = raceData ? (raceData.favoredClass || '') : '';
+
+        // Build list of classes to compare (exclude favored class)
+        let classesToCompare;
+        if (favoredClass.toLowerCase() === 'any') {
+            // Exclude the highest-level class
+            let highestLevel = 0;
+            let highestClass = '';
+            classNames.forEach(cn => {
+                if (classLevels[cn] > highestLevel) {
+                    highestLevel = classLevels[cn];
+                    highestClass = cn;
+                }
+            });
+            classesToCompare = classNames.filter(cn => cn !== highestClass);
+        } else if (favoredClass && classLevels[favoredClass]) {
+            classesToCompare = classNames.filter(cn => cn !== favoredClass);
+        } else {
+            classesToCompare = [...classNames];
+        }
+
+        if (classesToCompare.length <= 1) return result;
+
+        // Check all pairs
+        for (let i = 0; i < classesToCompare.length; i++) {
+            for (let j = i + 1; j < classesToCompare.length; j++) {
+                const a = classesToCompare[i];
+                const b = classesToCompare[j];
+                const diff = Math.abs(classLevels[a] - classLevels[b]);
+                if (diff > 1) {
+                    result.penalty += 0.2;
+                    result.details.push(`${a} ${classLevels[a]} / ${b} ${classLevels[b]} (differ by ${diff})`);
+                }
+            }
+        }
+
+        return result;
+    }
+
     // Calculate all character stats
     calculateAll(characterData) {
         // Cache feat bonuses for this calculation cycle (avoids ~44 redundant calls)
@@ -1181,6 +1235,9 @@ class Calculator {
             }
         }
 
+        // Calculate multiclass XP penalty
+        const multiclassXPPenalty = this.calculateMulticlassXPPenalty(characterData);
+
         // Clear feat bonus cache after calculation cycle
         this._cachedFeatBonuses = null;
 
@@ -1196,7 +1253,8 @@ class Calculator {
             nextLevelXP,
             spellRanges,
             spellsPerDay,
-            flawPenalties
+            flawPenalties,
+            multiclassXPPenalty
         };
     }
 }

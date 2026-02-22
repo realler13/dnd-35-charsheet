@@ -167,6 +167,9 @@ class Character {
                 }
             },
 
+            // Portrait (base64 data URL)
+            portrait: '',
+
             // Game Log
             gameLog: [],
 
@@ -595,6 +598,11 @@ class Character {
         // Add flaws array if missing
         if (!this.data.flaws) {
             this.data.flaws = [];
+        }
+
+        // Add portrait field if missing
+        if (!this.data.portrait && this.data.portrait !== '') {
+            this.data.portrait = '';
         }
 
         // Add languages array if missing
