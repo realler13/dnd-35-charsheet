@@ -4,18 +4,26 @@ A complete web-based character sheet builder for D&D 3.5, featuring a comprehens
 
 **Status**: ✅ Fully Implemented - Ready to Use!
 
+## Motivation
+
+D&D 3.5 character creation involves tracking many interconnected rules, bonuses, and choices. This project brings character stats, skills, feats, equipment, and spells together in a browser-based sheet to reduce manual bookkeeping and keep the focus on playing.
+
+Inspired by the HeroForge Anew 3.5 spreadsheet, it combines automatic calculations with PCGen-sourced game data, local saves, and portable JSON backups.
+
 ## Quick Start
 
-1. **Start the web server:**
-   ```bash
-   cd "/path/to/D&D 3.5 CharSheet"
-   python3 -m http.server 8000
-   ```
+You need Git, Python 3, and a modern web browser. No build step is required.
+
+1. **Clone the repository and start the web server:**
+    ```bash
+    git clone https://github.com/realler13/dnd-35-charsheet.git
+    cd dnd-35-charsheet
+    python3 -m http.server 8000
+    ```
 
 2. **Open in your browser:**
-   ```
-   http://localhost:8000
-   ```
+
+   Visit <http://localhost:8000>. Serve the app over HTTP rather than opening `index.html` directly, so it can load the game data.
 
 3. **Start creating your character!**
 
@@ -135,7 +143,7 @@ npx http-server -p 8000
 php -S localhost:8000
 ```
 
-## How to Use
+## Usage
 
 ### Creating a New Character
 
@@ -337,6 +345,19 @@ To update or add game data from PCGen:
 4. Refresh browser to load new data
 
 See **MIGRATION.md** for details.
+
+## Contributing
+
+Bug reports, D&D 3.5 rules corrections, game data improvements, and code contributions are welcome.
+
+1. Open an [issue](https://github.com/realler13/dnd-35-charsheet/issues) to report a bug or discuss a proposed change. Include steps to reproduce, expected behavior, and any relevant browser console errors.
+2. Fork the repository (or clone it directly if you have write access), then create a branch:
+   ```bash
+   git switch -c your-change-name
+   ```
+3. Follow the [Quick Start](#quick-start) instructions to run the app locally. Keep changes focused and follow the existing vanilla JavaScript structure in `js/`.
+4. Test the affected tabs in your browser, check the console for errors, and verify that saving, loading, and JSON export/import still work. For rules changes, explain the expected calculation and cite the relevant rule.
+5. Open a pull request describing what changed and how you tested it. Include screenshots for visible UI changes.
 
 ## Troubleshooting
 
